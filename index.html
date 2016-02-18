@@ -112,7 +112,8 @@ $(function() {
         prependTo: '.container-center-wrapper'
 
     });
-
+    var height = $(window).height();
+    $('.slicknav_nav').css({'max-height': height, 'overflow-y':'scroll'});
 });
 </script>
 </body>
