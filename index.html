@@ -2,13 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victorious</title>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
+    <script src="js/slicknav/jquery.slicknav.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="js/slicknav/slicknav.css"/>
 </head>
 <body>
 <header>
@@ -24,7 +26,7 @@
                     <nav class="header-menu">
                         <ul>
                             <li><a href="" class="active">Главная</a></li><!--
-                         --><li><a href="" class="dropdown-anchor">Услуги</a></li><!--
+                         --><li><a href="#" class="dropdown-anchor">Услуги</a></li><!--
                          --><li><a href="">Работы</a></li><!--
                          --><li><a href="">Отзывы</a></li><!--
                          --><li><a href="">Блог</a></li><!--
@@ -54,6 +56,39 @@
                     </div>
                 </div>
             </div>
+            <ul id="menu-mobile" style="display: none">
+                <li><a href="">Главная</a></li>
+                <li id="utyutyu">Услуги
+                    <ul>
+                        <li>Разработка сайтов
+                            <ul>
+                                <li><a href="">Сайты-визитки</a></li>
+                                <li><a href="">Корпоративные сайты</a></li>
+                                <li><a href="">Интернет-магазины</a></li>
+                                <li><a href="">Landing Pages</a></li>
+                            </ul>
+                        </li>
+
+                        <li>Продвижение сайтов
+                            <ul>
+                                <li><a href="">Поисковое продвижение</a></li>
+                                <li><a href="">Продвижение в соц.сетях</a></li>
+                                <li><a href="">Контекстная реклама</a></li>
+                            </ul>
+                        </li>
+                        <li>Поддержка сайтов
+                            <ul>
+                                <li><a href="">Модернизация сайтов</a></li>
+                                <li><a href="">Наполнение сайтов</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Работы</a></li>
+                <li><a href="">Отзывы</a></li>
+                <li><a href="">Блог</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
         </div>
     </div>
 </header>
@@ -61,14 +96,24 @@
 <footer></footer>
 
 <script>
-    $(document).on('scroll',function(e){
-       if( $(this).scrollTop() > 70 ){
-           $('header').addClass('fixed');
-       }
-        else{
-           $('header').removeClass('fixed');
-       }
+$(function() {
+    $(document).on('scroll', function (e) {
+        if ($(this).scrollTop() > 70) {
+            $('header').addClass('fixed');
+        }
+        else {
+            $('header').removeClass('fixed');
+        }
     })
+
+    $('#menu-mobile').slicknav({
+        label: '',
+        duration: 1000,
+        prependTo: '.container-center-wrapper'
+
+    });
+
+});
 </script>
 </body>
 </html>

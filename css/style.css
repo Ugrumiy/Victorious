@@ -176,6 +176,19 @@ header .logo-menu-container .logo-pic img {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 600px) {
+  header .logo-menu-container {
+    display: none;
+  }
+}
+header .slicknav_menu {
+  display: none;
+}
+@media (max-width: 600px) {
+  header .slicknav_menu {
+    display: block;
+  }
+}
 header .header-phone-btn {
   position: absolute;
   top: 25px;
