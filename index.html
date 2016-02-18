@@ -14,7 +14,7 @@
 <header>
     <div class="container-full-width">
         <div class="container-center-wrapper">
-            <div class="js-logo-menu-container logo-menu-container clearfix">
+            <div class="logo-menu-container clearfix">
                 <div class="logo-pic"></div>
                 <div class="header-phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
@@ -62,13 +62,11 @@
 
 <script>
     $(document).on('scroll',function(e){
-       if($(this).scrollTop() > 70 ){
+       if( $(this).scrollTop() > 70 ){
            $('header').addClass('fixed');
-           $('.js-logo-menu-container').addClass('fixed');
        }
         else{
            $('header').removeClass('fixed');
-           $('.js-logo-menu-container').removeClass('fixed');
        }
     })
 </script>

@@ -138,6 +138,10 @@ a img {
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  min-width: 320px;
+}
 body {
   font: 16px/1.5em 'PT Sans', Arial, sans-serif;
   height: 3000px;
@@ -148,58 +152,54 @@ body {
   padding: 0 15px;
 }
 /*Header*/
-header.fixed {
-  width: 100%;
-  position: fixed;
-}
-.logo-menu-container {
+header .logo-menu-container {
   width: 100%;
   height: 130px;
   position: relative;
   border-top: 1px solid transparent;
 }
-.logo-menu-container .logo-pic {
+header .logo-menu-container .logo-pic {
   width: 225px;
   height: 67px;
   position: absolute;
   top: 50%;
   margin: -33px 0 0 0;
   background: url('../img/logo.png') no-repeat 0 0;
-  background-size: cover ;
+  background-size: cover;
 }
 @media (max-width: 900px) {
-  .logo-menu-container .logo-pic {
+  header .logo-menu-container .logo-pic {
     top: 30%;
   }
 }
-.logo-menu-container .logo-pic img {
+header .logo-menu-container .logo-pic img {
   height: 100%;
   width: 100%;
 }
-.logo-menu-container .header-phone-btn {
+header .header-phone-btn {
   position: absolute;
   top: 25px;
   right: 0;
 }
-.logo-menu-container .header-phone-btn .phone-number {
+header .header-phone-btn .phone-number {
   font-size: 1.18em;
   font-weight: 700;
   text-decoration: none;
   margin: 0 10px 0 0;
 }
-.logo-menu-container .header-phone-btn .phone-number:link {
+header .header-phone-btn .phone-number:link {
   color: #000000;
 }
-.logo-menu-container .header-phone-btn .phone-number:visited {
+header .header-phone-btn .phone-number:visited {
   color: #000000;
 }
-.logo-menu-container .header-phone-btn .phone-number:hover {
+header .header-phone-btn .phone-number:hover {
   color: #000000;
 }
-.logo-menu-container .header-phone-btn .phone-number:active {
+header .header-phone-btn .phone-number:active {
   color: #000000;
 }
-.logo-menu-container .header-phone-btn button {
+header .header-phone-btn button {
   color: #399799;
   font-weight: 700;
   background: transparent;
@@ -218,11 +218,11 @@ header.fixed {
   background-clip: padding-box;
   font-size: 15px;
 }
-.logo-menu-container .header-phone-btn button:hover {
+header .header-phone-btn button:hover {
   background: #399799;
   color: #ffffff;
 }
-.logo-menu-container .header-menu-container {
+header .header-menu-container {
   text-align: center;
   max-width: 650px;
   position: absolute;
@@ -230,28 +230,28 @@ header.fixed {
   right: 0;
 }
 @media (max-width: 900px) {
-  .logo-menu-container .header-menu-container {
+  header .header-menu-container {
     position: static;
     max-width: 600px;
     width: 100%;
     margin: 88px auto 0 auto;
   }
 }
-.logo-menu-container .header-menu ul {
+header .header-menu ul {
   list-style: none;
 }
-.logo-menu-container .header-menu ul li {
+header .header-menu ul li {
   display: inline-block;
 }
-.logo-menu-container .header-menu ul li:not(:last-child) {
+header .header-menu ul li:not(:last-child) {
   margin-right: 60px;
 }
 @media (max-width: 900px) {
-  .logo-menu-container .header-menu ul li:not(:last-child) {
+  header .header-menu ul li:not(:last-child) {
     margin-right: 9%;
   }
 }
-.logo-menu-container .header-menu ul a {
+header .header-menu ul a {
   display: inline-block;
   text-decoration: none;
   margin: 0 auto;
@@ -262,23 +262,23 @@ header.fixed {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-.logo-menu-container .header-menu ul a:link {
+header .header-menu ul a:link {
   color: #000000;
 }
-.logo-menu-container .header-menu ul a:visited {
+header .header-menu ul a:visited {
   color: #000000;
 }
-.logo-menu-container .header-menu ul a:hover {
+header .header-menu ul a:hover {
   color: #000000;
 }
-.logo-menu-container .header-menu ul a:active {
+header .header-menu ul a:active {
   color: #000000;
 }
-.logo-menu-container .header-menu ul a:hover,
-.logo-menu-container .header-menu ul a.active {
+header .header-menu ul a:hover,
+header .header-menu ul a.active {
   border-bottom: 1px solid #3c3c3c;
 }
-.logo-menu-container .header-menu ul a.dropdown-anchor:after {
+header .header-menu ul a.dropdown-anchor:after {
   content: '';
   display: block;
   width: 16px;
@@ -288,28 +288,28 @@ header.fixed {
   right: -23px;
   background: black;
 }
-.logo-menu-container .header-menu-dropout {
+header .header-menu-dropout {
   display: inline-block;
   position: relative;
   top: 50px;
   padding: 20px;
   background-color: #399799;
 }
-.logo-menu-container .header-menu-dropout .link-group {
+header .header-menu-dropout .link-group {
   float: left;
   list-style: none;
   text-align: left;
 }
-.logo-menu-container .header-menu-dropout .link-group:not(:first-child) {
+header .header-menu-dropout .link-group:not(:first-child) {
   margin-left: 1em;
 }
-.logo-menu-container .header-menu-dropout .link-group .link-group_title {
+header .header-menu-dropout .link-group .link-group_title {
   font-size: 17px;
   line-height: 1.8;
   font-weight: 700;
   color: #ffffff;
 }
-.logo-menu-container .header-menu-dropout a {
+header .header-menu-dropout a {
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
@@ -318,28 +318,32 @@ header.fixed {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-.logo-menu-container .header-menu-dropout a:link {
+header .header-menu-dropout a:link {
   color: #ffffff;
 }
-.logo-menu-container .header-menu-dropout a:visited {
+header .header-menu-dropout a:visited {
   color: #ffffff;
 }
-.logo-menu-container .header-menu-dropout a:hover {
+header .header-menu-dropout a:hover {
   color: #ffffff;
 }
-.logo-menu-container .header-menu-dropout a:active {
+header .header-menu-dropout a:active {
   color: #ffffff;
 }
-.logo-menu-container .header-menu-dropout a:hover {
+header .header-menu-dropout a:hover {
   border-bottom: 1px solid #ffffff;
 }
-.logo-menu-container .header-menu-dropout.active {
+header .header-menu-dropout.active {
   display: inline-block;
 }
-.logo-menu-container.fixed {
+header.fixed {
+  width: 100%;
+  position: fixed;
+}
+header.fixed .logo-menu-container {
   height: 60px;
 }
-.logo-menu-container.fixed .logo-pic {
+header.fixed .logo-menu-container .logo-pic {
   height: 60px;
   width: 200px;
   position: static;
@@ -347,23 +351,23 @@ header.fixed {
   margin: 0;
 }
 @media (max-width: 900px) {
-  .logo-menu-container.fixed .logo-pic {
+  header.fixed .logo-menu-container .logo-pic {
     width: 31px;
     background: url('../img/logo_short.png') no-repeat 0 0;
     background-size: contain;
   }
 }
-.logo-menu-container.fixed .header-phone-btn {
+header.fixed .logo-menu-container .header-phone-btn {
   display: none;
 }
-.logo-menu-container.fixed .header-menu-container {
+header.fixed .logo-menu-container .header-menu-container {
   position: absolute;
   max-width: 100%;
   top: 16px;
   margin: 0;
 }
 @media (max-width: 900px) {
-  .logo-menu-container.fixed .header-menu ul li:not(:last-child) {
+  header.fixed .logo-menu-container .header-menu ul li:not(:last-child) {
     margin-right: 7%;
   }
 }

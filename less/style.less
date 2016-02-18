@@ -55,6 +55,9 @@
   box-sizing: border-box;
 }
 
+html, body {
+  min-width: 320px;
+}
 body {
   font: 16px/1.5em 'PT Sans', Arial, sans-serif;
   height: 3000px;
@@ -68,74 +71,72 @@ body {
 
 
 /*Header*/
-header.fixed{
-  width: 100%;
-  position: fixed;
-}
-.logo-menu-container{
-  width: 100%;
-  height: 130px;
-  position: relative;
-  border-top: 1px solid transparent;
-  .logo-pic{
-    width: 225px;
-    height: 67px;
-    position: absolute;
-    top: 50%;
-    margin: -33px 0 0 0;
-    background: url('../img/logo.png') no-repeat 0 0;
-    background-size: cover ;
-    @media (max-width: 900px){
-      top: 30%;
-    }
-    img{
-      height: 100%;
-      width: 100%;
-    }
+header {
+  .logo-menu-container {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    border-top: 1px solid transparent;
+    .logo-pic {
+      width: 225px;
+      height: 67px;
+      position: absolute;
+      top: 50%;
+      margin: -33px 0 0 0;
+      background: url('../img/logo.png') no-repeat 0 0;
+      background-size: cover;
+      @media (max-width: 900px) {
+        top: 30%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
 
+    }
   }
-  .header-phone-btn{
+  .header-phone-btn {
     position: absolute;
     top: 25px;
     right: 0;
-    .phone-number{
+    .phone-number {
       font-size: 1.18em;
       font-weight: 700;
       text-decoration: none;
       margin: 0 10px 0 0;
       .link-colors(@black, @black)
     }
-    button{
+    button {
       .btn(@light-green);
       font-size: 15px;
     }
   }
-  .header-menu-container{
+  .header-menu-container {
     text-align: center;
     max-width: 650px;
     position: absolute;
     top: 75px;
     right: 0;
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
       position: static;
       max-width: 600px;
       width: 100%;
       margin: 88px auto 0 auto;
     }
   }
-  .header-menu{
-    ul{
+  .header-menu {
+    ul {
       list-style: none;
-      li{
+      li {
         display: inline-block;
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-right: 60px;
-          @media (max-width: 900px){
+          @media (max-width: 900px) {
             margin-right: 9%;
           }
         }
       }
-      a{
+      a {
         display: inline-block;
         text-decoration: none;
         margin: 0 auto;
@@ -144,10 +145,10 @@ header.fixed{
         .transition(all 0.3s ease);
         .link-colors(@black, @black);
         &:hover,
-        &.active{
+        &.active {
           border-bottom: 1px solid #3c3c3c;
         }
-        &.dropdown-anchor:after{
+        &.dropdown-anchor:after {
           content: '';
           display: block;
           width: 16px;
@@ -160,65 +161,70 @@ header.fixed{
       }
     }
   }
-  .header-menu-dropout{
+  .header-menu-dropout {
     display: inline-block;
     position: relative;
     top: 50px;
     padding: 20px;
     background-color: @light-green;
-    .link-group{
+    .link-group {
       float: left;
       list-style: none;
       text-align: left;
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-left: 1em;
       }
-      .link-group_title{
+      .link-group_title {
         font-size: 17px;
         line-height: 1.8;
         font-weight: 700;
         color: #ffffff;
       }
     }
-    a{
+    a {
       font-size: 16px;
       line-height: 1.5;
       text-decoration: none;
       .transition(all 0.3s ease);
       .link-colors(@white, @white);
-      &:hover{
+      &:hover {
         border-bottom: 1px solid @white;
       }
     }
-    &.active{
+    &.active {
       display: inline-block;
     }
   }
-  &.fixed{
+}
+
+header.fixed {
+  width: 100%;
+  position: fixed;
+  .logo-menu-container {
     height: 60px;
-    .logo-pic{
+    .logo-pic {
       height: 60px;
       width: 200px;
       position: static;
       float: left;
       margin: 0;
-      @media (max-width: 900px){
+      @media (max-width: 900px) {
         width: 31px;
         background: url('../img/logo_short.png') no-repeat 0 0;
         background-size: contain;
       }
     }
-    .header-phone-btn{
+    .header-phone-btn {
       display: none;
     }
-    .header-menu-container{
-        position: absolute;
-        max-width: 100%;
-        top: 16px;
-        margin: 0;
+    .header-menu-container {
+      position: absolute;
+      max-width: 100%;
+      top: 16px;
+      margin: 0;
     }
-    .header-menu ul li:not(:last-child){
-      @media (max-width: 900px){
+    .header-menu ul li:not(:last-child) {
+      @media (max-width: 900px) {
         margin-right: 7%;
       }
     }
