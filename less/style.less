@@ -1,3 +1,96 @@
-body{
-  width: 100%;
+
+/*1024 700 480 320*/
+@import "reset.less";
+@import "mixins.less";
+
+
+/*Varibles and Mixins*/
+@light-green: #399799;
+@black: #000000;
+
+.link-colors(@default-color, @hover-color){
+  &:link{
+    color: @default-color;
+  }
+  &:visited{
+    color: @default-color;
+  }
+  &:hover{
+    color: @hover-color;
+  }
+  &:active{
+    color: @default-color;
+  }
+}
+.btn(@btn-color){
+
+  color: @btn-color;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.6em 1.6em;
+  border: 2px solid @btn-color;
+  cursor: pointer;
+  .transition(all 0.3s ease);
+  .border-radius(3px);
+  &:hover{
+    background: @btn-color;
+    color: #ffffff;
+  }
+}
+
+
+/*General CSS*/
+*:focus {
+  outline: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.5em 'PT Sans', Arial, sans-serif;
+}
+
+.container-center-wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*Header*/
+.logo-menu-container-default{
+  height: 130px;
+  position: relative;
+  .header-phone-btn{
+    .phone-number{
+      font-size: 1.18em;
+      font-weight: 700;
+      text-decoration: none;
+      .link-colors(@black, @black)
+    }
+    button{
+      .btn(@light-green);
+      font-size: 15px;
+    }
+  }
+  .header-menu{
+    ul{
+      list-style: none;
+      li{
+        display: inline-block;
+      }
+      a{
+        display: block;
+        text-decoration: none;
+        .link-colors(@black, @black)
+      }
+    }
+  }
 }
