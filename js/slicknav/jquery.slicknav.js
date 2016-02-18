@@ -24,7 +24,7 @@
             removeIds: false,
             removeClasses: false,
             removeStyles: false,
-			brand: '<div>sss</div>',
+			brand: '',
             init: function () {},
             beforeOpen: function () {},
             beforeClose: function () {},

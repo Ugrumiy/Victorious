@@ -1,4 +1,5 @@
 /*900 700 480 320*/
+/*900 700 480 320*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -149,9 +150,16 @@ body {
 .container-center-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 /*Header*/
+header {
+  padding: 0 15px;
+}
+@media (max-width: 600px) {
+  header {
+    padding: 0;
+  }
+}
 header .logo-menu-container {
   width: 100%;
   height: 130px;
@@ -183,11 +191,30 @@ header .logo-menu-container .logo-pic img {
 }
 header .slicknav_menu {
   display: none;
+  padding: 0;
+  background: none;
 }
 @media (max-width: 600px) {
   header .slicknav_menu {
     display: block;
   }
+}
+header .slicknav_menu .slicknav_btn {
+  background: none;
+}
+header .slicknav_menu .slicknav_btn .slicknav_icon-bar {
+  background-color: #399799;
+}
+header .slicknav_menu .slicknav_nav {
+  background: #399799;
+}
+header .slicknav_menu .slicknav_brand {
+  margin: 0 0 0 10px;
+  padding: 0;
+  width: 202px;
+  height: 60px;
+  background: url('../img/logo.png') no-repeat 0 0;
+  background-size: cover;
 }
 header .header-phone-btn {
   position: absolute;
