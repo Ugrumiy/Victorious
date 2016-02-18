@@ -1,4 +1,4 @@
-/*1024 700 480 320*/
+/*900 600 480 320*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -142,18 +142,40 @@ body {
   font: 16px/1.5em 'PT Sans', Arial, sans-serif;
 }
 .container-center-wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 /*Header*/
 .logo-menu-container-default {
+  width: 100%;
   height: 130px;
   position: relative;
+  background: red;
+  border: 1px solid transparent;
+}
+.logo-menu-container-default .logo-pic {
+  width: 225px;
+  height: 67px;
+  position: absolute;
+  top: 50%;
+  margin: -33px 0 0 0;
+}
+@media (max-width: 900px) {
+  .logo-menu-container-default .logo-pic {
+    top: 30%;
+  }
+}
+.logo-menu-container-default .header-phone-btn {
+  position: absolute;
+  top: 25px;
+  right: 0;
 }
 .logo-menu-container-default .header-phone-btn .phone-number {
   font-size: 1.18em;
   font-weight: 700;
   text-decoration: none;
+  margin: 0 10px 0 0;
 }
 .logo-menu-container-default .header-phone-btn .phone-number:link {
   color: #000000;
@@ -190,15 +212,31 @@ body {
   background: #399799;
   color: #ffffff;
 }
+.logo-menu-container-default .header-menu {
+  max-width: 650px;
+  position: absolute;
+  top: 75px;
+  right: 0;
+}
 .logo-menu-container-default .header-menu ul {
   list-style: none;
 }
 .logo-menu-container-default .header-menu ul li {
   display: inline-block;
 }
+.logo-menu-container-default .header-menu ul li:not(:last-child) {
+  margin-right: 60px;
+}
+@media (max-width: 900px) {
+  .logo-menu-container-default .header-menu ul li:not(:last-child) {
+    margin-right: 9%;
+  }
+}
 .logo-menu-container-default .header-menu ul a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
+  margin: 0 auto;
+  line-height: 1.2em;
 }
 .logo-menu-container-default .header-menu ul a:link {
   color: #000000;
@@ -211,4 +249,16 @@ body {
 }
 .logo-menu-container-default .header-menu ul a:active {
   color: #000000;
+}
+.logo-menu-container-default .header-menu ul a:hover,
+.logo-menu-container-default .header-menu ul a.active {
+  border-bottom: 1px solid #3c3c3c;
+}
+@media (max-width: 900px) {
+  .logo-menu-container-default .header-menu {
+    position: static;
+    max-width: 556px;
+    width: 100%;
+    margin: 88px auto 0 auto;
+  }
 }
