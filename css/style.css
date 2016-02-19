@@ -143,12 +143,27 @@ body {
   min-width: 320px;
 }
 body {
-  font: 16px/1.5em 'PT Sans', Arial, sans-serif;
+  font: 16px/1.2em 'PT Sans', Arial, sans-serif;
   height: 3000px;
+}
+h2 {
+  font: 37px/1.2 'Bitter', serif;
+  margin: 70px 0 70px 0;
+}
+p {
+  margin: 10px 0;
 }
 .container-center-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+.left-col {
+  float: left;
+  width: 50%;
+}
+.right-col {
+  float: right;
+  width: 50%;
 }
 /*Header*/
 header {
@@ -483,4 +498,41 @@ main .slider .slide .slide-title .highlighted {
   main .slider .slide .slide-title {
     font-size: 20px;
   }
+}
+main #about-company {
+  padding: 0 15px;
+}
+main .about-company .about-company_text {
+  width: 100%;
+  text-align: justify;
+}
+main .about-company .download_presentation {
+  display: block;
+  padding: 0 0 0 40px;
+  font-size: 14px;
+  font-style: italic;
+  text-decoration: none;
+  background: url('../img/download_pdf_icon.png') no-repeat 0 0;
+}
+main .about-company .download_presentation:link {
+  color: #000000;
+}
+main .about-company .download_presentation:visited {
+  color: #000000;
+}
+main .about-company .download_presentation:hover {
+  color: #000000;
+}
+main .about-company .download_presentation:active {
+  color: #000000;
+}
+main .company-features {
+  padding: 187px 0 0 0;
+}
+main .company-features .feature-item {
+  width: 248px;
+  min-height: 75px;
+  padding: 0 0 0 105px;
+  text-transform: uppercase;
+  background: url('../img/feature_icon.png') no-repeat 45px top;
 }
