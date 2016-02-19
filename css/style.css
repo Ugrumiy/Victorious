@@ -153,6 +153,7 @@ body {
 /*Header*/
 header {
   padding: 0 15px;
+  z-index: 1000;
 }
 @media (max-width: 600px) {
   header {
@@ -160,7 +161,6 @@ header {
     position: fixed;
     width: 100%;
     background: #ffffff;
-    z-index: 1000;
     top: 0;
     left: 0;
   }
@@ -273,6 +273,7 @@ header .header-menu-container {
   position: absolute;
   top: 75px;
   right: 0;
+  z-index: 500;
 }
 @media (max-width: 900px) {
   header .header-menu-container {
@@ -334,11 +335,19 @@ header .header-menu ul a.dropdown-anchor:after {
   background: black;
 }
 header .header-menu-dropout {
-  display: inline-block;
-  position: relative;
+  display: none;
+  width: 565px;
+  position: absolute;
   top: 50px;
   padding: 20px;
   background-color: #399799;
+}
+@media (max-width: 900px) {
+  header .header-menu-dropout {
+    top: 130px;
+    left: 50%;
+    margin-left: -282px;
+  }
 }
 header .header-menu-dropout .link-group {
   float: left;
@@ -377,9 +386,6 @@ header .header-menu-dropout a:active {
 }
 header .header-menu-dropout a:hover {
   border-bottom: 1px solid #ffffff;
-}
-header .header-menu-dropout.active {
-  display: inline-block;
 }
 header.fixed {
   width: 100%;

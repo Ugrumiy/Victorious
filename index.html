@@ -28,14 +28,14 @@
                     <nav class="header-menu">
                         <ul>
                             <li><a href="" class="active">Главная</a></li><!--
-                         --><li><a href="#" class="dropdown-anchor">Услуги</a></li><!--
+                         --><li><a href="#" id="header-menu-dropdown-anchor" class="dropdown-anchor">Услуги</a></li><!--
                          --><li><a href="">Работы</a></li><!--
                          --><li><a href="">Отзывы</a></li><!--
                          --><li><a href="">Блог</a></li><!--
                          --><li><a href="">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div class="header-menu-dropout clearfix">
+                    <div id="header-menu-dropout" class="header-menu-dropout clearfix">
                         <ul class="link-group">
                             <li class="link-group_title">Разработка сайтов</li>
                             <li><a href="">Сайты-визитки</a></li>
@@ -142,6 +142,17 @@ $(function() {
         arrows: false,
 
     });
+
+    $('#header-menu-dropdown-anchor').on('click', function(event){
+        event.preventDefault();
+        var dropout = $('#header-menu-dropout');
+        if(dropout.hasClass('active')) {
+            dropout.fadeOut(200).removeClass('active');
+        }
+        else {
+            dropout.fadeIn(200).addClass('active');
+        }
+    })
 });
 </script>
 </body>

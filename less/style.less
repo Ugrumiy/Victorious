@@ -72,12 +72,12 @@ body {
 /*Header*/
 header {
     padding: 0 15px;
+    z-index: 1000;
     @media (max-width: 600px) {
       padding: 0;
       position: fixed;
       width: 100%;
       background: @white;
-      z-index: 1000;
       top: 0;
       left: 0;
     }
@@ -155,6 +155,7 @@ header {
     position: absolute;
     top: 75px;
     right: 0;
+    z-index: 500;
     @media (max-width: 900px) {
       position: static;
       max-width: 600px;
@@ -200,11 +201,17 @@ header {
     }
   }
   .header-menu-dropout {
-    display: inline-block;
-    position: relative;
+    display: none;
+    width: 565px;
+    position: absolute;
     top: 50px;
     padding: 20px;
     background-color: @light-green;
+    @media (max-width: 900px) {
+      top: 130px;
+      left: 50%;
+      margin-left: -282px;
+    }
     .link-group {
       float: left;
       list-style: none;
@@ -228,9 +235,6 @@ header {
       &:hover {
         border-bottom: 1px solid @white;
       }
-    }
-    &.active {
-      display: inline-block;
     }
   }
 }
