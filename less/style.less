@@ -76,14 +76,7 @@ p{
   margin: 0 auto;
 }
 
-.left-col{
-  float: left;
-  width: 50%;
-}
-.right-col{
-  float: right;
-  width: 50%;
-}
+
 /*Header*/
 header {
     padding: 0 15px;
@@ -344,6 +337,9 @@ main{
     padding: 0 15px;
   }
   .about-company{
+    float: left;
+    width: 50%;
+
     .about-company_text{
       width: 100%;
       text-align: justify;
@@ -359,13 +355,24 @@ main{
     }
   }
   .company-features{
-    padding: 187px 0 0 0;
+    position: relative;
+    padding-top: 187px;
+    .left-col{
+      float: left;
+      width: 190px;
+
+    }
+    .right-col{
+      float: right;
+      width: 190px;
+
+    }
     .feature-item{
-      width: 248px;
+      width: 190px;
       min-height: 75px;
-      padding:  0 0 0 105px;
+      padding:  0 0 0 48px;
       text-transform: uppercase;
-      background:  url('../img/feature_icon.png') no-repeat 45px top;
+      background:  url('../img/feature_icon.png') no-repeat 0 top;
 
     }
   }
