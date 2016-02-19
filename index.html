@@ -9,12 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
     <script src="js/slicknav/jquery.slicknav.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/slickslider/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/slickslider/slick.css"/>
     <link rel="stylesheet" href="js/slicknav/slicknav.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header>
-    <div class="container-full-width">
+    <div id="header" class="container-full-width">
         <div class="container-center-wrapper">
             <div class="logo-menu-container clearfix">
                 <div class="logo-pic"></div>
@@ -92,7 +94,26 @@
         </div>
     </div>
 </header>
-<main></main>
+<main>
+    <div id="slider" class="container-full-width">
+        <div class="container-center-wrapper">
+            <div class="slider">
+                <div class="slide">
+                    <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента1</div>
+                </div>
+                <div class="slide">
+                    <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента2</div>
+                </div>
+                <div class="slide">
+                    <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента3</div>
+                </div>
+                <div class="slide">
+                    <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 <footer></footer>
 
 <script>
@@ -106,11 +127,19 @@ $(function() {
         }
     })
 
+    $headerContainer = $('#header');
     $('#menu-mobile').slicknav({
         label: '',
         duration: 1000,
-        prependTo: '.container-center-wrapper',
+        prependTo: $headerContainer.find('.container-center-wrapper'),
         brand: ' ',
+
+    });
+
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
 
     });
 });

@@ -74,6 +74,12 @@ header {
     padding: 0 15px;
     @media (max-width: 600px) {
       padding: 0;
+      position: fixed;
+      width: 100%;
+      background: @white;
+      z-index: 1000;
+      top: 0;
+      left: 0;
     }
   .logo-menu-container {
     width: 100%;
@@ -232,6 +238,9 @@ header {
 header.fixed {
   width: 100%;
   position: fixed;
+  background: @white;
+  top: 0;
+  left: 0;
   .logo-menu-container {
     height: 60px;
     .logo-pic {
@@ -258,6 +267,57 @@ header.fixed {
     .header-menu ul li:not(:last-child) {
       @media (max-width: 900px) {
         margin-right: 7%;
+      }
+    }
+  }
+}
+
+main{
+  #slider{
+    background: url('../img/slider_bg.jpg') repeat-x 50% 0;
+    @media (max-width: 600px) {
+      background-position: 50% -81px;
+      margin-top: 60px;
+    }
+  }
+  .slider{
+
+    .slide{
+      width: 100%;
+      height: 488px;
+      text-align: center;
+      @media (max-width: 600px) {
+        height: 325px;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .slide-title{
+        font: 50px/1.2 'Bitter', serif;
+        display: inline-block;
+        vertical-align: middle;
+        .highlighted{
+          font-weight: 700;
+          text-decoration: underline;
+        }
+        @media (max-width: 800px) {
+          font-size: 40px;
+        }
+        @media (max-width: 650px) {
+          font-size: 35px;
+        }
+        @media (max-width: 550px) {
+          font-size: 27px;
+        }
+        @media (max-width: 450px) {
+          font-size: 22px;
+        }
+        @media (max-width: 450px) {
+          font-size: 20px;
+        }
       }
     }
   }
