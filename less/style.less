@@ -339,6 +339,18 @@ main{
   .about-company{
     float: left;
     width: 50%;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 950px) {
+      width: 45%;
+    }
+    @media (max-width: 850px) {
+      width: 60%;
+    }
+    @media (max-width: 600px) {
+      float: none;
+      width: 100%;
+    }
 
     .about-company_text{
       width: 100%;
@@ -346,6 +358,7 @@ main{
     }
     .download_presentation{
       display: block;
+      margin: 55px 0 0 0 ;
       padding: 0 0 0 40px;
       font-size: 14px;
       font-style: italic;
@@ -357,23 +370,77 @@ main{
   .company-features{
     position: relative;
     padding-top: 187px;
+    @media (max-width: 850px) {
+      float:right;
+      width: 40%;
+    }
+    @media (max-width: 600px) {
+      float: none;
+      width: 95%;
+      padding-top: 50px;
+      margin: 0 auto;
+    }
+    @media (max-width: 450px) {
+      //width: 80%;
+    }
     .left-col{
-      float: left;
+      float: right;
       width: 190px;
+      @media (max-width: 850px) {
+        float: none;
+        margin: 0 auto;
+      }
+      @media (max-width: 600px) {
+        float: left;
+        width: 190px;
+      }
+      @media (max-width: 450px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
 
     }
     .right-col{
       float: right;
       width: 190px;
-
+      margin-right: 7%;
+      @media (max-width: 850px) {
+        float: none;
+        margin: 0 auto;
+      }
+      @media (max-width: 600px) {
+        float: right;
+        width: 190px;
+      }
+       @media (max-width: 450px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
     }
     .feature-item{
-      width: 190px;
+      width: 100%;
       min-height: 75px;
       padding:  0 0 0 48px;
       text-transform: uppercase;
       background:  url('../img/feature_icon.png') no-repeat 0 top;
-
+      @media (max-width: 450px) {
+        width: auto;
+        min-height: 51px;
+        margin: 15px 0;
+        display: inline-block;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 }

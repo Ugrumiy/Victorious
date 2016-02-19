@@ -1,4 +1,5 @@
 /*900 700 480 320*/
+/*900 700 480 320*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -497,6 +498,24 @@ main #about-company {
 main .about-company {
   float: left;
   width: 50%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 950px) {
+  main .about-company {
+    width: 45%;
+  }
+}
+@media (max-width: 850px) {
+  main .about-company {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  main .about-company {
+    float: none;
+    width: 100%;
+  }
 }
 main .about-company .about-company_text {
   width: 100%;
@@ -504,6 +523,7 @@ main .about-company .about-company_text {
 }
 main .about-company .download_presentation {
   display: block;
+  margin: 55px 0 0 0 ;
   padding: 0 0 0 40px;
   font-size: 14px;
   font-style: italic;
@@ -526,18 +546,92 @@ main .company-features {
   position: relative;
   padding-top: 187px;
 }
+@media (max-width: 850px) {
+  main .company-features {
+    float: right;
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  main .company-features {
+    float: none;
+    width: 95%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 450px) {
+  
+}
 main .company-features .left-col {
-  float: left;
+  float: right;
   width: 190px;
+}
+@media (max-width: 850px) {
+  main .company-features .left-col {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  main .company-features .left-col {
+    float: left;
+    width: 190px;
+  }
+}
+@media (max-width: 450px) {
+  main .company-features .left-col {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
 }
 main .company-features .right-col {
   float: right;
   width: 190px;
+  margin-right: 7%;
+}
+@media (max-width: 850px) {
+  main .company-features .right-col {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  main .company-features .right-col {
+    float: right;
+    width: 190px;
+  }
+}
+@media (max-width: 450px) {
+  main .company-features .right-col {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
 }
 main .company-features .feature-item {
-  width: 190px;
+  width: 100%;
   min-height: 75px;
   padding: 0 0 0 48px;
   text-transform: uppercase;
   background: url('../img/feature_icon.png') no-repeat 0 top;
+}
+@media (max-width: 450px) {
+  main .company-features .feature-item {
+    width: auto;
+    min-height: 51px;
+    margin: 15px 0;
+    display: inline-block;
+  }
+}
+main .company-features .feature-item:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+main .company-features .feature-item span {
+  display: inline-block;
+  vertical-align: middle;
 }
