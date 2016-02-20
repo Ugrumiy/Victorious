@@ -509,7 +509,7 @@ main .slider .slide .slide-title .highlighted {
     font-size: 20px;
   }
 }
-main #about-company-container-full-width {
+main .about-company-container-full-width {
   padding: 0 15px;
 }
 main .about-company {
