@@ -1,4 +1,3 @@
-/*900 700 480 320*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -449,6 +448,7 @@ main {
   /*� ��������*/
   /*�������*/
   /*������*/
+  /*SEO Text*/
 }
 main .slider-container-full-width {
   background: url('../img/slider_bg.jpg') repeat-x 50% 0;
@@ -807,4 +807,16 @@ main .seo-text-container-full-width .right-column {
     float: none;
     width: 100%;
   }
+}
+main .seo-text-container-full-width a:link {
+  color: #399799;
+}
+main .seo-text-container-full-width a:visited {
+  color: #399799;
+}
+main .seo-text-container-full-width a:hover {
+  color: #000000;
+}
+main .seo-text-container-full-width a:active {
+  color: #399799;
 }

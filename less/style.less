@@ -1,5 +1,4 @@
 
-/*900 700 480 320*/
 @import "reset.less";
 @import "mixins.less";
 
@@ -82,16 +81,16 @@ p{
 
 /*Header*/
 header {
-    padding: 0 15px;
-    z-index: 1000;
-    @media (max-width: 600px) {
-      padding: 0;
-      position: fixed;
-      width: 100%;
-      background: @white;
-      top: 0;
-      left: 0;
-    }
+  padding: 0 15px;
+  z-index: 1000;
+  @media (max-width: 600px) {
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    background: @white;
+    top: 0;
+    left: 0;
+  }
   .logo-menu-container {
     width: 100%;
     height: 130px;
@@ -223,7 +222,8 @@ header {
     }
   }
 
-  /*Мобильное меню*/
+
+/*Мобильное меню*/
   .slicknav_menu{
     display: none;
     padding: 0;
@@ -252,6 +252,7 @@ header {
   }
 
 }
+
 
 /*Хедер при прокрутке*/
 header.fixed {
@@ -292,6 +293,7 @@ header.fixed {
 }
 
 main{
+
 
   /*Слайдер*/
   .slider-container-full-width{
@@ -455,6 +457,7 @@ main{
     }
   }
 
+
   /*Клиенты*/
   .our-clients-container-full-width{
     background: url('../img/clients_bg.jpg') repeat 50% 0;
@@ -473,6 +476,7 @@ main{
       }
     }
   }
+
 
   /*Услуги*/
   .services-container-full-width{
@@ -559,6 +563,7 @@ main{
   }
 
 
+  /*SEO Text*/
   .seo-text-container-full-width{
     padding: 0 15px 5% 15px;
     border-top: 1px solid transparent;
@@ -587,6 +592,8 @@ main{
         width: 100%;
       }
     }
-
+    a{
+      .link-colors(@light-green, @black);
+    }
   }
 }
