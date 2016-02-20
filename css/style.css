@@ -166,6 +166,7 @@ p {
 header {
   padding: 0 15px;
   z-index: 1000;
+  /*��������� ����*/
 }
 @media (max-width: 600px) {
   header {
@@ -205,33 +206,6 @@ header .logo-menu-container .logo-pic img {
   header .logo-menu-container {
     display: none;
   }
-}
-header .slicknav_menu {
-  display: none;
-  padding: 0;
-  background: none;
-}
-@media (max-width: 600px) {
-  header .slicknav_menu {
-    display: block;
-  }
-}
-header .slicknav_menu .slicknav_btn {
-  background: none;
-}
-header .slicknav_menu .slicknav_btn .slicknav_icon-bar {
-  background-color: #399799;
-}
-header .slicknav_menu .slicknav_nav {
-  background: #399799;
-}
-header .slicknav_menu .slicknav_brand {
-  margin: 0 0 0 10px;
-  padding: 0;
-  width: 202px;
-  height: 60px;
-  background: url('../img/logo.png') no-repeat 0 0;
-  background-size: cover;
 }
 header .header-phone-btn {
   position: absolute;
@@ -395,6 +369,34 @@ header .header-menu-dropout a:active {
 header .header-menu-dropout a:hover {
   border-bottom: 1px solid #ffffff;
 }
+header .slicknav_menu {
+  display: none;
+  padding: 0;
+  background: none;
+}
+@media (max-width: 600px) {
+  header .slicknav_menu {
+    display: block;
+  }
+}
+header .slicknav_menu .slicknav_btn {
+  background: none;
+}
+header .slicknav_menu .slicknav_btn .slicknav_icon-bar {
+  background-color: #399799;
+}
+header .slicknav_menu .slicknav_nav {
+  background: #399799;
+}
+header .slicknav_menu .slicknav_brand {
+  margin: 0 0 0 10px;
+  padding: 0;
+  width: 202px;
+  height: 60px;
+  background: url('../img/logo.png') no-repeat 0 0;
+  background-size: cover;
+}
+/*����� ��� ���������*/
 header.fixed {
   width: 100%;
   position: fixed;
@@ -433,11 +435,17 @@ header.fixed .logo-menu-container .header-menu-container {
     margin-right: 7%;
   }
 }
-main #slider {
+main {
+  /*�������*/
+  /*� ��������*/
+  /*�������*/
+  /*������*/
+}
+main .slider-container-full-width {
   background: url('../img/slider_bg.jpg') repeat-x 50% 0;
 }
 @media (max-width: 600px) {
-  main #slider {
+  main .slider-container-full-width {
     background-position: 50% -81px;
     margin-top: 60px;
   }
@@ -492,7 +500,7 @@ main .slider .slide .slide-title .highlighted {
     font-size: 20px;
   }
 }
-main #about-company {
+main #about-company-container-full-width {
   padding: 0 15px;
 }
 main .about-company {
@@ -632,19 +640,19 @@ main .company-features .feature-item span {
   display: inline-block;
   vertical-align: middle;
 }
-main #our-clients {
+main .our-clients-container-full-width {
   background: url('../img/clients_bg.jpg') repeat 50% 0;
   padding: 0.1% 15px 3% 15px;
 }
-main #our-clients .column {
+main .our-clients-container-full-width .column {
   width: 29%;
   float: left;
   font-size: 0;
 }
-main #our-clients .column:not(:last-child) {
+main .our-clients-container-full-width .column:not(:last-child) {
   margin-right: 6.5%;
 }
-main #our-clients .column img {
+main .our-clients-container-full-width .column img {
   width: 100%;
   margin: 2% 0;
   -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.23);

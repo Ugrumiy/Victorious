@@ -118,32 +118,6 @@ header {
       display: none;
     }
   }
-  .slicknav_menu{
-    display: none;
-    padding: 0;
-    background: none;
-
-    @media (max-width: 600px) {
-      display: block;
-    }
-    .slicknav_btn{
-      background: none;
-      .slicknav_icon-bar{
-        background-color: @light-green;
-      }
-    }
-    .slicknav_nav{
-      background: @light-green;
-    }
-    .slicknav_brand{
-      margin: 0 0 0 10px;
-      padding: 0;
-      width: 202px;
-      height: 60px;
-      background: url('../img/logo.png') no-repeat 0 0;
-      background-size: cover;
-    }
-  }
   .header-phone-btn {
     position: absolute;
     top: 25px;
@@ -247,8 +221,38 @@ header {
       }
     }
   }
+
+  /*Мобильное меню*/
+  .slicknav_menu{
+    display: none;
+    padding: 0;
+    background: none;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+    .slicknav_btn{
+      background: none;
+      .slicknav_icon-bar{
+        background-color: @light-green;
+      }
+    }
+    .slicknav_nav{
+      background: @light-green;
+    }
+    .slicknav_brand{
+      margin: 0 0 0 10px;
+      padding: 0;
+      width: 202px;
+      height: 60px;
+      background: url('../img/logo.png') no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+
 }
 
+/*Хедер при прокрутке*/
 header.fixed {
   width: 100%;
   position: fixed;
@@ -287,7 +291,9 @@ header.fixed {
 }
 
 main{
-  #slider{
+
+  /*Слайдер*/
+  .slider-container-full-width{
     background: url('../img/slider_bg.jpg') repeat-x 50% 0;
     @media (max-width: 600px) {
       background-position: 50% -81px;
@@ -335,7 +341,9 @@ main{
     }
   }
 
-  #about-company{
+
+  /*О компании*/
+  #about-company-container-full-width{
     padding: 0 15px;
   }
   .about-company{
@@ -445,7 +453,9 @@ main{
       }
     }
   }
-  #our-clients{
+
+  /*Клиенты*/
+  .our-clients-container-full-width{
     background: url('../img/clients_bg.jpg') repeat 50% 0;
     padding: 0.1% 15px 3% 15px;
     .column{
@@ -461,5 +471,10 @@ main{
         .box-shadow(0px 0px 4px 1px rgba(0,0,0,0.23));
       }
     }
+  }
+
+  /*Услуги*/
+  .services-container-full-width{
+
   }
 }
