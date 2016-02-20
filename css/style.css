@@ -146,11 +146,13 @@ body {
   font: 16px/1.2em 'PT Sans', Arial, sans-serif;
   height: 3000px;
 }
+h1,
 h2 {
   font: 37px/1.2 'Bitter', serif;
   margin: 60px 0;
 }
 @media (max-width: 600px) {
+  h1,
   h2 {
     margin: 30px 0;
     text-align: center;
@@ -772,4 +774,37 @@ main .services-container-full-width .service-item a:active {
 }
 main .services-container-full-width .service-item a:hover {
   box-shadow: none;
+}
+main .seo-text-container-full-width {
+  padding: 0 15px 5% 15px;
+  border-top: 1px solid transparent;
+  background: #e4e4e4;
+  background: -moz-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #e4e4e4), color-stop(100%, #f6f6f6));
+  background: -webkit-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
+  background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
+  background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
+  background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+}
+main .seo-text-container-full-width .left-column {
+  float: left;
+  width: 47%;
+  margin-right: 6%;
+}
+@media (max-width: 600px) {
+  main .seo-text-container-full-width .left-column {
+    float: none;
+    width: 100%;
+  }
+}
+main .seo-text-container-full-width .right-column {
+  float: right;
+  width: 47%;
+}
+@media (max-width: 600px) {
+  main .seo-text-container-full-width .right-column {
+    float: none;
+    width: 100%;
+  }
 }
