@@ -353,7 +353,7 @@ header .header-menu ul a.dropdown-anchor:after {
   width: 16px;
   height: 12px;
   position: absolute;
-  top: 4px;
+  top: 7px;
   right: -23px;
   background: black;
 }
@@ -416,9 +416,6 @@ header .slicknav_menu {
   display: none;
   padding: 0;
   background: none;
-  -webkit-box-shadow: 0px 2px 15px -4px #000000;
-  -moz-box-shadow: 0px 2px 15px -4px #000000;
-  box-shadow: 0px 2px 15px -4px #000000;
 }
 @media (max-width: 600px) {
   header .slicknav_menu {
@@ -453,6 +450,7 @@ header.fixed {
 }
 header.fixed #header {
   width: 100%;
+  padding: 3px 15px;
   position: fixed;
   background: #ffffff;
   top: 0;
