@@ -1,3 +1,4 @@
+/*Variables and Mixins*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -192,7 +193,8 @@ p {
 header {
   padding: 0 15px;
   z-index: 1000;
-  /*��������� ����*/
+  /*Mobile menu*/
+
 }
 @media (max-width: 600px) {
   header {
@@ -428,7 +430,7 @@ header .slicknav_menu .slicknav_brand {
   background: url('../img/logo.png') no-repeat 0 0;
   background-size: cover;
 }
-/*����� ��� ���������*/
+/*Fixed Header*/
 header.fixed {
   width: 100%;
   position: fixed;
@@ -468,20 +470,29 @@ header.fixed .logo-menu-container .header-menu-container {
   }
 }
 main {
-  /*�������*/
-  /*� ��������*/
-  /*�������*/
-  /*������*/
+  /*Slider*/
+
+  /*About block*/
+
+  /*Clients block*/
+
+  /*Services block*/
+
   /*SEO Text*/
+
 }
 main .slider-container-full-width {
-  background: url('../img/slider_bg.jpg') repeat-x 50% 0;
+  background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
 }
 @media (max-width: 600px) {
   main .slider-container-full-width {
     background-position: 50% -81px;
     margin-top: 60px;
   }
+}
+main .slider-container-full-width .container-center-wrapper {
+  max-width: 1920px;
+  width: 100%;
 }
 main .slider .slide {
   width: 100%;
@@ -564,7 +575,7 @@ main .about-company .about-company_text {
 }
 main .about-company .download_presentation {
   display: block;
-  margin: 55px 0 0 0 ;
+  margin: 55px 0 60px 0 ;
   padding: 0 0 0 40px;
   font-size: 14px;
   font-style: italic;
@@ -600,6 +611,9 @@ main .company-features {
     padding-top: 50px;
     margin: 0 auto;
   }
+}
+@media (max-width: 450px) {
+  
 }
 main .company-features .left-col {
   float: right;
@@ -809,7 +823,7 @@ main .seo-text-container-full-width {
   background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
 }
 main .seo-text-container-full-width .left-column {
   float: left;
@@ -843,4 +857,30 @@ main .seo-text-container-full-width a:hover {
 }
 main .seo-text-container-full-width a:active {
   color: #399799;
+}
+footer .logo-copyright {
+  float: left;
+}
+footer .logo-copyright .footer-logo {
+  width: 225px;
+  height: 67px;
+  background: url('../img/logo_footer.png') no-repeat 0 top;
+}
+footer .logo-copyright .copyright {
+  color: #898989;
+}
+footer .social-sharing {
+  float: right;
+}
+footer .social-sharing ul {
+  list-style: none;
+}
+footer .social-sharing ul li {
+  display: inline-block;
+}
+footer .social-sharing ul a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: red;
 }

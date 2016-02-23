@@ -248,7 +248,7 @@ header {
   }
 
 
-/*Мобильное меню*/
+/*Mobile menu*/
   .slicknav_menu{
     display: none;
     padding: 0;
@@ -279,7 +279,7 @@ header {
 }
 
 
-/*Хедер при прокрутке*/
+/*Fixed Header*/
 header.fixed {
   width: 100%;
   position: fixed;
@@ -320,12 +320,16 @@ header.fixed {
 main{
 
 
-  /*Слайдер*/
+  /*Slider*/
   .slider-container-full-width{
-    background: url('../img/slider_bg.jpg') repeat-x 50% 0;
+    background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
     @media (max-width: 600px) {
       background-position: 50% -81px;
       margin-top: 60px;
+    }
+    .container-center-wrapper{
+      max-width: 1920px;
+        width: 100%;
     }
   }
   .slider{
@@ -370,7 +374,7 @@ main{
   }
 
 
-  /*О компании*/
+  /*About block*/
   .about-company-container-full-width{
     padding: 0 15px;
   }
@@ -396,7 +400,7 @@ main{
     }
     .download_presentation{
       display: block;
-      margin: 55px 0 0 0 ;
+      margin: 55px 0 60px 0 ;
       padding: 0 0 0 40px;
       font-size: 14px;
       font-style: italic;
@@ -483,7 +487,7 @@ main{
   }
 
 
-  /*Клиенты*/
+  /*Clients block*/
   .our-clients-container-full-width{
     background: url('../img/clients_bg.jpg') repeat 50% 0;
     padding: 0.1% 15px 3% 15px;
@@ -503,7 +507,7 @@ main{
   }
 
 
-  /*Услуги*/
+  /*Services block*/
   .services-container-full-width{
     padding: 0 15px;
     .service-item{
@@ -619,6 +623,35 @@ main{
     }
     a{
       .link-colors(@light-green, @black);
+    }
+  }
+}
+
+footer{
+  .logo-copyright{
+    float:left;
+    .footer-logo{
+      width: 225px;
+      height: 67px;
+      background:  url('../img/logo_footer.png') no-repeat 0 top;
+    }
+    .copyright{
+      color: #898989;
+    }
+  }
+  .social-sharing{
+    float: right;
+    ul{
+      list-style: none;
+      li{
+        display: inline-block;
+      }
+      a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: red;
+      }
     }
   }
 }
