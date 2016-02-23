@@ -222,7 +222,7 @@ header {
     padding: 20px;
     background-color: @light-green;
     @media (max-width: 950px) {
-      top: 150px;
+      top: 149px;
       left: 50%;
       margin-left: -282px;
     }
@@ -258,6 +258,7 @@ header {
     display: none;
     padding: 0;
     background: none;
+    .box-shadow(0px 2px 15px -4px @black);
 
     @media (max-width: 600px) {
       display: block;
@@ -286,40 +287,50 @@ header {
 
 /*Fixed Header*/
 header.fixed {
-  width: 100%;
-  position: fixed;
-  background: @white;
-  top: 0;
-  left: 0;
-  .logo-menu-container {
-    height: 60px;
-    .logo-pic {
+  padding: 75px 0;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+  #header {
+    width: 100%;
+    position: fixed;
+    background: @white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .logo-menu-container {
       height: 60px;
-      width: 200px;
-      position: static;
-      float: left;
-      margin: 0;
-      @media (max-width: 950px) {
+      .box-shadow(0px 2px 15px -4px @black);
+      .logo-pic {
+        height: 60px;
+        width: 200px;
+        position: static;
+        float: left;
+        margin: 0;
+        @media (max-width: 950px) {
+          display: none;
+        }
+      }
+      .header-phone-btn {
         display: none;
       }
-    }
-    .header-phone-btn {
-      display: none;
-    }
-    .header-menu-container {
-      position: absolute;
-      max-width: 100%;
-      top: 16px;
-      margin: 0;
-    }
-    .header-menu ul li:not(:last-child) {
-      @media (max-width: 900px) {
-        margin-right: 7%;
+      .header-menu-container {
+        position: absolute;
+        max-width: 100%;
+        top: 16px;
+        margin: 0;
+      }
+      .header-menu ul li:not(:last-child) {
+        @media (max-width: 900px) {
+          margin-right: 7%;
+        }
+      }
+      .header-menu-dropout {
+        top: 57px;
       }
     }
   }
 }
-
 main{
 
 
@@ -358,28 +369,7 @@ main{
         .highlighted{
           font-weight: 700;
           text-decoration: underline;
-        }/*
-        @media (max-width: 950px) {
-          font-size: 45px;
         }
-        @media (max-width: 850px) {
-          font-size: 42px;
-        }
-        @media (max-width: 800px) {
-          font-size: 33px;
-        }
-        @media (max-width: 650px) {
-          font-size: 35px;
-        }
-        @media (max-width: 550px) {
-          font-size: 27px;
-        }
-        @media (max-width: 450px) {
-          font-size: 22px;
-        }
-        @media (max-width: 450px) {
-          font-size: 20px;
-        }*/
       }
     }
   }

@@ -367,7 +367,7 @@ header .header-menu-dropout {
 }
 @media (max-width: 950px) {
   header .header-menu-dropout {
-    top: 150px;
+    top: 149px;
     left: 50%;
     margin-left: -282px;
   }
@@ -416,6 +416,9 @@ header .slicknav_menu {
   display: none;
   padding: 0;
   background: none;
+  -webkit-box-shadow: 0px 2px 15px -4px #000000;
+  -moz-box-shadow: 0px 2px 15px -4px #000000;
+  box-shadow: 0px 2px 15px -4px #000000;
 }
 @media (max-width: 600px) {
   header .slicknav_menu {
@@ -441,16 +444,28 @@ header .slicknav_menu .slicknav_brand {
 }
 /*Fixed Header*/
 header.fixed {
+  padding: 75px 0;
+}
+@media (max-width: 600px) {
+  header.fixed {
+    padding: 0;
+  }
+}
+header.fixed #header {
   width: 100%;
   position: fixed;
   background: #ffffff;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
-header.fixed .logo-menu-container {
+header.fixed #header .logo-menu-container {
   height: 60px;
+  -webkit-box-shadow: 0px 2px 15px -4px #000000;
+  -moz-box-shadow: 0px 2px 15px -4px #000000;
+  box-shadow: 0px 2px 15px -4px #000000;
 }
-header.fixed .logo-menu-container .logo-pic {
+header.fixed #header .logo-menu-container .logo-pic {
   height: 60px;
   width: 200px;
   position: static;
@@ -458,23 +473,26 @@ header.fixed .logo-menu-container .logo-pic {
   margin: 0;
 }
 @media (max-width: 950px) {
-  header.fixed .logo-menu-container .logo-pic {
+  header.fixed #header .logo-menu-container .logo-pic {
     display: none;
   }
 }
-header.fixed .logo-menu-container .header-phone-btn {
+header.fixed #header .logo-menu-container .header-phone-btn {
   display: none;
 }
-header.fixed .logo-menu-container .header-menu-container {
+header.fixed #header .logo-menu-container .header-menu-container {
   position: absolute;
   max-width: 100%;
   top: 16px;
   margin: 0;
 }
 @media (max-width: 900px) {
-  header.fixed .logo-menu-container .header-menu ul li:not(:last-child) {
+  header.fixed #header .logo-menu-container .header-menu ul li:not(:last-child) {
     margin-right: 7%;
   }
+}
+header.fixed #header .logo-menu-container .header-menu-dropout {
+  top: 57px;
 }
 main {
   /*Slider*/
@@ -522,29 +540,6 @@ main .slider .slide .slide-title {
   font-family: 'Bitter', serif;
   display: inline-block;
   vertical-align: middle;
-  /*
-        @media (max-width: 950px) {
-          font-size: 45px;
-        }
-        @media (max-width: 850px) {
-          font-size: 42px;
-        }
-        @media (max-width: 800px) {
-          font-size: 33px;
-        }
-        @media (max-width: 650px) {
-          font-size: 35px;
-        }
-        @media (max-width: 550px) {
-          font-size: 27px;
-        }
-        @media (max-width: 450px) {
-          font-size: 22px;
-        }
-        @media (max-width: 450px) {
-          font-size: 20px;
-        }*/
-
 }
 main .slider .slide .slide-title .highlighted {
   font-weight: 700;
