@@ -684,7 +684,7 @@ main .company-features .feature-item {
 }
 @media (max-width: 450px) {
   main .company-features .feature-item {
-    width: auto;
+    width: 100%;
     min-height: 51px;
     margin: 15px 0;
     display: inline-block;
