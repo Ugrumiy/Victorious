@@ -29,6 +29,7 @@
 
 
 /*Variables and Mixins*/
+/*_______________*/
 @light-green: #399799;
 @light-gray: #f9f9f9;
 @black: #000000;
@@ -98,6 +99,7 @@
 
 
 /*General CSS*/
+/*_______________*/
 *:focus {
   outline: none;
 }
@@ -137,6 +139,7 @@ p{
 
 
 /*Header*/
+/*_______________*/
 #header {
   padding: 0 15px;
   z-index: 1000;
@@ -286,6 +289,7 @@ p{
   }
 
 /*Mobile menu*/
+/*_______________*/
   .slicknav_menu{
     display: none;
     padding: 0;
@@ -316,6 +320,7 @@ p{
 
 
 /*Fixed Header*/
+/*_______________*/
 header.fixed {
   padding: 75px 0;
   @media (max-width: 600px) {
@@ -383,7 +388,8 @@ main{
     }
   }
 
-  /*Slider*/
+/*Slider*/
+/*_______________*/
   .slider-container-full-width{
     background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
     @media (max-width: 600px) {
@@ -424,7 +430,8 @@ main{
   }
 
 
-  /*About block*/
+/*About block*/
+/*_______________*/
   .about-company-container-full-width{
     padding: 0 15px;
   }
@@ -544,7 +551,8 @@ main{
   }
 
 
-  /*Clients block*/
+/*Clients block*/
+/*_______________*/
   .our-clients-container-full-width{
     background: url('../img/clients_bg.jpg') repeat 50% 0;
     padding: 0.1% 15px 4% 15px;
@@ -564,7 +572,8 @@ main{
   }
 
 
-  /*Services block*/
+/*Services block*/
+/*_______________*/
   .services-container-full-width{
     padding: 0 15px;
      @media (max-width: 900px) {
@@ -657,7 +666,8 @@ main{
   }
 
 
-  /*SEO Text*/
+/*SEO Text*/
+/*_______________*/
   .seo-text-container-full-width{
     padding: 0 15px 4% 15px;
     border-top: 1px solid transparent;
@@ -693,6 +703,10 @@ main{
   }
 }
 
+
+
+/*Footer*/
+/*_______________*/
 footer{
   padding: 65px 15px;
   .logo-copyright{
@@ -739,9 +753,13 @@ footer{
   }
 }
 
-
+/*Contacts*/
+/*_______________*/
 .contacts-container-full-width{
   padding: 0 15px;
+  @media (max-width: 600px) {
+    padding:0;
+  }
 }
 .contact-info_map{
   .contact-info{
@@ -751,6 +769,7 @@ footer{
       float: none;
       width: 100%;
       margin-bottom: 40px;
+      padding: 0 15px;
     }
     p{
       margin: 15px 0;
@@ -783,13 +802,16 @@ footer{
   }
 }
 .contactus-form{
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
   .input-group.text{
     float: left;
     margin-bottom: 3%;
     &:not(:first-child){
       margin-left: 6.5%;
     }
-    .input-group-text(@light-gray,29%,40px);
+    .input-group-text(@light-gray, 29%, 40px);
     @media (max-width: 600px) {
       float: none;
       width: 100%;
@@ -797,7 +819,7 @@ footer{
     }
   }
   .input-group.textarea{
-    .input-group-text(@light-gray,100%,125px);
+    .input-group-text(@light-gray, 100%, 125px);
     textarea{
       padding: 10px;
       resize: none;

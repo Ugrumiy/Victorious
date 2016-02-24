@@ -149,7 +149,9 @@ a img {
   font-style: italic;
 }
 /*Variables and Mixins*/
+/*_______________*/
 /*General CSS*/
+/*_______________*/
 *:focus {
   outline: none;
 }
@@ -188,10 +190,12 @@ p {
   margin: 0 auto;
 }
 /*Header*/
+/*_______________*/
 #header {
   padding: 0 15px;
   z-index: 1000;
   /*Mobile menu*/
+  /*_______________*/
 }
 @media (max-width: 600px) {
   #header {
@@ -438,6 +442,7 @@ p {
   background-size: cover;
 }
 /*Fixed Header*/
+/*_______________*/
 header.fixed {
   padding: 75px 0;
 }
@@ -497,10 +502,15 @@ header .inner-page-pattern-bg {
 }
 main {
   /*Slider*/
+  /*_______________*/
   /*About block*/
+  /*_______________*/
   /*Clients block*/
+  /*_______________*/
   /*Services block*/
+  /*_______________*/
   /*SEO Text*/
+  /*_______________*/
 }
 main .breadcrumbs {
   list-style: none;
@@ -908,6 +918,8 @@ main .seo-text-container-full-width a:hover {
 main .seo-text-container-full-width a:active {
   color: #399799;
 }
+/*Footer*/
+/*_______________*/
 footer {
   padding: 65px 15px;
 }
@@ -954,8 +966,15 @@ footer .social-sharing ul a {
   height: 40px;
   background: red;
 }
+/*Contacts*/
+/*_______________*/
 .contacts-container-full-width {
   padding: 0 15px;
+}
+@media (max-width: 600px) {
+  .contacts-container-full-width {
+    padding: 0;
+  }
 }
 .contact-info_map .contact-info {
   width: 36%;
@@ -966,6 +985,7 @@ footer .social-sharing ul a {
     float: none;
     width: 100%;
     margin-bottom: 40px;
+    padding: 0 15px;
   }
 }
 .contact-info_map .contact-info p {
@@ -1016,6 +1036,11 @@ footer .social-sharing ul a {
     float: none;
     width: 100%;
     margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .contactus-form {
+    padding: 0 15px;
   }
 }
 .contactus-form .input-group.text {
