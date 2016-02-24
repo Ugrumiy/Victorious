@@ -845,7 +845,11 @@ footer{
     width: 200px;
     float: left;
     margin-right: 10%;
-
+    @media (max-width: 600px) {
+      float: none;
+      width: 100%;
+      margin-right: 0 !important;
+    }
     .name-position{
       margin:0 0 20px 0;
     }
@@ -861,7 +865,7 @@ footer{
     }
     .company-logo{
       display: block;
-      width: 100%;
+      width: 200px;
       min-height: 60px;
       margin: 10px 0 15px 0;
       background: red;
@@ -871,6 +875,10 @@ footer{
     .feedback-text{
       position: relative;
       padding-top: 43px;
+      @media (max-width: 600px) {
+        padding-top: 20px;
+      }
+      /*Styles for bracket-symbols*/
       .top-bracket {
         position: relative;
         width: 100%;
@@ -883,6 +891,22 @@ footer{
           top: -20px;
           left: -40px;
           background: blue;
+          @media (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+      &:before {
+        content: '';
+        display: none;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: green;
+        @media (max-width: 600px) {
+          display: block;
         }
       }
       &:after{
@@ -892,8 +916,12 @@ footer{
         height: 35px;
         position: absolute;
         bottom:-45px;
-        right:0px;
+        right: 0;
         background: blue;
+        @media (max-width: 600px) {
+          left: 0;
+          background-position: 0 0;
+        }
       }
     }
   }

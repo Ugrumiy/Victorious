@@ -1167,6 +1167,13 @@ footer .social-sharing ul a {
   float: left;
   margin-right: 10%;
 }
+@media (max-width: 600px) {
+  .feedback-item .personal-info {
+    float: none;
+    width: 100%;
+    margin-right: 0 !important;
+  }
+}
 .feedback-item .personal-info .name-position {
   margin: 0 0 20px 0;
 }
@@ -1182,7 +1189,7 @@ footer .social-sharing ul a {
 }
 .feedback-item .personal-info .company-logo {
   display: block;
-  width: 100%;
+  width: 200px;
   min-height: 60px;
   margin: 10px 0 15px 0;
   background: red;
@@ -1190,6 +1197,12 @@ footer .social-sharing ul a {
 .feedback-item .feedback-text-container .feedback-text {
   position: relative;
   padding-top: 43px;
+  /*Styles for bracket-symbols*/
+}
+@media (max-width: 600px) {
+  .feedback-item .feedback-text-container .feedback-text {
+    padding-top: 20px;
+  }
 }
 .feedback-item .feedback-text-container .feedback-text .top-bracket {
   position: relative;
@@ -1205,6 +1218,26 @@ footer .social-sharing ul a {
   left: -40px;
   background: blue;
 }
+@media (max-width: 600px) {
+  .feedback-item .feedback-text-container .feedback-text .top-bracket:before {
+    display: none;
+  }
+}
+.feedback-item .feedback-text-container .feedback-text:before {
+  content: '';
+  display: none;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: green;
+}
+@media (max-width: 600px) {
+  .feedback-item .feedback-text-container .feedback-text:before {
+    display: block;
+  }
+}
 .feedback-item .feedback-text-container .feedback-text:after {
   content: '';
   display: block;
@@ -1212,6 +1245,12 @@ footer .social-sharing ul a {
   height: 35px;
   position: absolute;
   bottom: -45px;
-  right: 0px;
+  right: 0;
   background: blue;
+}
+@media (max-width: 600px) {
+  .feedback-item .feedback-text-container .feedback-text:after {
+    left: 0;
+    background-position: 0 0;
+  }
 }
