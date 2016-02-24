@@ -740,10 +740,18 @@ footer{
 }
 
 
+.contacts-container-full-width{
+  padding: 0 15px;
+}
 .contact-info_map{
   .contact-info{
     width: 36%;
     float: left;
+    @media (max-width: 600px) {
+      float: none;
+      width: 100%;
+      margin-bottom: 40px;
+    }
     p{
       margin: 15px 0;
       &:first-child{
@@ -766,16 +774,26 @@ footer{
     height: 270px;
     margin-left: 6%;
     float: right;
-   background: red;
+    background: red;
+    @media (max-width: 600px) {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 .contactus-form{
   .input-group.text{
     float: left;
     margin-bottom: 3%;
-    .input-group-text(@light-gray,29%,40px);
     &:not(:first-child){
       margin-left: 6.5%;
+    }
+    .input-group-text(@light-gray,29%,40px);
+    @media (max-width: 600px) {
+      float: none;
+      width: 100%;
+      margin-left: 0 !important;
     }
   }
   .input-group.textarea{
@@ -788,5 +806,9 @@ footer{
     .placeholder{
       line-height: 1.2;
     }
+  }
+  input[type="submit"]{
+    .btn(@light-green);
+    margin: 3% 0 0 0;
   }
 }

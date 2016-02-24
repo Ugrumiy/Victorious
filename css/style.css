@@ -954,9 +954,19 @@ footer .social-sharing ul a {
   height: 40px;
   background: red;
 }
+.contacts-container-full-width {
+  padding: 0 15px;
+}
 .contact-info_map .contact-info {
   width: 36%;
   float: left;
+}
+@media (max-width: 600px) {
+  .contact-info_map .contact-info {
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 .contact-info_map .contact-info p {
   margin: 15px 0;
@@ -1001,12 +1011,22 @@ footer .social-sharing ul a {
   float: right;
   background: red;
 }
+@media (max-width: 600px) {
+  .contact-info_map .map-container {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .contactus-form .input-group.text {
   float: left;
   margin-bottom: 3%;
   width: 29%;
   height: 40px;
   position: relative;
+}
+.contactus-form .input-group.text:not(:first-child) {
+  margin-left: 6.5%;
 }
 .contactus-form .input-group.text input,
 .contactus-form .input-group.text textarea {
@@ -1039,8 +1059,12 @@ footer .social-sharing ul a {
 .contactus-form .input-group.text.active .placeholder {
   display: none;
 }
-.contactus-form .input-group.text:not(:first-child) {
-  margin-left: 6.5%;
+@media (max-width: 600px) {
+  .contactus-form .input-group.text {
+    float: none;
+    width: 100%;
+    margin-left: 0 !important;
+  }
 }
 .contactus-form .input-group.textarea {
   width: 100%;
@@ -1085,4 +1109,27 @@ footer .social-sharing ul a {
 }
 .contactus-form .input-group.textarea .placeholder {
   line-height: 1.2;
+}
+.contactus-form input[type="submit"] {
+  color: #399799;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #399799;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin: 3% 0 0 0;
+}
+.contactus-form input[type="submit"]:hover {
+  background: #399799;
+  color: #ffffff;
 }
