@@ -108,28 +108,32 @@
             <div class="contact-info_map clearfix">
                 <div class="contact-info">
                     <p>С удовольствием ответим на все ваши вопросы по телефону или электронной почте.</p>
-                    <p><a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a></p>
-                    <p>Электронная почта:<a class="phone-number" href="mailto:mail@victorious.pro">mail@victorious.pro</a></p>
-                    <address>Адрес офиса:<br>г. Москва, ул. Тестовая, 1, офис 120.</address>
+                    <p>Телефон:<br><b><a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a></b></p>
+                    <p>Электронная почта:<br><a href="mailto:mail@victorious.pro">mail@victorious.pro</a></p>
+                    <address>Адрес офиса:<br><b>г. Москва, ул. Тестовая, 1, офис 120.</b></address>
                 </div>
                 <div class="map-container"></div>
             </div>
-            <form action="get" id="contactus-form">
-                <div class="input-group-container">
-                    <input name="username" type="text"/>
-                    <div class="placeholder"></div>
+            <h2>Отправить нам сообщение</h2>
+            <form action="get" id="contactus-form" class="contactus-form clearfix">
+                <div class="clearfix">
+                    <div class="input-group text">
+                        <input name="username" type="text"/>
+                        <div class="js_placeholder placeholder">Ваше имя:</div>
+                    </div>
+                    <div class="input-group text">
+                        <input name="userphone" type="text"/>
+                        <div class="js_placeholder placeholder">Номер телефона:</div>
+                    </div>
+                    <div class="input-group text">
+                        <input name="usermail" type="text"/>
+                        <div class="js_placeholder placeholder">E-mail:</div>
+                    </div>
+
                 </div>
-                <div class="input-group-container">
-                    <input name="userphone" type="text"/>
-                    <div class="placeholder"></div>
-                </div>
-                <div class="input-group-container">
-                    <input name="usermail" type="text"/>
-                    <div class="placeholder"></div>
-                </div>
-                <div class="input-group-container">
+                <div class="input-group textarea">
                     <textarea name="usermessage" id="" cols="30" rows="10"></textarea>
-                    <div class="placeholder"></div>
+                    <div class="js_placeholder placeholder">Сообщение:</div>
                 </div>
                 <input type="submit"/>
             </form>
@@ -157,50 +161,18 @@
 
 <script>
 $(function() {
-    $(document).on('scroll', function (e) {
-        if ($(this).scrollTop() > 70) {
-            $('header').addClass('fixed');
-        }
-        else {
-            $('header').removeClass('fixed');
+    $("#contactus-form").find('.js_placeholder').on('click', function(){
+        $(this).parent().addClass('active');
+        $(this).prev().focus();
+    })
+    $("#contactus-form").find('input[type="text"], textarea').on('focus change input', function(){
+        $(this).parent().addClass('active');
+    }).on('blur',function(){
+        if ($(this).val() == ''){
+            $(this).parent().removeClass('active');
         }
     })
 
-    $headerContainer = $('#header');
-    $('#menu-mobile').slicknav({
-        label: '',
-        duration: 1000,
-        prependTo: $headerContainer.find('.container-center-wrapper'),
-        brand: ' ',
-
-    });
-
-    $('.slider').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
-        adaptiveHeight: true,
-
-    });
-
-    $('#header-menu-dropdown-anchor').on('click', function(event){
-        event.preventDefault();
-        var dropout = $('#header-menu-dropout');
-        if(dropout.hasClass('active')) {
-            dropout.fadeOut(200).removeClass('active');
-        }
-        else {
-            dropout.fadeIn(200).addClass('active');
-        }
-    })
-    
-    $('.slide').flowtype({
-       minimum   : 320,
-       maximum   : 1200,
-       minFont   : 17,
-       maxFont   : 50,
-       fontRatio : 25
-    });
 });
 </script>
 </body>
