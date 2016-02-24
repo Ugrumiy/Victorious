@@ -845,6 +845,7 @@ footer{
     width: 200px;
     float: left;
     margin-right: 10%;
+    position: relative;
     @media (max-width: 600px) {
       float: none;
       width: 100%;
@@ -852,6 +853,15 @@ footer{
     }
     .name-position{
       margin:0 0 20px 0;
+      @media (max-width: 600px) {
+        margin: 0;
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        padding: 5px;
+        color: @white;
+        background: rgba(0,0,0, 0.5);
+      }
     }
     .position{
       font-size: 19px;

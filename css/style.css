@@ -1,3 +1,4 @@
+/*Variables and Mixins*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -195,7 +196,9 @@ p {
   padding: 0 15px;
   z-index: 1000;
   /*Mobile menu*/
+
   /*_______________*/
+
 }
 @media (max-width: 600px) {
   #header {
@@ -502,15 +505,25 @@ header .inner-page-pattern-bg {
 }
 main {
   /*Slider*/
+
   /*_______________*/
+
   /*About block*/
+
   /*_______________*/
+
   /*Clients block*/
+
   /*_______________*/
+
   /*Services block*/
+
   /*_______________*/
+
   /*SEO Text*/
+
   /*_______________*/
+
 }
 main .breadcrumbs {
   list-style: none;
@@ -655,6 +668,9 @@ main .company-features {
     padding-top: 50px;
     margin: 0 auto;
   }
+}
+@media (max-width: 450px) {
+  
 }
 main .company-features .left-col {
   float: right;
@@ -877,7 +893,7 @@ main .seo-text-container-full-width {
   background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
 }
 main .seo-text-container-full-width .left-column {
   float: left;
@@ -1166,6 +1182,7 @@ footer .social-sharing ul a {
   width: 200px;
   float: left;
   margin-right: 10%;
+  position: relative;
 }
 @media (max-width: 600px) {
   .feedback-item .personal-info {
@@ -1176,6 +1193,17 @@ footer .social-sharing ul a {
 }
 .feedback-item .personal-info .name-position {
   margin: 0 0 20px 0;
+}
+@media (max-width: 600px) {
+  .feedback-item .personal-info .name-position {
+    margin: 0;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    padding: 5px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 .feedback-item .personal-info .position {
   font-size: 19px;
@@ -1198,6 +1226,7 @@ footer .social-sharing ul a {
   position: relative;
   padding-top: 43px;
   /*Styles for bracket-symbols*/
+
 }
 @media (max-width: 600px) {
   .feedback-item .feedback-text-container .feedback-text {
