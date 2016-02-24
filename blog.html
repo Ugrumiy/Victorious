@@ -104,31 +104,31 @@
               <li>&#62;</li>
               <li class="current-active">Контакты</li>
           </ul>
-          <h1>Корпоративный блог</h1>
-            <div class="blog-list-container-clearfix">
-                <div class="blog-items">
-                    <div class="blog-item clearfix">
-                        <a href=""><h3>Продвижение сайтов в 2016 году и база новостников из ГГЛ</h3></a>
-                        <div class="blog-item-date">22.02.2016</div>
-                        <img src="" alt="" class="blog-item-pic"/>
-                        <p class="blog-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
-                    </div>
-                </div>
+            <div class="blog-list-container clearfix">
+                <h1>Корпоративный блог</h1>
                 <div class="blog-filter">
-                    <div class="blog-filter-title"></div>
-                    <form action="get" id="filter-form">
+                    <div class="blog-filter-title">Категории материалов:</div>
+                    <form action="get" id="filter-form" class="filter-form">
                         <ul class="theme-filter">
-                            <li><label class="active"><input type="checkbox"/>Поисковое продвижение</label></li>
-                            <li><label><input type="checkbox"/>Разработка сайтов</label></li>
+                            <li><label><input type="checkbox" checked/>Поисковое продвижение</label></li>
+                           <!-- <li><label><input type="checkbox" checked/>Разработка сайтов</label></li>
                             <li><label><input type="checkbox"/>Управление проектами</label></li>
-                            <li><label><input type="checkbox"/>Продвижение в социальных сетях</label></li>
+                            <li><label><input type="checkbox"/>Продвижение в социальных сетях</label></li>-->
                         </ul>
                     </form>
-                    <form action="get" id="search-form">
+                    <div class="blog-filter-title">Поиск материалов:</div>
+                    <form action="get" id="search-form" class="search-form">
                         <input type="search">
                     </form>
                 </div>
-
+                <div class="blog-items">
+                    <div class="blog-item clearfix">
+                        <a class="blog-item-title" href=""><h3>Продвижение сайтов в 2016 году и база новостников из ГГЛ</h3></a>
+                        <div class="blog-item-date">22.02.2016</div>
+                        <img src="img/example1.jpg" alt="" class="blog-item-pic"/>
+                        <p class="blog-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -154,18 +154,14 @@
 
 <script>
 $(function() {
-    $("#contactus-form").find('.js_placeholder').on('click', function(){
-        $(this).parent().addClass('active');
-        $(this).prev().focus();
+    $(document).on('ready', function(){
+        $('#filter-form').find('input[type="checkbox"]:checked').parent().addClass('active');
+        $('#filter-form').find('label').on('click',function(){
+           
+                $(this).find('input[type="checkbox"]').prop('checked','false');
+               
+        })
     })
-    $("#contactus-form").find('input[type="text"], textarea').on('focus change input', function(){
-        $(this).parent().addClass('active');
-    }).on('blur',function(){
-        if ($(this).val() == ''){
-            $(this).parent().removeClass('active');
-        }
-    })
-
 });
 </script>
 </body>

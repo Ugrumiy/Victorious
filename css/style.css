@@ -1283,3 +1283,108 @@ footer .social-sharing ul a {
     background-position: 0 0;
   }
 }
+/*blog*/
+.blog-list-container .blog-items {
+  float: left;
+  width: 70%;
+}
+.blog-list-container .blog-item .blog-item-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.blog-list-container .blog-item .blog-item-title:link {
+  color: #399799;
+}
+.blog-list-container .blog-item .blog-item-title:visited {
+  color: #399799;
+}
+.blog-list-container .blog-item .blog-item-title:hover {
+  color: #000000;
+}
+.blog-list-container .blog-item .blog-item-title:active {
+  color: #399799;
+}
+.blog-list-container .blog-item .blog-item-date {
+  font-size: 13px;
+  color: #3c3c3c;
+  margin-bottom: 25px;
+}
+.blog-list-container .blog-item .blog-item-pic {
+  display: block;
+  float: left;
+  width: 41%;
+  max-height: 150px;
+  margin-right: 3%;
+  background: red;
+}
+.blog-list-container .blog-item .blog-item-text {
+  font-size: 14px;
+  margin-top: 0;
+}
+.blog-list-container .blog-filter {
+  float: right;
+  width: 30%;
+}
+.blog-list-container .blog-filter .blog-filter-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter {
+  list-style: none;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter li {
+  margin: 10px 0;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter label {
+  display: inline-block;
+  font-size: 15px;
+  color: #979797;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #979797;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0.4em 1.2em;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter label:hover {
+  background: #979797;
+  color: #ffffff;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter label.active {
+  color: #399799;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #399799;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0.4em 1.2em;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter label.active:hover {
+  background: #399799;
+  color: #ffffff;
+}
