@@ -111,9 +111,9 @@
                     <form action="get" id="filter-form" class="filter-form">
                         <ul class="theme-filter">
                             <li><label><input type="checkbox" checked/>Поисковое продвижение</label></li>
-                           <!-- <li><label><input type="checkbox" checked/>Разработка сайтов</label></li>
+                            <li><label><input type="checkbox" checked/>Разработка сайтов</label></li>
                             <li><label><input type="checkbox"/>Управление проектами</label></li>
-                            <li><label><input type="checkbox"/>Продвижение в социальных сетях</label></li>-->
+                            <li><label><input type="checkbox"/>Продвижение в социальных сетях</label></li>
                         </ul>
                     </form>
                     <div class="blog-filter-title">Поиск материалов:</div>
@@ -157,13 +157,8 @@ $(function() {
     $(document).on('ready', function(){
         $('#filter-form').find('input[type="checkbox"]:checked').parent().addClass('active');
         $('#filter-form').find('input[type="checkbox"]').on('change',function(){
-            if($(this).parent().hasClass('active')){
-                $(this).parent().removeClass('active');
-            }
-            else{
-                $(this).parent().addClass('active');
-
-            }
+            $(this).parent().toggleClass('active');
+            //$('#filter-form').submit();
         })
     })
 });
