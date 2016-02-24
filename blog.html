@@ -155,8 +155,9 @@
 <script>
 $(function() {
     $(document).on('ready', function(){
-        $('#filter-form').find('input[type="checkbox"]:checked').parent().addClass('active');
-        $('#filter-form').find('input[type="checkbox"]').on('change',function(){
+        var $checkboxes = $('#filter-form').find('input[type="checkbox"]');
+        $checkboxes.filter(':checked').parent().addClass('active');
+        $checkboxes.on('change',function(){
             $(this).parent().toggleClass('active');
             //$('#filter-form').submit();
         })
