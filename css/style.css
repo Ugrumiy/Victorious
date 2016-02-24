@@ -516,6 +516,11 @@ main .breadcrumbs {
   list-style: none;
   margin-top: 35px;
 }
+@media (max-width: 600px) {
+  main .breadcrumbs {
+    padding: 0 15px;
+  }
+}
 main .breadcrumbs li {
   display: inline-block;
 }
@@ -1157,4 +1162,34 @@ footer .social-sharing ul a {
 .contactus-form input[type="submit"]:hover {
   background: #399799;
   color: #ffffff;
+}
+.feedback-item .personal-info {
+  width: 17%;
+  min-width: 200px;
+  float: left;
+  margin-right: 10%;
+}
+.feedback-item .personal-info .name-position {
+  margin: 0 0 20px 0;
+}
+.feedback-item .personal-info .position {
+  font-size: 19px;
+  font-weight: 700;
+}
+.feedback-item .personal-info .photo {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  background: red;
+}
+.feedback-item .personal-info .company-logo {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  margin-top: 10px;
+  background: red;
+}
+.feedback-item .feedback-text-container {
+  width: 73%;
+  float: right;
 }
