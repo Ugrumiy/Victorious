@@ -1,0 +1,203 @@
+<?php
+// @TODO: make sure break break end the loop
+// probably need a return instead
+$cycle = '';
+
+$html = '<ul class="breadcrumbs-list">';
+$breadcrumbs_0 = '<li class="breadcrumbs-item"><a class="breadcrumbs-link" href="/">Главная</a>&nbsp;&raquo;&nbsp;</li>';
+
+foreach ($site_map['header'] as $item => $link) {
+    $breadcrumbs_1 = '';
+    
+    // lvl 1 with sub
+    if (is_array($link)) {
+        if (isset($link['self_link'])) {
+            if (is_current_uri($link['self_link'])) {
+                $html .= $breadcrumbs_0;
+                $html .= '<li class="breadcrumbs-item active">'.$item.'</li>';
+                break;
+            }
+            else {
+                $breadcrumbs_1 .= '<li class="breadcrumbs-item"><a class="breadcrumbs-link" href="'.$link['self_link'].'">'.$item.'</a>&nbsp;&raquo;&nbsp;</li>';
+            }
+        }
+        else {
+            $breadcrumbs_1 .= '<li class="breadcrumbs-item">'.$item.'&nbsp;&raquo;&nbsp;</li>';
+        }
+        
+        foreach ($link as $item2 => $link2) {
+            $breadcrumbs_2 = '';
+            
+            // lvl 2 with sub
+            if (is_array($link2)) {
+                $cycle .= $item2.'<br>';
+                if (isset($link2['self_link'])) {
+                    if (is_current_uri($link2['self_link'])) {
+                        $html .= $breadcrumbs_1;
+                        $html .= $breadcrumbs_2;
+                        $html .= '<li class="breadcrumbs-item active">'.$item.'</li>';
+                        break;
+                    }
+                    else {
+                        $breadcrumbs_2 .= '<li class="breadcrumbs-item"><a class="breadcrumbs-link" href="'.$link2['self_link'].'">'.$item2.'</a>&nbsp;&raquo;&nbsp;</li>';
+                    }
+                }
+                else {
+                    $breadcrumbs_2 .= '<li class="breadcrumbs-item">'.$item2.'&nbsp;&raquo;&nbsp;</li>';
+                }
+                
+                foreach ($link2 as $item3 => $link3) {
+                    $breadcrumbs_3 = '';
+                
+                    if (is_current_uri($link3)) {
+                        $html .= $breadcrumbs_1;
+                        $html .= $breadcrumbs_2;
+                        $html .= $breadcrumbs_3;
+                        $html .= '<li class="breadcrumbs-item active">'.$item3.'</li>';
+                        break;
+                    }
+                }
+            }
+            // lvl 2 simple
+            else if (is_current_uri($link2)) {
+                $html .= $breadcrumbs_1;
+                $html .= $breadcrumbs_2;
+                $html .= '<li class="breadcrumbs-item active">'.$item2.'</li>';
+                break;
+            }
+        }
+    }
+    // lvl 1 simple
+    else if (is_current_uri($link)) {
+        $html .= $breadcrumbs_0;
+        $html .= '<li class="breadcrumbs-item active">'.$item.'</li>';
+        break;
+    }
+}
+
+$html .= '</ul>';
+
+echo $html;
+echo $cycle;
+
+function is_current_uri($uri) {
+    if (strcmp($uri, PAGE_URI) == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LIBMAIN
+
+
+$site_map = array(
+    //____________________
+    // Site header nav
+    
+    'header' => array(
+        'Рейтинги' =>'/top_castles.php',
+        'Главная' => '/',
+        'Новости' => '/news.php?section=all',
+        'Об игре' => array(
+            'self_link' => '/about.php',
+            'Особенности' => array(
+                'self_link' => '/about.php#about-features',
+                'Осады замков' => '/castle_siege.php',
+                'Кланы' => '/guilds.php',
+                'Свободный ПвЕ Контент' => '/pve_content.php',
+                'Системные требования' => '/system_requirements.php',
+                'Замки' => '/castles.php',
+                'Способности' => '/levelling.php',
+                'Мировые боссы' => '/world_bosses.php',
+            ),
+            'Новичкам' => array(
+                'Безопасность аккаунта' => '/acc_security.php',
+                'Экран игры' => '/game_screen.php',
+                'Управление персонажем' => '/controls.php',
+                'Первые шаги' => '/first_steps.php',
+                'Перемещения по миру' => '/transportation.php',
+            ),
+            'Расы' => array(
+                'self_link' => '/about.php#race-rotation',
+                'История Рас' => '/race_history.php',
+                'Демоны' => '/race_demon.php',
+                'Люди' => '/race_human.php',
+                'Эльфы' => '/race_elf.php',
+                'Гномы' => '/race_dwarf.php',
+            ),
+            'Классы' => array(
+                'self_link' => '/about.php#class-rotation',
+                'Варвар' => '/class_barbarian.php',
+                'Паладин' => '/class_paladin.php',
+                'Воин' => '/class_warrior.php',
+                'Следопыт' => '/class_ranger.php',
+                'Монах' => '/class_monk.php',
+                'Убийца' => '/class_rogue.php',
+                'Колдун' => '/class_mage.php',
+                'Жрец' => '/class_priest.php',
+                'Некромант' => '/class_necromancer.php',
+            ),
+            'PvP' => array(
+                'Система ПК' => '/pvp_content.php',
+                'Очки репутации' => '/reputation.php',
+            ),
+            'Прокачка экипировки' => array(
+                'Экипировка' => '/character_equipment.php',
+                'Зачарование' => '/enchantment.php',
+                'Инкрустация' => '/incrustation.php',
+                'Улучшение' => '/eq_improv.php',
+            ),
+        ),
+        'Медиа' => '/media.php',
+        'Форум' => 'http://forum.gamexp.ru/forumdisplay.php?f=721',
+        'Поддержка' => 'http://help.gamexp.ru/',
+        'Магазин' => 'http://shop.gamexp.ru/s3/',
+    ),
+    // specials are currently supported only in lvl 1 nav
+    'header_special' => array(
+        'Магазин' => 'store',
+    ),
+    //____________________
+    // Side shorten nav
+    
+    'side' => array(
+        'Осады замков' => '/castle_siege.php',
+        'Статистика замков' => '/top_castles.php',
+        'Кланы' => '/guilds.php',
+        'Свободный ПвЕ Контент' => '/pve_content.php',
+        'Системные требования' => '/system_requirements.php',
+        'Замки' => '/castles.php',
+        'Способности' => '/levelling.php',
+        'Мировые боссы' => '/world_bosses.php',
+    ),
+    //____________________
+    // Site footer nav
+    
+    'footer' => array(
+        'Новости' => array(
+            'Акции' => '/news.php?section=1',
+            'События' => '/news.php?section=2',
+        ),
+        'Об игре' => array(
+            'Особенности игры' => '/about.php',
+            'Системные требования' => '/system_requirements.php',
+            'Первые шаги' => '/first_steps.php',
+            'История одного воина' => '/a_story_of_a_warrior.php',
+        ),
+        'Медиа' => array(
+            'Все' => '/media.php',
+        ),
+        'Форум' => array(
+            'Правила форума' => 'http://forum.gamexp.ru/forumdisplay.php?f=721',
+        ),
+        'Поддержка' => array(
+            'Техническая поддержка' => 'http://help.gamexp.ru/',
+            'Лицензионное соглашение' => 'https://my.gamexp.ru/help/rules.php',
+        ),
+    ),
+);
