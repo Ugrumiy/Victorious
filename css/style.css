@@ -516,11 +516,6 @@ main .breadcrumbs {
   list-style: none;
   margin-top: 35px;
 }
-@media (max-width: 600px) {
-  main .breadcrumbs {
-    padding: 0 15px;
-  }
-}
 main .breadcrumbs li {
   display: inline-block;
 }
@@ -1163,9 +1158,12 @@ footer .social-sharing ul a {
   background: #399799;
   color: #ffffff;
 }
+.feedback-container-full-width {
+  padding: 0 15px;
+}
 .feedback-item .personal-info {
   width: 17%;
-  min-width: 200px;
+  width: 200px;
   float: left;
   margin-right: 10%;
 }
@@ -1186,10 +1184,34 @@ footer .social-sharing ul a {
   display: block;
   width: 100%;
   min-height: 60px;
-  margin-top: 10px;
+  margin: 10px 0 15px 0;
   background: red;
 }
-.feedback-item .feedback-text-container {
-  width: 73%;
-  float: right;
+.feedback-item .feedback-text-container .feedback-text {
+  position: relative;
+  padding-top: 43px;
+}
+.feedback-item .feedback-text-container .feedback-text .top-bracket {
+  position: relative;
+  width: 100%;
+}
+.feedback-item .feedback-text-container .feedback-text .top-bracket:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  background: blue;
+}
+.feedback-item .feedback-text-container .feedback-text:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  bottom: -45px;
+  right: 0px;
+  background: blue;
 }

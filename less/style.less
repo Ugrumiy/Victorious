@@ -377,9 +377,6 @@ header .inner-page-pattern-bg{
 main{
 
   .breadcrumbs{
-    @media (max-width: 600px) {
-      padding: 0 15px;
-    }
     list-style: none;
     margin-top: 35px;
     li{
@@ -839,15 +836,16 @@ footer{
 }
 
 
-.feedback-items-container{
-
+.feedback-container-full-width{
+ padding: 0 15px;
 }
 .feedback-item{
   .personal-info{
     width: 17%;
-    min-width: 200px;
+    width: 200px;
     float: left;
     margin-right: 10%;
+
     .name-position{
       margin:0 0 20px 0;
     }
@@ -865,12 +863,38 @@ footer{
       display: block;
       width: 100%;
       min-height: 60px;
-      margin-top: 10px;
+      margin: 10px 0 15px 0;
       background: red;
     }
   }
   .feedback-text-container{
-    width: 73%;
-    float: right;
+    .feedback-text{
+      position: relative;
+      padding-top: 43px;
+      .top-bracket {
+        position: relative;
+        width: 100%;
+        &:before {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 35px;
+          position: absolute;
+          top: -20px;
+          left: -40px;
+          background: blue;
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        bottom:-45px;
+        right:0px;
+        background: blue;
+      }
+    }
   }
 }
