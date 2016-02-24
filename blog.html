@@ -156,10 +156,14 @@
 $(function() {
     $(document).on('ready', function(){
         $('#filter-form').find('input[type="checkbox"]:checked').parent().addClass('active');
-        $('#filter-form').find('label').on('click',function(){
-           
-                $(this).find('input[type="checkbox"]').prop('checked','false');
-               
+        $('#filter-form').find('input[type="checkbox"]').on('change',function(){
+            if($(this).parent().hasClass('active')){
+                $(this).parent().removeClass('active');
+            }
+            else{
+                $(this).parent().addClass('active');
+
+            }
         })
     })
 });
