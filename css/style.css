@@ -607,7 +607,7 @@ main .about-company {
 }
 @media (max-width: 850px) {
   main .about-company {
-    width: 60%;
+    width: 58%;
   }
 }
 @media (max-width: 600px) {
@@ -656,24 +656,35 @@ main .about-company .download_presentation:hover {
 main .company-features {
   position: relative;
   padding-top: 175px;
+  /*
+    @media (max-width: 450px) {
+      //width: 80%;
+    }*/
 }
 @media (max-width: 850px) {
   main .company-features {
     float: right;
     width: 40%;
+    padding-top: 135px;
   }
 }
 @media (max-width: 600px) {
   main .company-features {
     float: none;
-    width: 95%;
+    width: 100%;
     padding-top: 50px;
     margin: 0 auto;
   }
 }
 main .company-features .left-col {
   float: right;
-  width: 190px;
+  width: 200px;
+  /*
+      @media (max-width: 450px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }*/
 }
 @media (max-width: 850px) {
   main .company-features .left-col {
@@ -684,20 +695,18 @@ main .company-features .left-col {
 @media (max-width: 600px) {
   main .company-features .left-col {
     float: left;
-    width: 190px;
-  }
-}
-@media (max-width: 450px) {
-  main .company-features .left-col {
-    float: none;
-    width: 100%;
-    text-align: center;
   }
 }
 main .company-features .right-col {
   float: right;
-  width: 190px;
-  margin-right: 7%;
+  width: 200px;
+  margin-right: 5%;
+  /*
+      @media (max-width: 450px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }*/
 }
 @media (max-width: 850px) {
   main .company-features .right-col {
@@ -708,39 +717,21 @@ main .company-features .right-col {
 @media (max-width: 600px) {
   main .company-features .right-col {
     float: right;
-    width: 190px;
-  }
-}
-@media (max-width: 450px) {
-  main .company-features .right-col {
-    float: none;
-    width: 100%;
-    text-align: center;
   }
 }
 main .company-features .feature-item {
-  width: 100%;
-  min-height: 75px;
-  padding: 0 0 0 48px;
-  text-transform: uppercase;
-  background: url('../img/feature_icon.png') no-repeat 0 top;
+  margin-bottom: 15px;
 }
-@media (max-width: 450px) {
-  main .company-features .feature-item {
-    width: 100%;
-    min-height: 51px;
-    margin: 15px 0;
-    display: inline-block;
-  }
-}
-main .company-features .feature-item:before {
-  content: '';
+main .company-features .feature-item .feature-item_icon {
+  height: 48px;
   display: inline-block;
-  height: 100%;
   vertical-align: middle;
+  margin-right: 10px;
 }
-main .company-features .feature-item span {
+main .company-features .feature-item .feature-item_text {
   display: inline-block;
+  text-transform: uppercase;
+  width: 140px;
   vertical-align: middle;
 }
 main .our-clients-container-full-width {
@@ -1247,7 +1238,7 @@ footer .social-sharing ul a {
 }
 @media (max-width: 600px) {
   .feedback-item .personal-info .photo {
-    min-height: auto;
+    min-height: none;
     max-height: 250px;
   }
 }
