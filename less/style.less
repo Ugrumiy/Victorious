@@ -943,9 +943,10 @@ footer{
 .blog-list-container{
   .blog-items{
     float: left;
-    width: 70%;
+    width: 65%;
   }
   .blog-item{
+    margin: 0 0 35px 0;
     .blog-item-title{
       font-size: 20px;
       font-weight: 700;
@@ -956,7 +957,7 @@ footer{
     .blog-item-date{
       font-size: 13px;
       color: @dark-gray;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
     .blog-item-pic {
       display: block;
@@ -968,6 +969,7 @@ footer{
     }
     .blog-item-text {
       font-size: 14px;
+      text-align: justify;
       margin-top: 0
     }
   }
@@ -977,6 +979,7 @@ footer{
     .blog-filter-title{
       font-size: 15px;
       font-weight: 700;
+      margin-bottom: 12px;
     }
     .filter-form{
       .theme-filter{
@@ -993,11 +996,36 @@ footer{
             .btn(@light-green);
             padding: 0.4em 1.2em;
           }
+          input[type="checkbox"]{
+            display: none;
+          }
         }
       }
     }
     .search-form{
-
+      input[type="search"]{
+        height: 40px;
+        width: 74%;
+        padding: 10px 0 0px 40px;
+        border: none;
+        border-bottom: 2px solid @middle-gray;
+        font-size: 14px;
+        //line-height: 40px;
+        color: #525252;
+      }
     }
+  }
+}
+.paginator{
+  margin: 70px 0 0 0;
+  ul{
+    list-style: none;
+    text-align: right;
+  }
+  li{
+    display: inline-block;
+    .btn(@light-green);
+    font-size: 14px;
+    padding: 0.5em 1em;
   }
 }

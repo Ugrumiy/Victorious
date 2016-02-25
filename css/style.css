@@ -1,4 +1,3 @@
-/*Variables and Mixins*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -196,9 +195,7 @@ p {
   padding: 0 15px;
   z-index: 1000;
   /*Mobile menu*/
-
   /*_______________*/
-
 }
 @media (max-width: 600px) {
   #header {
@@ -505,25 +502,15 @@ header .inner-page-pattern-bg {
 }
 main {
   /*Slider*/
-
   /*_______________*/
-
   /*About block*/
-
   /*_______________*/
-
   /*Clients block*/
-
   /*_______________*/
-
   /*Services block*/
-
   /*_______________*/
-
   /*SEO Text*/
-
   /*_______________*/
-
 }
 main .breadcrumbs {
   list-style: none;
@@ -668,9 +655,6 @@ main .company-features {
     padding-top: 50px;
     margin: 0 auto;
   }
-}
-@media (max-width: 450px) {
-  
 }
 main .company-features .left-col {
   float: right;
@@ -893,7 +877,7 @@ main .seo-text-container-full-width {
   background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
 }
 main .seo-text-container-full-width .left-column {
   float: left;
@@ -1226,7 +1210,6 @@ footer .social-sharing ul a {
   position: relative;
   padding-top: 43px;
   /*Styles for bracket-symbols*/
-
 }
 @media (max-width: 600px) {
   .feedback-item .feedback-text-container .feedback-text {
@@ -1286,7 +1269,10 @@ footer .social-sharing ul a {
 /*blog*/
 .blog-list-container .blog-items {
   float: left;
-  width: 70%;
+  width: 65%;
+}
+.blog-list-container .blog-item {
+  margin: 0 0 35px 0;
 }
 .blog-list-container .blog-item .blog-item-title {
   font-size: 20px;
@@ -1312,7 +1298,7 @@ footer .social-sharing ul a {
 .blog-list-container .blog-item .blog-item-date {
   font-size: 13px;
   color: #3c3c3c;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .blog-list-container .blog-item .blog-item-pic {
   display: block;
@@ -1324,6 +1310,7 @@ footer .social-sharing ul a {
 }
 .blog-list-container .blog-item .blog-item-text {
   font-size: 14px;
+  text-align: justify;
   margin-top: 0;
 }
 .blog-list-container .blog-filter {
@@ -1333,6 +1320,7 @@ footer .social-sharing ul a {
 .blog-list-container .blog-filter .blog-filter-title {
   font-size: 15px;
   font-weight: 700;
+  margin-bottom: 12px;
 }
 .blog-list-container .blog-filter .filter-form .theme-filter {
   list-style: none;
@@ -1385,6 +1373,50 @@ footer .social-sharing ul a {
   padding: 0.4em 1.2em;
 }
 .blog-list-container .blog-filter .filter-form .theme-filter label.active:hover {
+  background: #399799;
+  color: #ffffff;
+}
+.blog-list-container .blog-filter .filter-form .theme-filter label input[type="checkbox"] {
+  display: none;
+}
+.blog-list-container .blog-filter .search-form input[type="search"] {
+  height: 40px;
+  width: 74%;
+  padding: 10px 0 0px 40px;
+  border: none;
+  border-bottom: 2px solid #979797;
+  font-size: 14px;
+  color: #525252;
+}
+.paginator {
+  margin: 70px 0 0 0;
+}
+.paginator ul {
+  list-style: none;
+  text-align: right;
+}
+.paginator li {
+  display: inline-block;
+  color: #399799;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #399799;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 14px;
+  padding: 0.5em 1em;
+}
+.paginator li:hover {
   background: #399799;
   color: #ffffff;
 }
