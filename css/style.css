@@ -1178,6 +1178,31 @@ footer .social-sharing ul a {
     padding: 0 15px;
   }
 }
+.feedback-item a {
+  display: inline-block;
+  margin-top: 40px;
+  color: #399799;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #399799;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-decoration: none;
+}
+.feedback-item a:hover {
+  background: #399799;
+  color: #ffffff;
+}
 .feedback-item .personal-info {
   width: 17%;
   width: 200px;
@@ -1206,22 +1231,50 @@ footer .social-sharing ul a {
     background: rgba(0, 0, 0, 0.5);
   }
 }
+@media (max-width: 400px) {
+  .feedback-item .personal-info .name-position {
+    font-size: 12px;
+  }
+}
 .feedback-item .personal-info .position {
   font-size: 19px;
   font-weight: 700;
 }
 .feedback-item .personal-info .photo {
-  display: block;
   width: 100%;
   min-height: 250px;
   background: red;
 }
+@media (max-width: 600px) {
+  .feedback-item .personal-info .photo {
+    min-height: auto;
+    max-height: 250px;
+  }
+}
+.feedback-item .personal-info .photo.static {
+  display: block;
+}
+@media (max-width: 600px) {
+  .feedback-item .personal-info .photo.static {
+    display: none;
+  }
+}
+.feedback-item .personal-info .photo.flexible {
+  display: none;
+}
+@media (max-width: 600px) {
+  .feedback-item .personal-info .photo.flexible {
+    display: block;
+  }
+}
 .feedback-item .personal-info .company-logo {
   display: block;
-  width: 200px;
-  min-height: 60px;
   margin: 10px 0 15px 0;
-  background: red;
+}
+@media (max-width: 600px) {
+  .feedback-item .feedback-text-container {
+    margin-top: -30px;
+  }
 }
 .feedback-item .feedback-text-container .feedback-text {
   position: relative;

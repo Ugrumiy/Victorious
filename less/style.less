@@ -853,6 +853,12 @@ footer{
   }
 }
 .feedback-item{
+  a{
+    display: inline-block;
+    margin-top: 40px;
+    .btn(@light-green);
+    text-decoration: none;
+  }
   .personal-info{
     width: 17%;
     width: 200px;
@@ -875,26 +881,44 @@ footer{
         color: @white;
         background: rgba(0,0,0, 0.5);
       }
+      @media (max-width: 400px) {
+        font-size: 12px;
+      }
     }
     .position{
       font-size: 19px;
       font-weight: 700;
     }
     .photo{
-      display: block;
       width: 100%;
       min-height: 250px;
       background: red;
+      @media (max-width: 600px) {
+        min-height: auto;
+        max-height: 250px
+      }
+      &.static{
+        display: block;
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+      &.flexible{
+        display: none;
+        @media (max-width: 600px) {
+          display: block;
+        }
+      }
     }
     .company-logo{
       display: block;
-      width: 200px;
-      min-height: 60px;
       margin: 10px 0 15px 0;
-      background: red;
     }
   }
   .feedback-text-container{
+    @media (max-width: 600px) {
+      margin-top: -30px;
+    }
     .feedback-text{
       position: relative;
       padding-top: 43px;
