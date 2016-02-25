@@ -1267,9 +1267,18 @@ footer .social-sharing ul a {
   }
 }
 /*blog*/
+.blog-list-container {
+  padding: 0 15px;
+}
 .blog-list-container .blog-items {
   float: left;
   width: 65%;
+}
+@media (max-width: 850px) {
+  .blog-list-container .blog-items {
+    float: none;
+    width: 100%;
+  }
 }
 .blog-list-container .blog-item {
   margin: 0 0 35px 0;
@@ -1304,9 +1313,14 @@ footer .social-sharing ul a {
   display: block;
   float: left;
   width: 41%;
-  max-height: 150px;
   margin-right: 3%;
   background: red;
+}
+@media (max-width: 600px) {
+  .blog-list-container .blog-item .blog-item-pic {
+    width: 100%;
+    margin-bottom: 3%;
+  }
 }
 .blog-list-container .blog-item .blog-item-text {
   font-size: 14px;
@@ -1315,7 +1329,11 @@ footer .social-sharing ul a {
 }
 .blog-list-container .blog-filter {
   float: right;
-  width: 30%;
+}
+@media (max-width: 850px) {
+  .blog-list-container .blog-filter {
+    width: 100%;
+  }
 }
 .blog-list-container .blog-filter .blog-filter-title {
   font-size: 15px;
@@ -1327,6 +1345,12 @@ footer .social-sharing ul a {
 }
 .blog-list-container .blog-filter .filter-form .theme-filter li {
   margin: 10px 0;
+}
+@media (max-width: 850px) {
+  .blog-list-container .blog-filter .filter-form .theme-filter li {
+    display: inline-block;
+    margin: 5px 0;
+  }
 }
 .blog-list-container .blog-filter .filter-form .theme-filter label {
   display: inline-block;
@@ -1379,14 +1403,26 @@ footer .social-sharing ul a {
 .blog-list-container .blog-filter .filter-form .theme-filter label input[type="checkbox"] {
   display: none;
 }
+@media (max-width: 850px) {
+  .blog-list-container .blog-filter .search-form {
+    width: 30%;
+    min-width: 250px;
+    margin: 0 0 30px 0;
+  }
+}
 .blog-list-container .blog-filter .search-form input[type="search"] {
   height: 40px;
-  width: 74%;
+  width: 100%;
   padding: 10px 0 0px 40px;
   border: none;
   border-bottom: 2px solid #979797;
   font-size: 14px;
   color: #525252;
+}
+@media (max-width: 850px) {
+  .blog-list-container .blog-filter .search-form .blog-filter-title {
+    display: none;
+  }
 }
 .paginator {
   margin: 70px 0 0 0;
@@ -1394,6 +1430,11 @@ footer .social-sharing ul a {
 .paginator ul {
   list-style: none;
   text-align: right;
+}
+@media (max-width: 600px) {
+  .paginator ul {
+    text-align: center;
+  }
 }
 .paginator li {
   display: inline-block;
