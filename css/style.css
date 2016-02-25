@@ -205,14 +205,13 @@ p {
 }
 /*Header*/
 /*_______________*/
-#header {
-  padding: 0 15px;
+#header-container {
   z-index: 1000;
   /*Mobile menu*/
   /*_______________*/
 }
 @media (max-width: 600px) {
-  #header {
+  #header-container {
     padding: 0;
     position: fixed;
     width: 100%;
@@ -221,18 +220,21 @@ p {
     left: 0;
   }
 }
-#header .logo-menu-container {
+#header-container .container-center-wrapper {
+  padding: 0 15px;
+}
+#header-container .logo-menu-container {
   width: 100%;
   height: 137px;
   position: relative;
   border-top: 1px solid transparent;
 }
 @media (max-width: 950px) {
-  #header .logo-menu-container {
+  #header-container .logo-menu-container {
     height: 150px;
   }
 }
-#header .logo-menu-container .logo-pic {
+#header-container .logo-menu-container .logo-pic {
   width: 225px;
   height: 67px;
   position: absolute;
@@ -242,44 +244,44 @@ p {
   background-size: cover;
 }
 @media (max-width: 950px) {
-  #header .logo-menu-container .logo-pic {
+  #header-container .logo-menu-container .logo-pic {
     top: 30%;
   }
 }
-#header .logo-menu-container .logo-pic img {
+#header-container .logo-menu-container .logo-pic img {
   height: 100%;
   width: 100%;
 }
 @media (max-width: 600px) {
-  #header .logo-menu-container {
+  #header-container .logo-menu-container {
     display: none;
   }
 }
-#header .header-phone-btn {
+#header-container .header-phone-btn {
   position: absolute;
   top: 30px;
   right: 0;
 }
-#header .header-phone-btn .phone-number {
+#header-container .header-phone-btn .phone-number {
   font-size: 1.2em;
   line-height: 2em;
   font-weight: 700;
   text-decoration: none;
   margin: 0 13px 0 0;
 }
-#header .header-phone-btn .phone-number:link {
+#header-container .header-phone-btn .phone-number:link {
   color: #000000;
 }
-#header .header-phone-btn .phone-number:visited {
+#header-container .header-phone-btn .phone-number:visited {
   color: #000000;
 }
-#header .header-phone-btn .phone-number:hover {
+#header-container .header-phone-btn .phone-number:hover {
   color: #000000;
 }
-#header .header-phone-btn .phone-number:active {
+#header-container .header-phone-btn .phone-number:active {
   color: #000000;
 }
-#header .header-phone-btn button {
+#header-container .header-phone-btn button {
   color: #399799;
   font-weight: 700;
   background: transparent;
@@ -299,11 +301,11 @@ p {
   font-size: 15px;
   margin-top: -2px;
 }
-#header .header-phone-btn button:hover {
+#header-container .header-phone-btn button:hover {
   background: #399799;
   color: #ffffff;
 }
-#header .header-menu-container {
+#header-container .header-menu-container {
   text-align: center;
   max-width: 670px;
   position: absolute;
@@ -312,28 +314,28 @@ p {
   z-index: 500;
 }
 @media (max-width: 950px) {
-  #header .header-menu-container {
+  #header-container .header-menu-container {
     position: static;
     max-width: 680px;
     width: 100%;
     margin: 105px auto 0 auto;
   }
 }
-#header .header-menu ul {
+#header-container .header-menu ul {
   list-style: none;
 }
-#header .header-menu ul li {
+#header-container .header-menu ul li {
   display: inline-block;
 }
-#header .header-menu ul li:not(:last-child) {
+#header-container .header-menu ul li:not(:last-child) {
   margin-right: 60px;
 }
 @media (max-width: 950px) {
-  #header .header-menu ul li:not(:last-child) {
+  #header-container .header-menu ul li:not(:last-child) {
     margin-right: 7%;
   }
 }
-#header .header-menu ul a {
+#header-container .header-menu ul a {
   display: inline-block;
   text-decoration: none;
   margin: 0 auto;
@@ -345,25 +347,25 @@ p {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-#header .header-menu ul a:link {
+#header-container .header-menu ul a:link {
   color: #000000;
 }
-#header .header-menu ul a:visited {
+#header-container .header-menu ul a:visited {
   color: #000000;
 }
-#header .header-menu ul a:hover {
+#header-container .header-menu ul a:hover {
   color: #000000;
 }
-#header .header-menu ul a:active {
+#header-container .header-menu ul a:active {
   color: #000000;
 }
-#header .header-menu ul a:hover,
-#header .header-menu ul a.active {
+#header-container .header-menu ul a:hover,
+#header-container .header-menu ul a.active {
   -webkit-box-shadow: 0px 2px 0px 0px #3c3c3c;
   -moz-box-shadow: 0px 2px 0px 0px #3c3c3c;
   box-shadow: 0px 2px 0px 0px #3c3c3c;
 }
-#header .header-menu ul a.dropdown-anchor:after {
+#header-container .header-menu ul a.dropdown-anchor:after {
   content: '';
   display: block;
   width: 16px;
@@ -373,7 +375,7 @@ p {
   right: -23px;
   background: black;
 }
-#header .header-menu-dropout {
+#header-container .header-menu-dropout {
   display: none;
   width: 565px;
   position: absolute;
@@ -382,27 +384,27 @@ p {
   background-color: #399799;
 }
 @media (max-width: 950px) {
-  #header .header-menu-dropout {
+  #header-container .header-menu-dropout {
     top: 149px;
     left: 50%;
     margin-left: -282px;
   }
 }
-#header .header-menu-dropout .link-group {
+#header-container .header-menu-dropout .link-group {
   float: left;
   list-style: none;
   text-align: left;
 }
-#header .header-menu-dropout .link-group:not(:first-child) {
+#header-container .header-menu-dropout .link-group:not(:first-child) {
   margin-left: 1em;
 }
-#header .header-menu-dropout .link-group .link-group_title {
+#header-container .header-menu-dropout .link-group .link-group_title {
   font-size: 17px;
   line-height: 1.8;
   font-weight: 700;
   color: #ffffff;
 }
-#header .header-menu-dropout a {
+#header-container .header-menu-dropout a {
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
@@ -411,43 +413,43 @@ p {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-#header .header-menu-dropout a:link {
+#header-container .header-menu-dropout a:link {
   color: #ffffff;
 }
-#header .header-menu-dropout a:visited {
+#header-container .header-menu-dropout a:visited {
   color: #ffffff;
 }
-#header .header-menu-dropout a:hover {
+#header-container .header-menu-dropout a:hover {
   color: #ffffff;
 }
-#header .header-menu-dropout a:active {
+#header-container .header-menu-dropout a:active {
   color: #ffffff;
 }
-#header .header-menu-dropout a:hover {
+#header-container .header-menu-dropout a:hover {
   -webkit-box-shadow: 0px 2px 0px 0px #ffffff;
   -moz-box-shadow: 0px 2px 0px 0px #ffffff;
   box-shadow: 0px 2px 0px 0px #ffffff;
 }
-#header .slicknav_menu {
+#header-container .slicknav_menu {
   display: none;
   padding: 0;
   background: none;
 }
 @media (max-width: 600px) {
-  #header .slicknav_menu {
+  #header-container .slicknav_menu {
     display: block;
   }
 }
-#header .slicknav_menu .slicknav_btn {
+#header-container .slicknav_menu .slicknav_btn {
   background: none;
 }
-#header .slicknav_menu .slicknav_btn .slicknav_icon-bar {
+#header-container .slicknav_menu .slicknav_btn .slicknav_icon-bar {
   background-color: #399799;
 }
-#header .slicknav_menu .slicknav_nav {
+#header-container .slicknav_menu .slicknav_nav {
   background: #399799;
 }
-#header .slicknav_menu .slicknav_brand {
+#header-container .slicknav_menu .slicknav_brand {
   margin: 0 0 0 10px;
   padding: 0;
   width: 202px;
@@ -465,7 +467,7 @@ header.fixed {
     padding: 0;
   }
 }
-header.fixed #header {
+header.fixed #header-container {
   width: 100%;
   padding: 3px 0;
   position: fixed;
@@ -477,10 +479,10 @@ header.fixed #header {
   -moz-box-shadow: 0px 2px 15px -4px #000000;
   box-shadow: 0px 2px 15px -4px #000000;
 }
-header.fixed #header .logo-menu-container {
+header.fixed #header-container .logo-menu-container {
   height: 60px;
 }
-header.fixed #header .logo-menu-container .logo-pic {
+header.fixed #header-container .logo-menu-container .logo-pic {
   height: 60px;
   width: 200px;
   position: static;
@@ -488,25 +490,25 @@ header.fixed #header .logo-menu-container .logo-pic {
   margin: 0;
 }
 @media (max-width: 950px) {
-  header.fixed #header .logo-menu-container .logo-pic {
+  header.fixed #header-container .logo-menu-container .logo-pic {
     display: none;
   }
 }
-header.fixed #header .logo-menu-container .header-phone-btn {
+header.fixed #header-container .logo-menu-container .header-phone-btn {
   display: none;
 }
-header.fixed #header .logo-menu-container .header-menu-container {
+header.fixed #header-container .logo-menu-container .header-menu-container {
   position: absolute;
   max-width: 100%;
   top: 16px;
   margin: 0;
 }
 @media (max-width: 900px) {
-  header.fixed #header .logo-menu-container .header-menu ul li:not(:last-child) {
+  header.fixed #header-container .logo-menu-container .header-menu ul li:not(:last-child) {
     margin-right: 7%;
   }
 }
-header.fixed #header .logo-menu-container .header-menu-dropout {
+header.fixed #header-container .logo-menu-container .header-menu-dropout {
   top: 57px;
 }
 header .inner-page-pattern-bg {

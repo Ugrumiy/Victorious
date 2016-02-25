@@ -17,7 +17,7 @@
 </head>
 <body>
 <header>
-    <div id="header" class="container-full-width">
+    <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
             <div class="logo-menu-container clearfix">
                 <div class="logo-pic"></div>
@@ -61,7 +61,7 @@
             </div>
             <ul id="menu-mobile" style="display: none">
                 <li><a href="">Главная</a></li>
-                <li id="utyutyu">Услуги
+                <li>Услуги
                     <ul>
                         <li>Разработка сайтов
                             <ul>
@@ -244,11 +244,11 @@ $(function() {
         }
     })
 
-    $headerContainer = $('#header');
+    $headerContainer = $('#header-container');
     $('#menu-mobile').slicknav({
         label: '',
         duration: 1000,
-        prependTo: $headerContainer.find('.container-center-wrapper'),
+        prependTo: $headerContainer,
         brand: ' ',
 
     });

@@ -151,8 +151,7 @@ p{
 
 /*Header*/
 /*_______________*/
-#header {
-  padding: 0 15px;
+#header-container {
   z-index: 1000;
   @media (max-width: 600px) {
     padding: 0;
@@ -161,6 +160,9 @@ p{
     background: @white;
     top: 0;
     left: 0;
+  }
+  .container-center-wrapper{
+    padding: 0 15px;
   }
   .logo-menu-container {
     width: 100%;
@@ -337,7 +339,7 @@ header.fixed {
   @media (max-width: 600px) {
     padding: 0;
   }
-  #header {
+  #header-container {
     width: 100%;
     padding: 3px 0;
     position: fixed;
