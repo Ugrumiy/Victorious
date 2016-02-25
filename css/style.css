@@ -467,7 +467,7 @@ header.fixed {
 }
 header.fixed #header {
   width: 100%;
-  padding: 3px 15px;
+  padding: 3px 0;
   position: fixed;
   background: #ffffff;
   top: 0;
