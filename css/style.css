@@ -656,10 +656,6 @@ main .about-company .download_presentation:hover {
 main .company-features {
   position: relative;
   padding-top: 175px;
-  /*
-    @media (max-width: 450px) {
-      //width: 80%;
-    }*/
 }
 @media (max-width: 850px) {
   main .company-features {
@@ -679,12 +675,6 @@ main .company-features {
 main .company-features .left-col {
   float: right;
   width: 200px;
-  /*
-      @media (max-width: 450px) {
-        float: none;
-        width: 100%;
-        text-align: center;
-      }*/
 }
 @media (max-width: 850px) {
   main .company-features .left-col {
@@ -697,16 +687,17 @@ main .company-features .left-col {
     float: left;
   }
 }
+@media (max-width: 450px) {
+  main .company-features .left-col {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
 main .company-features .right-col {
   float: right;
   width: 200px;
   margin-right: 5%;
-  /*
-      @media (max-width: 450px) {
-        float: none;
-        width: 100%;
-        text-align: center;
-      }*/
 }
 @media (max-width: 850px) {
   main .company-features .right-col {
@@ -717,6 +708,13 @@ main .company-features .right-col {
 @media (max-width: 600px) {
   main .company-features .right-col {
     float: right;
+  }
+}
+@media (max-width: 450px) {
+  main .company-features .right-col {
+    float: none;
+    width: 100%;
+    text-align: center;
   }
 }
 main .company-features .feature-item {
