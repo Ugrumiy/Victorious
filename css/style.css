@@ -189,6 +189,14 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+.content {
+  padding: 0 15px;
+}
+@media (max-width: 600px) {
+  .content {
+    padding: 0;
+  }
+}
 /*Header*/
 /*_______________*/
 #header {
@@ -515,6 +523,7 @@ main {
 main .breadcrumbs {
   list-style: none;
   margin-top: 35px;
+  padding: 0 15px;
 }
 main .breadcrumbs li {
   display: inline-block;
@@ -1158,8 +1167,10 @@ footer .social-sharing ul a {
   background: #399799;
   color: #ffffff;
 }
-.feedback-container-full-width {
-  padding: 0 15px;
+@media (max-width: 600px) {
+  .feedback-items-container {
+    padding: 0 15px;
+  }
 }
 .feedback-item .personal-info {
   width: 17%;
@@ -1266,24 +1277,26 @@ footer .social-sharing ul a {
     background-position: 0 0;
   }
 }
-/*blog*/
-.blog-list-container {
-  padding: 0 15px;
-}
-.blog-list-container .blog-items {
+/*blog-items-list*/
+.article-item-list {
   float: left;
   width: 65%;
 }
 @media (max-width: 850px) {
-  .blog-list-container .blog-items {
+  .article-item-list {
     float: none;
     width: 100%;
   }
 }
-.blog-list-container .blog-item {
+.article-item-list_item {
   margin: 0 0 35px 0;
 }
-.blog-list-container .blog-item .blog-item-title {
+@media (max-width: 600px) {
+  .article-item-list_item {
+    padding: 0 15px;
+  }
+}
+.article-item-list_item .article-item-list_item_title {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -1292,24 +1305,24 @@ footer .social-sharing ul a {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-.blog-list-container .blog-item .blog-item-title:link {
+.article-item-list_item .article-item-list_item_title:link {
   color: #399799;
 }
-.blog-list-container .blog-item .blog-item-title:visited {
+.article-item-list_item .article-item-list_item_title:visited {
   color: #399799;
 }
-.blog-list-container .blog-item .blog-item-title:hover {
+.article-item-list_item .article-item-list_item_title:hover {
   color: #000000;
 }
-.blog-list-container .blog-item .blog-item-title:active {
+.article-item-list_item .article-item-list_item_title:active {
   color: #399799;
 }
-.blog-list-container .blog-item .blog-item-date {
+.article-item-list_item .article-item-list_item_date {
   font-size: 13px;
   color: #3c3c3c;
   margin-bottom: 15px;
 }
-.blog-list-container .blog-item .blog-item-pic {
+.article-item-list_item .article-item-list_item_pic {
   display: block;
   float: left;
   width: 41%;
@@ -1317,42 +1330,48 @@ footer .social-sharing ul a {
   background: red;
 }
 @media (max-width: 600px) {
-  .blog-list-container .blog-item .blog-item-pic {
+  .article-item-list_item .article-item-list_item_pic {
     width: 100%;
     margin-bottom: 3%;
   }
 }
-.blog-list-container .blog-item .blog-item-text {
+.article-item-list_item .article-item-list_item_text {
   font-size: 14px;
   text-align: justify;
   margin-top: 0;
 }
-.blog-filter {
+.article-filter {
   float: right;
 }
 @media (max-width: 850px) {
-  .blog-filter {
+  .article-filter {
     width: 100%;
+    float: none;
   }
 }
-.blog-filter .blog-filter-title {
+@media (max-width: 600px) {
+  .article-filter {
+    padding: 0 15px;
+  }
+}
+.article-filter .article-filter_title {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 12px;
 }
-.blog-filter .filter-form .theme-filter {
+.article-filter .article-category-form ul {
   list-style: none;
 }
-.blog-filter .filter-form .theme-filter li {
+.article-filter .article-category-form ul li {
   margin: 10px 0;
 }
 @media (max-width: 850px) {
-  .blog-filter .filter-form .theme-filter li {
+  .article-filter .article-category-form ul li {
     display: inline-block;
     margin: 5px 0;
   }
 }
-.blog-filter .filter-form .theme-filter label {
+.article-filter .article-category-form ul label {
   display: inline-block;
   font-size: 15px;
   color: #979797;
@@ -1373,11 +1392,11 @@ footer .social-sharing ul a {
   background-clip: padding-box;
   padding: 0.4em 1.2em;
 }
-.blog-filter .filter-form .theme-filter label:hover {
+.article-filter .article-category-form ul label:hover {
   background: #979797;
   color: #ffffff;
 }
-.blog-filter .filter-form .theme-filter label.active {
+.article-filter .article-category-form ul label.active {
   color: #399799;
   font-weight: 700;
   background: transparent;
@@ -1396,21 +1415,21 @@ footer .social-sharing ul a {
   background-clip: padding-box;
   padding: 0.4em 1.2em;
 }
-.blog-filter .filter-form .theme-filter label.active:hover {
+.article-filter .article-category-form ul label.active:hover {
   background: #399799;
   color: #ffffff;
 }
-.blog-filter .filter-form .theme-filter label input[type="checkbox"] {
+.article-filter .article-category-form ul label input[type="checkbox"] {
   display: none;
 }
 @media (max-width: 850px) {
-  .blog-filter .search-form {
+  .article-filter .article-search-form {
     width: 30%;
     min-width: 290px;
     margin: 10px 0 30px 0;
   }
 }
-.blog-filter .search-form input[type="search"] {
+.article-filter .article-search-form input[type="search"] {
   height: 40px;
   width: 100%;
   padding: 10px 0 0px 40px;
@@ -1420,32 +1439,34 @@ footer .social-sharing ul a {
   color: #525252;
 }
 @media (max-width: 850px) {
-  .blog-filter .search-form .blog-filter-title {
+  .article-filter .article-search-form .article-filter_title {
     display: none;
   }
 }
-.article-container-full-width {
-  padding: 0 15px;
-}
-.article-container-full-width .blog-filter {
+.content.article .article-filter {
   margin-top: 65px;
 }
 @media (max-width: 850px) {
-  .article-container-full-width .blog-filter {
-    margin: 0;
+  .content.article .article-filter {
+    margin: 30px 0 0 0;
   }
 }
-.article-container-full-width .article-item {
+.content.article .article-item {
   float: left;
   width: 65%;
 }
 @media (max-width: 850px) {
-  .article-container-full-width .article-item {
+  .content.article .article-item {
     float: none;
     width: 100%;
   }
-  .article-container-full-width .article-item h1 {
+  .content.article .article-item h1 {
     text-align: left;
+  }
+}
+@media (max-width: 600px) {
+  .content.article .article-item {
+    padding: 0 15px;
   }
 }
 .paginator {
