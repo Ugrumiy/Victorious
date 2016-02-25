@@ -125,6 +125,9 @@ body {
 h1, h2{
   font: 37px/1.2 'Bitter', serif;
   margin: 60px 0 68px 0;
+  @media (max-width: 850px) {
+    margin: 45px 0;
+  }
   @media (max-width: 600px) {
     margin: 30px 0;
     text-align: center;
@@ -1070,12 +1073,20 @@ footer{
     @media (max-width: 850px) {
       float: none;
       width: 100%;
-      h1 {
-        text-align: left;
-      }
     }
     @media (max-width: 600px) {
       padding: 0 15px;
+    }
+    h1 {
+      margin-bottom: 5px;
+      @media (max-width: 850px) {
+        text-align: left;
+      }
+    }
+    .article-item-date{
+      font-size: 13px;
+      color: @dark-gray;
+      margin-bottom: 15px;
     }
   }
 }

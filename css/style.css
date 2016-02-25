@@ -175,6 +175,12 @@ h2 {
   font: 37px/1.2 'Bitter', serif;
   margin: 60px 0 68px 0;
 }
+@media (max-width: 850px) {
+  h1,
+  h2 {
+    margin: 45px 0;
+  }
+}
 @media (max-width: 600px) {
   h1,
   h2 {
@@ -1460,14 +1466,24 @@ footer .social-sharing ul a {
     float: none;
     width: 100%;
   }
-  .content.article .article-item h1 {
-    text-align: left;
-  }
 }
 @media (max-width: 600px) {
   .content.article .article-item {
     padding: 0 15px;
   }
+}
+.content.article .article-item h1 {
+  margin-bottom: 5px;
+}
+@media (max-width: 850px) {
+  .content.article .article-item h1 {
+    text-align: left;
+  }
+}
+.content.article .article-item .article-item-date {
+  font-size: 13px;
+  color: #3c3c3c;
+  margin-bottom: 15px;
 }
 .paginator {
   margin: 70px 0 0 0;
