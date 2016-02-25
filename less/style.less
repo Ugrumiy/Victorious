@@ -502,7 +502,7 @@ main{
     }
     .left-col{
       float: right;
-      width: 200px;
+      width: 205px;
 
       @media (max-width: 850px) {
         float: none;
@@ -520,8 +520,8 @@ main{
     }
     .right-col{
       float: right;
-      width: 200px;
-      margin-right: 5%;
+      width: 205px;
+      margin-right: 4%;
 
       @media (max-width: 850px) {
         float: none;
@@ -539,7 +539,8 @@ main{
     .feature-item{
         margin-bottom: 15px;
       .feature-item_icon{
-        height: 48px;
+        max-width: 50px;
+        max-height: 50px;
         display: inline-block;
         vertical-align: middle;
         margin-right: 10px;
@@ -589,12 +590,12 @@ main{
       &:not(:last-child){
         margin-right: 5%;
       }
-      @media (max-width: 900px) {
+      @media (max-width: 850px) {
         text-align: center;
       }
       &.development{
-        @media (max-width: 900px) {
-          width: 45%;
+        @media (max-width: 850px) {
+          width:47%;
         }
         @media (max-width: 600px) {
           float: none;
@@ -603,8 +604,8 @@ main{
         }
       }
       &.seo{
-        @media (max-width: 900px) {
-          width: 50%;
+        @media (max-width: 850px) {
+          width: 47%;
           margin-right: 0;
         }
         @media (max-width: 600px) {
@@ -614,10 +615,15 @@ main{
         }
       }
       &.support{
-        @media (max-width: 900px) {
+        @media (max-width: 850px) {
           float: none;
-          width: 46%;
+          width: 100%;
           margin: 0 auto;
+          &:before{
+            content: '';
+            display: block;
+            clear: both;
+          }
         }
         @media (max-width: 600px) {
           float: none;
@@ -626,29 +632,33 @@ main{
         }
       }
       .service-item_title{
+        margin-bottom: 15px;
+      .service-item_title_icon{
+        max-width: 51px;
+        max-height: 51px;
         display: inline-block;
-        width: 68%;
-        min-height: 50px;
+        vertical-align: middle;
+        margin-right: 15px;
+        @media (max-width: 850px) {
+          margin: 0;
+        }
+      }
+      .service-item_title_text{
+        display: inline-block;
+        width: 170px;
+        vertical-align: middle;
         font-size: 21px;
         line-height: 1.3;
         font-weight: 700;
-        padding: 0 0 0 70px;
         text-transform: uppercase;
-        margin-bottom: 41px;
-        background:  url('../img/feature_icon.png') no-repeat 0 top;
-        @media (max-width: 900px) {
-          background-position: 14% top;
-        }
-        @media (max-width: 600px) {
-          width: auto;
-          font-size: 19px;
-          line-height: 50px;
-          background-position: 3% top;
         }
       }
       ul{
         list-style: none;
         width: 100%;
+        @media (max-width: 850px) {
+          text-align: center;
+        }
         li{
           margin: 0 0 11px 0;
         }
