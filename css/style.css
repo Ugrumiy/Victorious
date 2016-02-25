@@ -1406,8 +1406,8 @@ footer .social-sharing ul a {
 @media (max-width: 850px) {
   .blog-list-container .blog-filter .search-form {
     width: 30%;
-    min-width: 250px;
-    margin: 0 0 30px 0;
+    min-width: 290px;
+    margin: 10px 0 30px 0;
   }
 }
 .blog-list-container .blog-filter .search-form input[type="search"] {
@@ -1438,6 +1438,30 @@ footer .social-sharing ul a {
 }
 .paginator li {
   display: inline-block;
+  color: #979797;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #979797;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 14px;
+  padding: 0.5em 1em;
+}
+.paginator li:hover {
+  background: #979797;
+  color: #ffffff;
+}
+.paginator li.active {
   color: #399799;
   font-weight: 700;
   background: transparent;
@@ -1454,10 +1478,8 @@ footer .social-sharing ul a {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-size: 14px;
-  padding: 0.5em 1em;
 }
-.paginator li:hover {
+.paginator li.active:hover {
   background: #399799;
   color: #ffffff;
 }
