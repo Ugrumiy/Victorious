@@ -187,7 +187,6 @@ p{
         height: 100%;
         width: 100%;
       }
-
     }
     @media (max-width: 600px) {
       display: none;
@@ -301,6 +300,7 @@ p{
     }
   }
 
+  
 /*Mobile menu*/
 /*_______________*/
   .slicknav_menu{
@@ -327,6 +327,16 @@ p{
       height: 60px;
       background: url('../img/logo.png') no-repeat 0 0;
       background-size: cover;
+    }
+    .phone-number{
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 19px;
+      right: 80px;
+      background: red;
+      font-size: 0;
     }
   }
 }
@@ -387,6 +397,9 @@ header .inner-page-pattern-bg{
   height: 76px;
 }
 
+
+/*Main-content*/
+/*_______________*/
 main{
 
   .breadcrumbs{
@@ -402,8 +415,7 @@ main{
     }
   }
 
-/*Slider*/
-/*_______________*/
+
   .slider-container-full-width{
     background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
     @media (max-width: 600px) {
@@ -447,7 +459,7 @@ main{
 /*About block*/
 /*_______________*/
   .about-company-container-full-width{
-    padding: 0 15px;
+    padding: 0.1% 15px 4% 15px;
   }
   .about-company{
     float: left;
@@ -471,7 +483,7 @@ main{
     }
     .download_presentation{
       display: block;
-      margin: 65px 0 78px 0 ;
+      margin: 65px 0 0 0 ;
       padding: 0 0 0 40px;
       font-size: 14px;
       font-style: italic;
@@ -479,9 +491,6 @@ main{
       background: url('../img/download_pdf_icon.png') no-repeat 0 0;
       .link-colors(@black, @black);
       .transition(all 0.3s ease);
-      @media (max-width: 600px) {
-        margin: 65px 0 0 0 ;
-      }
       &:hover{
         text-decoration: underline;
       }
@@ -581,10 +590,7 @@ main{
 /*Services block*/
 /*_______________*/
   .services-container-full-width{
-    padding: 0 15px;
-     @media (max-width: 900px) {
-        padding-bottom: 50px;
-      }
+    padding: 0.1% 15px 4% 15px;
     .service-item{
       width: 30%;
       float: left;
@@ -698,6 +704,7 @@ main{
       float: left;
       width: 47%;
       margin-right: 6%;
+      text-align: justify;
       @media (max-width: 600px) {
         float: none;
         width: 100%;
@@ -706,6 +713,7 @@ main{
     .right-column{
       float: right;
       width: 47%;
+      text-align: justify;
       @media (max-width: 600px) {
         float: none;
         width: 100%;
@@ -767,6 +775,7 @@ footer{
     }
   }
 }
+
 
 /*Contacts*/
 /*_______________*/
@@ -850,6 +859,9 @@ footer{
   }
 }
 
+
+/*Feedback*/
+/*_______________*/
 .feedback-items-container{
   @media (max-width: 600px) {
     padding: 0 15px;
@@ -977,7 +989,9 @@ footer{
   }
 }
 
-/*blog-items-list*/
+
+/*Article-previews*/
+/*_______________*/
 .article-item-list{
   float: left;
   width: 65%;
@@ -1022,7 +1036,8 @@ footer{
 }
 
 
-
+/*Article-previews filters*/
+/*_______________*/
 .article-filter {
   float: right;
   @media (max-width: 850px) {
@@ -1086,6 +1101,9 @@ footer{
   }
 }
 
+
+/*Article-item*/
+/*_______________*/
 .content.article {
   .article-filter {
     margin-top: 65px;
@@ -1118,6 +1136,9 @@ footer{
   }
 }
 
+
+/*Paginator*/
+/*_______________*/
 .paginator{
   margin: 70px 0 0 0;
   ul{

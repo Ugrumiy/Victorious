@@ -457,6 +457,16 @@ p {
   background: url('../img/logo.png') no-repeat 0 0;
   background-size: cover;
 }
+#header-container .slicknav_menu .phone-number {
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 19px;
+  right: 80px;
+  background: red;
+  font-size: 0;
+}
 /*Fixed Header*/
 /*_______________*/
 header.fixed {
@@ -516,9 +526,9 @@ header .inner-page-pattern-bg {
   width: 100%;
   height: 76px;
 }
+/*Main-content*/
+/*_______________*/
 main {
-  /*Slider*/
-  /*_______________*/
   /*About block*/
   /*_______________*/
   /*Clients block*/
@@ -594,7 +604,7 @@ main .slider .slide .slide-title .highlighted {
   text-decoration: underline;
 }
 main .about-company-container-full-width {
-  padding: 0 15px;
+  padding: 0.1% 15px 4% 15px;
 }
 main .about-company {
   float: left;
@@ -624,7 +634,7 @@ main .about-company .about-company_text {
 }
 main .about-company .download_presentation {
   display: block;
-  margin: 65px 0 78px 0 ;
+  margin: 65px 0 0 0 ;
   padding: 0 0 0 40px;
   font-size: 14px;
   font-style: italic;
@@ -646,11 +656,6 @@ main .about-company .download_presentation:hover {
 }
 main .about-company .download_presentation:active {
   color: #000000;
-}
-@media (max-width: 600px) {
-  main .about-company .download_presentation {
-    margin: 65px 0 0 0 ;
-  }
 }
 main .about-company .download_presentation:hover {
   text-decoration: underline;
@@ -755,12 +760,7 @@ main .our-clients-container-full-width .column img {
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.23);
 }
 main .services-container-full-width {
-  padding: 0 15px;
-}
-@media (max-width: 900px) {
-  main .services-container-full-width {
-    padding-bottom: 50px;
-  }
+  padding: 0.1% 15px 4% 15px;
 }
 main .services-container-full-width .service-item {
   width: 30%;
@@ -899,6 +899,7 @@ main .seo-text-container-full-width .left-column {
   float: left;
   width: 47%;
   margin-right: 6%;
+  text-align: justify;
 }
 @media (max-width: 600px) {
   main .seo-text-container-full-width .left-column {
@@ -909,6 +910,7 @@ main .seo-text-container-full-width .left-column {
 main .seo-text-container-full-width .right-column {
   float: right;
   width: 47%;
+  text-align: justify;
 }
 @media (max-width: 600px) {
   main .seo-text-container-full-width .right-column {
@@ -1174,6 +1176,8 @@ footer .social-sharing ul a {
   background: #399799;
   color: #ffffff;
 }
+/*Feedback*/
+/*_______________*/
 @media (max-width: 600px) {
   .feedback-items-container {
     padding: 0 15px;
@@ -1337,7 +1341,8 @@ footer .social-sharing ul a {
     background-position: 0 0;
   }
 }
-/*blog-items-list*/
+/*Article-previews*/
+/*_______________*/
 .article-item-list {
   float: left;
   width: 65%;
@@ -1400,6 +1405,8 @@ footer .social-sharing ul a {
   text-align: justify;
   margin-top: 0;
 }
+/*Article-previews filters*/
+/*_______________*/
 .article-filter {
   float: right;
 }
@@ -1503,6 +1510,8 @@ footer .social-sharing ul a {
     display: none;
   }
 }
+/*Article-item*/
+/*_______________*/
 .content.article .article-filter {
   margin-top: 65px;
 }
@@ -1539,6 +1548,8 @@ footer .social-sharing ul a {
   color: #3c3c3c;
   margin-bottom: 15px;
 }
+/*Paginator*/
+/*_______________*/
 .paginator {
   margin: 70px 0 0 0;
 }
