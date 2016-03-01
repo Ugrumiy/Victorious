@@ -1,3 +1,4 @@
+/*Variables and Mixins*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -208,7 +209,9 @@ p {
 #header-container {
   z-index: 1000;
   /*Mobile menu*/
+
   /*_______________*/
+
 }
 @media (max-width: 600px) {
   #header-container {
@@ -320,6 +323,9 @@ p {
     width: 100%;
     margin: 105px auto 0 auto;
   }
+}
+#header-container .header-menu {
+  font-size: 0;
 }
 #header-container .header-menu ul {
   list-style: none;
@@ -530,13 +536,21 @@ header .inner-page-pattern-bg {
 /*_______________*/
 main {
   /*About block*/
+
   /*_______________*/
+
   /*Clients block*/
+
   /*_______________*/
+
   /*Services block*/
+
   /*_______________*/
+
   /*SEO Text*/
+
   /*_______________*/
+
 }
 main .breadcrumbs {
   list-style: none;
@@ -893,7 +907,7 @@ main .seo-text-container-full-width {
   background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
 }
 main .seo-text-container-full-width .left-column {
   float: left;
@@ -1264,6 +1278,7 @@ footer .social-sharing ul a {
 }
 .feedback-item .personal-info .photo.flexible {
   display: none;
+  min-height: 124px;
 }
 @media (max-width: 600px) {
   .feedback-item .personal-info .photo.flexible {
@@ -1283,6 +1298,7 @@ footer .social-sharing ul a {
   position: relative;
   padding-top: 43px;
   /*Styles for bracket-symbols*/
+
 }
 @media (max-width: 600px) {
   .feedback-item .feedback-text-container .feedback-text {
@@ -1602,6 +1618,7 @@ footer .social-sharing ul a {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  padding: 0.5em 1em;
 }
 .paginator li.active:hover {
   background: #399799;

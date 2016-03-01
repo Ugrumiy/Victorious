@@ -28,12 +28,12 @@
                 <div class="header-menu-container">
                     <nav class="header-menu">
                         <ul>
-                            <li><a href="" class="active">Главная</a></li><!--
-                         --><li><a href="#" id="header-menu-dropdown-anchor" class="dropdown-anchor">Услуги</a></li><!--
-                         --><li><a href="">Работы</a></li><!--
-                         --><li><a href="">Отзывы</a></li><!--
-                         --><li><a href="">Блог</a></li><!--
-                         --><li><a href="">Контакты</a></li>
+                            <li><a href="" class="active">Главная</a></li>
+                            <li><a href="#" id="header-menu-dropdown-anchor" class="dropdown-anchor">Услуги</a></li>
+                            <li><a href="">Работы</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Контакты</a></li>
                         </ul>
                     </nav>
                     <div id="header-menu-dropout" class="header-menu-dropout clearfix">
@@ -59,39 +59,6 @@
                     </div>
                 </div>
             </div>
-            <ul id="menu-mobile" style="display: none">
-                <li><a href="">Главная</a></li>
-                <li>Услуги
-                    <ul>
-                        <li>Разработка сайтов
-                            <ul>
-                                <li><a href="">Сайты-визитки</a></li>
-                                <li><a href="">Корпоративные сайты</a></li>
-                                <li><a href="">Интернет-магазины</a></li>
-                                <li><a href="">Landing Pages</a></li>
-                            </ul>
-                        </li>
-
-                        <li>Продвижение сайтов
-                            <ul>
-                                <li><a href="">Поисковое продвижение</a></li>
-                                <li><a href="">Продвижение в соц.сетях</a></li>
-                                <li><a href="">Контекстная реклама</a></li>
-                            </ul>
-                        </li>
-                        <li>Поддержка сайтов
-                            <ul>
-                                <li><a href="">Модернизация сайтов</a></li>
-                                <li><a href="">Наполнение сайтов</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="">Работы</a></li>
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">Блог</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
         </div>
     </div>
 </header>
@@ -233,6 +200,42 @@
 
 </footer>
 
+<script type="text/x-my-template" id="mobileMenuTemplate">
+    <ul id="menu-mobile">
+        <li><a href="">Главная</a></li>
+        <li>Услуги
+            <ul>
+                <li>Разработка сайтов
+                    <ul>
+                        <li><a href="">Сайты-визитки</a></li>
+                        <li><a href="">Корпоративные сайты</a></li>
+                        <li><a href="">Интернет-магазины</a></li>
+                        <li><a href="">Landing Pages</a></li>
+                    </ul>
+                </li>
+
+                <li>Продвижение сайтов
+                    <ul>
+                        <li><a href="">Поисковое продвижение</a></li>
+                        <li><a href="">Продвижение в соц.сетях</a></li>
+                        <li><a href="">Контекстная реклама</a></li>
+                    </ul>
+                </li>
+                <li>Поддержка сайтов
+                    <ul>
+                        <li><a href="">Модернизация сайтов</a></li>
+                        <li><a href="">Наполнение сайтов</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">Работы</a></li>
+        <li><a href="">Отзывы</a></li>
+        <li><a href="">Блог</a></li>
+        <li><a href="">Контакты</a></li>
+    </ul>
+</script>
+
 <script>
 $(function() {
 
@@ -246,7 +249,7 @@ $(function() {
     })
 
     $headerContainer = $('#header-container');
-    $('#menu-mobile').slicknav({
+    $('#mobileMenuTemplate').slicknav({
         label: '',
         duration: 1000,
         prependTo: $headerContainer,
