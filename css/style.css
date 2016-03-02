@@ -213,7 +213,6 @@ p {
     padding: 0;
     position: fixed;
     width: 100%;
-    background: #ffffff;
     top: 0;
     left: 0;
   }
@@ -555,6 +554,13 @@ p {
 }
 /*Mobile menu*/
 /*_______________*/
+#mobile-menu {
+  position: fixed;
+  height: 100% !important;
+}
+.multilevelpushmenu_wrapper {
+  height: 100% !important;
+}
 /*Fixed Header*/
 /*_______________*/
 header.fixed {
