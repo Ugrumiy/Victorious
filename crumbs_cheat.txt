@@ -201,3 +201,72 @@ $site_map = array(
         ),
     ),
 );
+
+
+
+
+
+//Главное меню
+<?
+            $html = '';
+            foreach ($site_map as $item => $link) {
+                // lvl 1
+                if (is_array($link)) {
+                    $html .= '<li class="nav__item subnav js__subnav">';
+                
+                    // lvl 1 self link
+                    if (isset($link['self_link'])) {
+                        $html .= '<a class="subnav__label nav__link js__subnav__label" href="'.$link['self_link'].'">'.$item.'</a>';
+                    } else {
+                        $html .= '<div class="subnav__label js__subnav__label">'.$item.'</div>';
+                    }
+                    
+                    $html .= '<div class="subnav__container js__subnav__container"><ul class="subnav__list">';
+                    
+                    foreach ($link as $item2 => $link2) {
+                        // lvl 2
+                        if (is_array($link2)) {
+                            $html .= '<li class="subnav__item sidenav js__sidenav">';
+                            
+                            // lvl 2 self link
+                            if (isset($link2['self_link'])) {
+                                $html .= '<a class="sidenav__label subnav__link js__sidenav__label" href="'.$link2['self_link'].'">'.$item2.'</a>';
+                            } else {
+                                $html .= '<div class="sidenav__label js__sidenav__label">'.$item2.'</div>';
+                            }
+                            
+                            $html .= '<div class="sidenav__container js__sidenav__container"><ul class="sidenav__list">';
+                            
+                            foreach ($link2 as $item3 => $link3) {
+                            // lvl 3
+                                if ($item3 != 'self_link') {
+                                    $html .= '<li class="sidenav__item"><a class="sidenav__link" href="'.$link3.'">'.$item3.'</a></li>';
+                                }
+                            }
+                            
+                            $html .= '</ul></div></li>';
+                        } else {
+                            if ($item2 != 'self_link') {
+                                $html .= '<li class="subnav__item"><a class="subnav__link js__subnav__link" href="'.$link2.'">'.$item2.'</a></li>';
+                            }
+                        }
+                        
+                    }
+                    
+                    $html .= '</ul></div></li>';
+                } else {
+                    if (in_array($item, $site_map_blank)) {
+                        $blank = ' target="_blank"';
+                    } else {
+                        $blank = '';
+                    }
+                    if (array_key_exists($item, $site_map_special)) {
+                        $special = ' '.$site_map_special[$item];
+                    } else {
+                        $special = '';
+                    }
+                    $html .= '<li class="nav__item"><a class="nav__link js__nav__link'.$special.'" href="'.$link.'"'.$blank.'>'.$item.'<i></i></a></li>';
+                }
+            }
+            echo $html;
+        ?>
