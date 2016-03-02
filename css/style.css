@@ -223,18 +223,18 @@ p {
 #header-container .container-center-wrapper {
   padding: 0 15px;
 }
-#header-container .desktop-menu-container {
+#header-container .desktop-menu {
   width: 100%;
   height: 137px;
   position: relative;
   border-top: 1px solid transparent;
 }
 @media (max-width: 950px) {
-  #header-container .desktop-menu-container {
+  #header-container .desktop-menu {
     height: 150px;
   }
 }
-#header-container .desktop-menu-container .header-logo {
+#header-container .desktop-menu .header-logo {
   width: 225px;
   height: 67px;
   position: absolute;
@@ -243,16 +243,16 @@ p {
   background-size: cover;
 }
 @media (max-width: 950px) {
-  #header-container .desktop-menu-container .header-logo {
+  #header-container .desktop-menu .header-logo {
     top: 30%;
   }
 }
-#header-container .desktop-menu-container .header-logo img {
+#header-container .desktop-menu .header-logo img {
   height: 100%;
   width: 100%;
 }
 @media (max-width: 600px) {
-  #header-container .desktop-menu-container {
+  #header-container .desktop-menu {
     display: none;
   }
 }
@@ -493,10 +493,10 @@ header.fixed #header-container {
   -moz-box-shadow: 0px 2px 15px -4px #000000;
   box-shadow: 0px 2px 15px -4px #000000;
 }
-header.fixed #header-container .desktop-menu-container {
+header.fixed #header-container .desktop-menu {
   height: 60px;
 }
-header.fixed #header-container .desktop-menu-container .header-logo {
+header.fixed #header-container .desktop-menu .header-logo {
   height: 60px;
   width: 200px;
   position: static;
@@ -504,25 +504,25 @@ header.fixed #header-container .desktop-menu-container .header-logo {
   margin: 3px 0;
 }
 @media (max-width: 950px) {
-  header.fixed #header-container .desktop-menu-container .header-logo {
+  header.fixed #header-container .desktop-menu .header-logo {
     display: none;
   }
 }
-header.fixed #header-container .desktop-menu-container .header-phone-btn {
+header.fixed #header-container .desktop-menu .header-phone-btn {
   display: none;
 }
-header.fixed #header-container .desktop-menu-container .header-menu-container {
+header.fixed #header-container .desktop-menu .header-menu-container {
   position: absolute;
   max-width: 100%;
   top: 20px;
   margin: 0;
 }
 @media (max-width: 900px) {
-  header.fixed #header-container .desktop-menu-container .header-menu ul li:not(:last-child) {
+  header.fixed #header-container .desktop-menu .header-menu ul li:not(:last-child) {
     margin-right: 7%;
   }
 }
-header.fixed #header-container .desktop-menu-container .header-menu-dropout {
+header.fixed #header-container .desktop-menu .header-menu-dropout {
   top: 57px;
 }
 header .inner-page-pattern-bg {
