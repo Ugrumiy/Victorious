@@ -19,8 +19,8 @@
 <header>
     <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
-            <div class="logo-menu-container clearfix">
-                <div class="logo-pic"></div>
+            <div class="desktop-menu-container clearfix">
+                <img id="header-logo" class="header-logo" src="img/logo.png">
                 <div class="header-phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
                     <button>Оставить заявку</button>
@@ -55,7 +55,6 @@
                             <li><a href="">Модернизация сайтов</a></li>
                             <li><a href="">Наполнение сайтов</a></li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -185,7 +184,7 @@
      <div id="footer" class="footer-container-full-width container-full-width">
         <div class="container-center-wrapper clearfix">
            <div class="logo-copyright">
-               <div class="footer-logo"></div>
+               <div class="footer-logo"><img src="img/logo_footer.png" alt="Logo"/></div>
                <p class="copyright">© 2016, Web-студия Victorious</p>
            </div>
            <div class="social-sharing">
@@ -200,7 +199,7 @@
 </footer>
 
 <script type="text/x-my-template" id="menu-mobile-template">
-    <ul id="menu-mobile">
+    <ul>
         <li><a href="">Главная</a></li>
         <li>Услуги
             <ul>
@@ -212,7 +211,6 @@
                         <li><a href="">Landing Pages</a></li>
                     </ul>
                 </li>
-
                 <li>Продвижение сайтов
                     <ul>
                         <li><a href="">Поисковое продвижение</a></li>
@@ -247,13 +245,14 @@ $(function() {
         }
     })
 
+    var logo =$('#header-logo');
     var menuMobile = $("#menu-mobile-template").html();
     $headerContainer = $('#header-container');
     $(menuMobile).slicknav({
         label: '',
         duration: 1000,
         prependTo: $headerContainer,
-        brand: ' ',
+        brand: logo.prop('outerHTML'),
 
     });
 
