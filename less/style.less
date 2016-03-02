@@ -172,13 +172,16 @@ p{
      @media (max-width: 950px) {
       height: 150px;
     }
+    @media (max-width: 600px) {
+      height: 60px;
+      padding: 3px 0;
+    }
     .header-logo {
       width: 225px;
       height: 67px;
       position: absolute;
       top: 50%;
       margin: -36px 0 0 0;
-      background-size: cover;
       @media (max-width: 950px) {
         top: 30%;
       }
@@ -186,27 +189,46 @@ p{
         height: 100%;
         width: 100%;
       }
-    }
-    @media (max-width: 600px) {
-      display: none;
+      @media (max-width: 600px) {
+        margin: 0;
+        padding: 0;
+        height: 54px;
+        width: auto;
+        position: static;
+      }
     }
   }
   .header-phone-btn {
     position: absolute;
     top: 30px;
     right: 0;
+    @media (max-width: 600px) {
+      top: 5px;
+      right: 70px;
+    }
     .phone-number {
       font-size: 1.2em;
       line-height: 2em;
       font-weight: 700;
       text-decoration: none;
       margin: 0 13px 0 0;
-      .link-colors(@black, @black)
+      .link-colors(@black, @black);
+      @media (max-width: 600px) {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        background: red;
+        font-size: 0;
+      }
     }
     button {
       .btn(@light-green);
       font-size: 15px;
       margin-top: -2px;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
   .header-menu-container {
@@ -221,6 +243,9 @@ p{
       max-width: 680px;
       width: 100%;
       margin: 100px auto 0 auto;
+    }
+    @media (max-width: 600px) {
+      display: none;
     }
   }
   .header-menu {
@@ -266,11 +291,11 @@ p{
     display: none;
     width: 565px;
     position: absolute;
-    top: 50px;
+    top: 75px;
     padding: 20px;
     background-color: @light-green;
     @media (max-width: 950px) {
-      top: 149px;
+      top: 165px;
       left: 50%;
       margin-left: -282px;
     }
@@ -299,58 +324,111 @@ p{
       }
     }
   }
+}
+
+.hamburger{
+  display: none;
+  width: 49px;
+  height: 49px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin: 0 0 0 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media (max-width: 600px) {
+    display: block;
+  }
+  span{
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: @light-green;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  span:nth-child(1) {
+    top: 10px;
+  }
+
+  span:nth-child(2),
+  span:nth-child(3) {
+    top: 25px;
+  }
+
+  span:nth-child(4) {
+    top: 42px;
+  }
+  &.open span{
+    background: #000000;
+  }
+  &.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  &.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  .hamburger_ie9{
+    width: 21px;
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background: url('../img/open_close_menu_icon_sprite.png') 0px -47px no-repeat;
+    display: none;
+  }
+  &.open .hamburger_ie9{
+    background-position: 0px 10px;
+  }
+}
 
 
 /*Mobile menu*/
 /*_______________*/
-  .slicknav_menu{
-    display: none;
-    padding: 0;
-    background: none;
 
-    @media (max-width: 600px) {
-      display: block;
-    }
-    .slicknav_btn{
-      background: none;
-      .slicknav_icon-bar{
-        background-color: @light-green;
-      }
-    }
-    .slicknav_nav{
-      background: @light-green;
-    }
-    .slicknav_brand{
-      margin: 3px 0 3px 10px;
-      padding: 0;
-      width: 202px;
-      height: 60px;
-        img{
-          width: 100%;
-          height: 100%;
-        }
-    }
-    .phone-number{
-      display: block;
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      top: 19px;
-      right: 62px;
-      background: red;
-      font-size: 0;
-    }
-  }
-}
+
 
 
 /*Fixed Header*/
 /*_______________*/
 header.fixed {
-  padding: 75px 0;
-  @media (max-width: 600px) {
-    padding: 0;
-  }
+  padding: 60px 0 0 0;
   #header-container {
     width: 100%;
     padding: 0;
@@ -363,17 +441,22 @@ header.fixed {
     .desktop-menu {
       height: 60px;
       .header-logo {
-        height: 60px;
-        width: 200px;
+        height: 54px;
+        width: auto;
         position: static;
         float: left;
-        margin: 3px 0;
+        margin: 0;
         @media (max-width: 950px) {
           display: none;
         }
+        @media (max-width: 600px) {
+          display: block;
+        }
       }
       .header-phone-btn {
-        display: none;
+        @media (min-width: 600px) {
+          display: none;
+        }
       }
       .header-menu-container {
         position: absolute;
