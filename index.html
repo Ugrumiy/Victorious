@@ -140,7 +140,7 @@
         </nav>
     </div>
 </header>
-<main>
+<main id="main">
     <div class="slider-container-full-width container-full-width">
         <div class="container-center-wrapper">
             <div id="js_slider" class="slider">
@@ -351,6 +351,10 @@ $(function() {
             $('#js_mobile-menu').multilevelpushmenu('fullcollapse');
             $('#js_hamburger').removeClass('open');
         }
+    })
+    $("#main").on('click', function(){
+        $mobileMenu.multilevelpushmenu('fullcollapse');
+        $('#js_hamburger').removeClass('open');
     })
 
 });
