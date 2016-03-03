@@ -1,3 +1,4 @@
+/*Variables and Mixins*/
 /**
  * Global Reset of all HTML Elements
  *
@@ -259,9 +260,9 @@ p {
 }
 @media (max-width: 600px) {
   #header-container .desktop-menu .desktop-menu_logo {
-    margin: 0;
+    margin: 6px 0 0 0;
     padding: 0;
-    height: 54px;
+    height: 40px;
     width: auto;
     position: static;
   }
@@ -273,8 +274,8 @@ p {
 }
 @media (max-width: 600px) {
   #header-container .desktop-menu_phone-btn {
-    top: 5px;
-    right: 52px;
+    top: 10px;
+    right: 62px;
   }
 }
 #header-container .desktop-menu_phone-btn .phone-number {
@@ -299,10 +300,10 @@ p {
 @media (max-width: 600px) {
   #header-container .desktop-menu_phone-btn .phone-number {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 0;
-    background: red;
+    background: url('../img/phone_receiver.png') no-repeat 0 0;
     font-size: 0;
   }
 }
@@ -579,13 +580,13 @@ p {
   -webkit-box-shadow: 0px 2px 15px -4px #000000;
   -moz-box-shadow: 0px 2px 15px -4px #000000;
   box-shadow: 0px 2px 15px -4px #000000;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#399799, direction=90, strength=2);
+  filter: progid:dximagetransform.microsoft.shadow(color=#399799, direction=90, strength=2);
 }
 .multilevelpushmenu_wrapper .rtl {
   -webkit-box-shadow: 0px 2px 15px -4px #000000;
   -moz-box-shadow: 0px 2px 15px -4px #000000;
   box-shadow: 0px 2px 15px -4px #000000;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#399799, direction=270, strength=2);
+  filter: progid:dximagetransform.microsoft.shadow(color=#399799, direction=270, strength=2);
 }
 .multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
   background: #F5F5F5;
@@ -654,6 +655,8 @@ header.fixed #header-container .desktop-menu .desktop-menu_logo {
 @media (max-width: 600px) {
   header.fixed #header-container .desktop-menu .desktop-menu_logo {
     display: block;
+    height: 40px;
+    margin: 6px 0 0 0;
   }
 }
 @media (min-width: 600px) {
@@ -684,9 +687,13 @@ header .inner-page-pattern-bg {
 /*_______________*/
 main {
   /*Breadcrumbs*/
+
   /*_______________*/
+
   /*Paginator*/
+
   /*_______________*/
+
 }
 main .breadcrumbs {
   list-style: none;
@@ -813,7 +820,7 @@ main .paginator li.active:hover {
 }
 .slider .slide .slide-title .highlighted {
   font-weight: 700;
-  text-decoration: underline;
+  border-bottom: 3px solid #000000;
 }
 /*About block index*/
 /*_______________*/
@@ -1113,7 +1120,7 @@ main .paginator li.active:hover {
   background: -o-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: -ms-linear-gradient(left, #e4e4e4 0%, #f6f6f6 100%);
   background: linear-gradient(to right, #e4e4e4 0%, #f6f6f6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#f6f6f6', GradientType=1);
 }
 .seo-text-container-full-width .left-column {
   float: left;
@@ -1204,6 +1211,9 @@ footer .social-sharing ul {
 }
 footer .social-sharing ul li {
   display: inline-block;
+}
+@media (max-width: 600px) {
+  
 }
 footer .social-sharing ul li:not(:last-child) {
   margin-right: 3%;
@@ -1514,6 +1524,7 @@ footer .social-sharing ul a {
   position: relative;
   padding-top: 43px;
   /*Styles for bracket-symbols*/
+
 }
 @media (max-width: 600px) {
   .feedback-item .feedback-text-container .feedback-text {
