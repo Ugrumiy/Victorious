@@ -42,7 +42,7 @@
 				overlapWidth: 20,
 				preventItemClick: true,
 				preventGroupItemClick: true,
-				swipe: 'both',
+				swipe: 'desktop',
 				durationSlideOut: 100,
 				durationSlideDown: 200,
 				durationTransition: 100,
