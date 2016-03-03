@@ -598,10 +598,13 @@ p {
   cursor: pointer;
 }
 .multilevelpushmenu_wrapper li:last-child {
-  border-bottom: 1px solid #399799;
+  border-bottom: none;
 }
 .multilevelpushmenu_wrapper li:hover {
   color: #399799;
+}
+.multilevelpushmenu_wrapper > .levelHolderClass > ul > li:first-child {
+  border-top: none;
 }
 .multilevelpushmenu_wrapper a {
   color: #399799;

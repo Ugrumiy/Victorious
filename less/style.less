@@ -414,6 +414,7 @@ p{
   top: 60px;
   .box-shadow(0px 2px 15px -4px @black);
 }
+
 .multilevelpushmenu_wrapper{
   height: 100% !important;
   .levelHolderClass {
@@ -442,11 +443,14 @@ p{
     border-top: 1px solid @light-green;
     cursor: pointer;
     &:last-child{
-      border-bottom: 1px solid @light-green;
+      border-bottom: none;
     }
     &:hover{
       color: @light-green;
     }
+  }
+  > .levelHolderClass > ul > li:first-child{
+      border-top: none;
   }
 
   a {
