@@ -319,7 +319,7 @@ $(function() {
 
 
     var $mobileMenu = $('#js_mobile-menu');
-
+    var mobileMenuOpen = false;
 
     $(document).ready(function(){
         $mobileMenu.multilevelpushmenu({
@@ -328,16 +328,16 @@ $(function() {
             fullCollapse: true,
             mode: 'cover',
             onExpandMenuEnd: function(){
-                $mobileMenu.addClass('open');
+                mobileMenuOpen = true;
             },
             onCollapseMenuEnd: function(){
-                $mobileMenu.removeClass('open');
+                mobileMenuOpen = false;
             },
         });
     });
 
     $('#js_hamburger').click(function(){
-        if( $mobileMenu.hasClass('open')){
+        if( mobileMenuOpen == true){
             $mobileMenu.multilevelpushmenu('collapse');
             $(this).removeClass('open');
         }
