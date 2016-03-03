@@ -116,7 +116,7 @@
                     <div class="map-container"></div>
                 </div>
                 <h2>Отправить нам сообщение</h2>
-                <form action="get" id="contactus-form" class="contactus-form clearfix">
+                <form action="get" id="js_contactus-form" class="contactus-form clearfix">
                     <div class="clearfix">
                         <div class="input-group text">
                             <input name="username" type="text"/>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="input-group textarea">
-                        <textarea name="usermessage" id="" cols="30" rows="10"></textarea>
+                        <textarea name="usermessage" cols="30" rows="10"></textarea>
                         <div class="js_placeholder placeholder">Сообщение:</div>
                     </div>
                     <input type="submit"/>
@@ -162,11 +162,11 @@
 
 <script>
 $(function() {
-    $("#contactus-form").find('.js_placeholder').on('click', function(){
+    $("#js_contactus-form").find('.js_placeholder').on('click', function(){
         $(this).parent().addClass('active');
         $(this).prev().focus();
     })
-    $("#contactus-form").find('input[type="text"], textarea').on('focus change input', function(){
+    $("#js_contactus-form").find('input[type="text"], textarea').on('focus change input', function(){
         $(this).parent().addClass('active');
     }).on('blur',function(){
         if ($(this).val() == ''){

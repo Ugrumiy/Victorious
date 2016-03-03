@@ -20,23 +20,23 @@
     <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
             <div class="desktop-menu clearfix">
-                <img id="header-logo" class="header-logo" src="img/logo.png">
-                <div class="header-phone-btn">
+                <img class="desktop-menu_logo" src="img/logo.png">
+                <div class="desktop-menu_phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
                     <button>Оставить заявку</button>
                 </div>
-                <div class="header-menu-container">
-                    <nav class="header-menu">
+                <div class="desktop-nav-container">
+                    <nav class="desktop-nav">
                         <ul>
                             <li><a href="" class="active">Главная</a></li>
-                            <li><a href="#" id="header-menu-dropdown-anchor" class="dropdown-anchor">Услуги</a></li>
+                            <li><a href="#" id="desktop-nav-dropdown-anchor" class="dropdown-anchor">Услуги</a></li>
                             <li><a href="">Работы</a></li>
                             <li><a href="">Отзывы</a></li>
                             <li><a href="">Блог</a></li>
                             <li><a href="">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div id="header-menu-dropout" class="header-menu-dropout clearfix">
+                    <div id="js_desktop-nav-dropout" class="desktop-nav-dropout clearfix">
                         <ul class="link-group">
                             <li class="link-group_title">Разработка сайтов</li>
                             <li><a href="">Сайты-визитки</a></li>
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div id="mobile-menu">
+    <div id="js_mobile-menu" class="mobile-menu">
         <nav>
             <ul>
                 <li>
@@ -141,19 +141,19 @@
     </div>
 </header>
 <main>
-    <div id="slider" class="slider-container-full-width container-full-width">
+    <div class="slider-container-full-width container-full-width">
         <div class="container-center-wrapper">
-            <div class="slider">
-                <div class="slide">
+            <div id="js_slider" class="slider">
+                <div class="js_slide slide">
                     <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента1</div>
                 </div>
-                <div class="slide">
+                <div class="js_slide slide">
                     <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента2</div>
                 </div>
-                <div class="slide">
+                <div class="js_slide slide">
                     <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента3</div>
                 </div>
-                <div class="slide">
+                <div class="js_slide slide">
                     <div class="slide-title">Разработка <span class="highlighted">корпоративных сайтов</span><br> от идеи до первого клиента4</div>
                 </div>
             </div>
@@ -260,7 +260,7 @@
     </div>
 </main>
 <footer>
-     <div id="footer" class="footer-container-full-width container-full-width">
+     <div class="footer-container-full-width container-full-width">
         <div class="container-center-wrapper clearfix">
            <div class="logo-copyright">
                <div class="footer-logo"><img src="img/logo_footer.png" alt="Logo"/></div>
@@ -268,9 +268,9 @@
            </div>
            <div class="social-sharing">
                <ul>
-                   <li><a class="vk" href=""></a></li><!--
-               --><li><a class="fb" href=""></a></li><!--
-               --><li><a class="gp" href=""></a></li>
+                    <li><a class="vk" href=""></a></li>
+                    <li><a class="fb" href=""></a></li>
+                    <li><a class="gp" href=""></a></li>
                </ul>
            </div>
         </div>
@@ -290,7 +290,7 @@ $(function() {
     })
 
 
-    $('.slider').slick({
+    $('#js_slider').slick({
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
@@ -298,9 +298,9 @@ $(function() {
 
     });
 
-    $('#header-menu-dropdown-anchor').on('click', function(event){
+    $('#desktop-nav-dropdown-anchor').on('click', function(event){
         event.preventDefault();
-        var dropout = $('#header-menu-dropout');
+        var dropout = $('#js_desktop-nav-dropout');
         if(dropout.hasClass('active')) {
             dropout.fadeOut(200).removeClass('active');
         }
@@ -309,7 +309,7 @@ $(function() {
         }
     })
     
-    $('.slide').flowtype({
+    $('.js_slide').flowtype({
        minimum   : 320,
        maximum   : 1200,
        minFont   : 17,
@@ -318,7 +318,7 @@ $(function() {
     });
 
 
-    var $mobileMenu = $('#mobile-menu');
+    var $mobileMenu = $('#js_mobile-menu');
 
 
     $(document).ready(function(){

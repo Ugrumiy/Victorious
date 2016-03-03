@@ -106,7 +106,7 @@
             </ul>
             <div class="content article clearfix">
                 <div class="article-filter">
-                    <form action="get" id="article-category-form" class="article-category-form">
+                    <form action="get" id="js_article-category-form" class="article-category-form">
                         <div class="article-filter_title">Категории материалов:</div>
                         <ul>
                             <li><label><input name="group1" type="checkbox" checked/>Поисковое продвижение</label></li>
@@ -155,7 +155,7 @@
 <script>
 $(function() {
     $(document).on('ready', function(){
-        var $checkboxes = $('#article-category-form').find('input[type="checkbox"]');
+        var $checkboxes = $('#js_article-category-form').find('input[type="checkbox"]');
         $checkboxes.filter(':checked').parent().addClass('active');
         $checkboxes.on('change',function(){
             $(this).parent().toggleClass('active');
