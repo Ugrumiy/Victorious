@@ -270,7 +270,7 @@ p {
 @media (max-width: 600px) {
   #header-container .header-phone-btn {
     top: 5px;
-    right: 70px;
+    right: 52px;
   }
 }
 #header-container .header-phone-btn .phone-number {
@@ -470,12 +470,12 @@ p {
   height: 49px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: rotate(0deg);
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   cursor: pointer;
   margin: 0 0 0 30px;
   position: absolute;
@@ -498,46 +498,46 @@ p {
   left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: rotate(0deg);
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
 }
 .hamburger span:nth-child(1) {
   top: 10px;
 }
 .hamburger span:nth-child(2),
 .hamburger span:nth-child(3) {
-  top: 25px;
+  top: 26px;
 }
 .hamburger span:nth-child(4) {
   top: 42px;
 }
 .hamburger.open span {
-  background: #000000;
+  background: #399799;
 }
 .hamburger.open span:nth-child(1) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 .hamburger.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 .hamburger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }
 .hamburger.open span:nth-child(4) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 .hamburger .hamburger_ie9 {
@@ -550,7 +550,7 @@ p {
   display: none;
 }
 .hamburger.open .hamburger_ie9 {
-  background-position: 0px 10px;
+  background-position: 0 10px;
 }
 /*Mobile menu*/
 /*_______________*/

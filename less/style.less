@@ -203,7 +203,7 @@ p{
     right: 0;
     @media (max-width: 600px) {
       top: 5px;
-      right: 70px;
+      right: 52px;
     }
     .phone-number {
       font-size: 1.2em;
@@ -329,14 +329,8 @@ p{
   display: none;
   width: 49px;
   height: 49px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  .rotate (0deg);
+  .transition (.5s ease-in-out);
   cursor: pointer;
   margin: 0 0 0 30px;
   position: absolute;
@@ -354,14 +348,8 @@ p{
     border-radius: 3px;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    .rotate (0deg);
+    .transition (.25s ease-in-out);
   }
   span:nth-child(1) {
     top: 10px;
@@ -369,38 +357,32 @@ p{
 
   span:nth-child(2),
   span:nth-child(3) {
-    top: 25px;
+    top: 26px;
   }
 
   span:nth-child(4) {
     top: 42px;
   }
   &.open span{
-    background: #000000;
+    background: @light-green;
   }
   &.open span:nth-child(1) {
     top: 18px;
-    width: 0%;
+    width: 0;
     left: 50%;
   }
 
   &.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    .rotate (45deg);
   }
 
   &.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    .rotate (-45deg);
   }
 
   &.open span:nth-child(4) {
     top: 18px;
-    width: 0%;
+    width: 0;
     left: 50%;
   }
   .hamburger_ie9{
@@ -413,7 +395,7 @@ p{
     display: none;
   }
   &.open .hamburger_ie9{
-    background-position: 0px 10px;
+    background-position: 0 10px;
   }
 }
 
