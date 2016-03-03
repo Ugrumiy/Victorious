@@ -78,7 +78,7 @@
                     <h2>Услуги</h2>
                     <ul>
                         <li>
-                            <a href="#">Разработка сайтов ></a>
+                            <a href="#">Разработка сайтов</a>
                             <h2>Разработка сайтов</h2>
                             <ul>
                                 <li>
@@ -96,7 +96,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Продвижение сайтов ></a>
+                            <a href="#">Продвижение сайтов</a>
                             <h2>Продвижение сайтов</h2>
                             <ul>
                                 <li>
@@ -338,11 +338,11 @@ $(function() {
 
     $('#js_hamburger').click(function(){
         if( $mobileMenu.hasClass('open')){
-            $('#mobile-menu').multilevelpushmenu('collapse');
+            $mobileMenu.multilevelpushmenu('collapse');
             $(this).removeClass('open');
         }
         else{
-            $('#mobile-menu').multilevelpushmenu('expand');
+            $mobileMenu.multilevelpushmenu('expand');
             $(this).addClass('open');
         }
     });
