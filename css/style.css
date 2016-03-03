@@ -565,6 +565,9 @@ p {
   height: 100% !important;
   z-index: 100;
   top: 60px;
+  -webkit-box-shadow: 0px 2px 15px -4px #000000;
+  -moz-box-shadow: 0px 2px 15px -4px #000000;
+  box-shadow: 0px 2px 15px -4px #000000;
 }
 .multilevelpushmenu_wrapper {
   height: 100% !important;
@@ -598,7 +601,7 @@ p {
   border-bottom: 1px solid #399799;
 }
 .multilevelpushmenu_wrapper li:hover {
-  color: #295685;
+  color: #399799;
 }
 .multilevelpushmenu_wrapper a {
   color: #399799;
@@ -607,7 +610,10 @@ p {
   color: #399799;
 }
 .multilevelpushmenu_wrapper .backItemClass {
-  background: #F5F5F5;
+  background: none;
+  -webkit-box-shadow: inset 2px 0px 28px -12px #000000;
+  -moz-box-shadow: inset 2px 0px 28px -12px #000000;
+  box-shadow: inset 2px 0px 28px -12px #000000;
   border-top: 1px solid #399799;
 }
 /*Fixed Header*/
@@ -1150,10 +1156,17 @@ main .paginator li.active:hover {
 /*Footer*/
 /*_______________*/
 footer {
-  padding: 65px 15px;
+  padding: 40px 15px 3% 15px;
 }
 footer .logo-copyright {
   float: left;
+}
+@media (max-width: 600px) {
+  footer .logo-copyright {
+    text-align: center;
+    float: none;
+    margin-top: 15px;
+  }
 }
 footer .logo-copyright .footer-logo {
   width: 225px;
@@ -1162,6 +1175,11 @@ footer .logo-copyright .footer-logo {
 footer .logo-copyright .footer-logo img {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 600px) {
+  footer .logo-copyright .footer-logo {
+    display: none;
+  }
 }
 footer .logo-copyright .copyright {
   color: #898989;
@@ -1172,10 +1190,10 @@ footer .social-sharing {
   width: 128px;
   font-size: 0;
 }
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   footer .social-sharing {
-    margin-top: -23px;
-    width: 50px;
+    float: none;
+    margin: 0 auto;
   }
 }
 footer .social-sharing ul {
@@ -1183,12 +1201,6 @@ footer .social-sharing ul {
 }
 footer .social-sharing ul li {
   display: inline-block;
-}
-@media (max-width: 450px) {
-  footer .social-sharing ul li {
-    display: block;
-    margin: 0 0 5px 0;
-  }
 }
 footer .social-sharing ul li:not(:last-child) {
   margin-right: 3%;
