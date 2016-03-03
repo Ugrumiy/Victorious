@@ -330,7 +330,7 @@ $(function() {
             onExpandMenuEnd: function(){
                 mobileMenuOpen = true;
             },
-            onCollapseMenuEnd: function(){
+            onFullCollapseMenuEnd: function(){
                 mobileMenuOpen = false;
             },
         });
@@ -338,7 +338,7 @@ $(function() {
 
     $('#js_hamburger').click(function(){
         if( mobileMenuOpen == true){
-            $mobileMenu.multilevelpushmenu('collapse');
+            $mobileMenu.multilevelpushmenu('fullcollapse');
             $(this).removeClass('open');
         }
         else{
@@ -348,7 +348,7 @@ $(function() {
     });
     $(window).on('resize', function(){
         if( $(this).width() > 600 ){
-            $mobileMenu.multilevelpushmenu('collapse');
+            $('#js_mobile-menu').multilevelpushmenu('fullcollapse');
             $('#js_hamburger').removeClass('open');
         }
     })

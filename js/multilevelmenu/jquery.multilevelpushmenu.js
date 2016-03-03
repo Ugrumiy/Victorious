@@ -48,6 +48,7 @@
 				durationTransition: 100,
 				onCollapseMenuStart: function() {},
 				onCollapseMenuEnd: function() {},
+				onFullCollapseMenuEnd: function() {},
 				onExpandMenuStart: function() {},
 				onExpandMenuEnd: function() {},
 				onGroupItemClick: function() {},
@@ -73,6 +74,9 @@
 				// Collapse menu
 				collapse: function () {
 					return collapseMenu.apply(this, Array.prototype.slice.call(arguments));
+				},
+				fullcollapse: function () {
+					return fullCollapseMenu.apply(this, Array.prototype.slice.call(arguments));
 				},
 				// Expand menu
 				expand: function () {
@@ -655,6 +659,148 @@
 					callbacks = [ { 'method' : instance.settings.onCollapseMenuEnd, 'args' : [instance.settings] } ];
 				} else {
 					$.merge(callbacks, [ { 'method' : instance.settings.onCollapseMenuEnd, 'args' : [instance.settings] } ]);
+				}
+				var $nextLevelHolders = instance.settings.container
+					.find( '#' + instance.settings.menuID + ' div.levelHolderClass' )
+					.filter(function(){
+						var retObjs = ( instance.settings.direction == 'rtl' ) ? 
+						($( this ).attr( 'data-level' ) > level) && (parseInt( $( this ).css( 'margin-right' ) ) >= 0 && $( this ).position().left < instance.settings.container.width() - instance.settings.overlapWidth )
+						:
+						($( this ).attr( 'data-level' ) > level) && (parseInt( $( this ).css( 'margin-left' ) ) >= 0 && $( this ).position().left >= 0 );
+						return retObjs;
+					}),
+					$prevLevelHolders = instance.settings.container
+					.find( '#' + instance.settings.menuID + ' div.levelHolderClass' )
+					.filter(function(){
+						var retObjs = ( instance.settings.direction == 'rtl' ) ? 
+						($( this ).attr( 'data-level' ) <= level) && (parseInt( $( this ).css( 'margin-right' ) ) >= 0 && $( this ).position().left < instance.settings.container.width() - instance.settings.overlapWidth )
+						:
+						($( this ).attr( 'data-level' ) <= level) && (parseInt( $( this ).css( 'margin-left' ) ) >= 0 && $( this ).position().left >= 0 );
+						return retObjs;
+					});
+				if( $prevLevelHolders.length > 0 ) {
+					collapingObjects[ 'prevAnimEnded' ] = false;
+					$nextLevelHolders.each(function( key, val ){
+						ieShadowFilterDistortion = ($( val ).css('filter').match(/DXImageTransform\.Microsoft\.Shadow/)) ? $( val ).get(0).filters.item("DXImageTransform.Microsoft.Shadow").strength : 0;
+						lwidth = ( instance.settings.mode == 'overlap' ) ? $( val ).width() - ( $nextLevelHolders.length + $prevLevelHolders.length - $( val ).attr( 'data-level' ) - 1) * ( instance.settings.overlapWidth + ieShadowFilterDistortion ) - ieShadowFilterDistortion : $( val ).width() - ieShadowFilterDistortion
+						if( instance.settings.direction == 'rtl' ) {
+							$( val ).stop().animate({
+								marginRight : ( (-1) * lwidth ),
+								width: lwidth
+							}, instance.settings.durationTransition);
+						}
+						else {
+							$( val ).stop().animate({
+								marginLeft : ( (-1) * lwidth ),
+								width: lwidth
+							}, instance.settings.durationTransition);
+						}
+					});
+					collapingObjects[ 'nextAnimEnded' ] = ( $nextLevelHolders.length > 0 ) ? false : true ;
+					$nextLevelHolders.last().queue(function(){
+						collapingObjects[ 'nextAnimEnded' ] = true;
+						animatedEventCallback( collapingObjects , callbacks );
+					});
+					$prevLevelHolders.each(function( key, val ){
+						ieShadowFilterDistortion = ($( val ).css('filter').match(/DXImageTransform\.Microsoft\.Shadow/)) ? $( val ).get(0).filters.item("DXImageTransform.Microsoft.Shadow").strength : 0;
+						var $makeLevelHolderVisible = $prevLevelHolders.filter(function(){
+							return $( this ).attr( 'data-level' ) == level;
+						});
+						$makeLevelHolderVisible.css( 'visibility' , 'visible' );
+						$makeLevelHolderVisible.find( '.' + instance.settings.backItemClass ).css( 'visibility' , 'visible' );
+						$makeLevelHolderVisible.find( 'ul' ).css( 'visibility' , 'visible' );
+						$makeLevelHolderVisible.removeClass( instance.settings.menuInactiveClass );
+						lwidth = ( instance.settings.mode == 'overlap' ) ? $( val ).width() - $nextLevelHolders.length * ( instance.settings.overlapWidth + ieShadowFilterDistortion ) - ieShadowFilterDistortion : $( val ).width() - ieShadowFilterDistortion;
+						if( instance.settings.direction == 'rtl' ) {
+							$( val ).stop().animate({
+								width: lwidth,
+								marginRight : ( $( val ).attr( 'data-level' ) == $baseLevelHolder.attr( 'data-level' ) && collapseAll ) ?
+									( instance.settings.fullCollapse ) ?
+										( -1 ) * $( val ).width()
+										:
+										( ( -1 ) * $( val ).width() + ( ( instance.settings.mode == 'overlap' ) ? $nextLevelHolders.length + 1 : 1 ) * instance.settings.overlapWidth )
+									:
+									0
+							}, instance.settings.durationSlideOut, function(){
+								if( $( val ).attr( 'data-level' ) == $baseLevelHolder.attr( 'data-level' ) && collapseAll ){
+									$baseLevelHolder.children( 'ul' ).first().hide(instance.settings.durationSlideDown, function(){
+										$baseLevelHolder.addClass( instance.settings.menuInactiveClass );
+									});
+								}
+								currWidth = $baseLevelHolder.width() + parseInt( $baseLevelHolder.css( 'margin-right' ) , 10 );
+								sizeElementWidth( instance.settings.container , currWidth );
+							});
+						}
+						else {
+							$( val ).stop().animate({
+								width: lwidth,
+								marginLeft : ( $( val ).attr( 'data-level' ) == $baseLevelHolder.attr( 'data-level' ) && collapseAll ) ?
+									( instance.settings.fullCollapse ) ?
+										( -1 ) * $( val ).width()
+										:
+										( ( -1 ) * $( val ).width() + ( ( instance.settings.mode == 'overlap' ) ? $nextLevelHolders.length + 1 : 1 ) * instance.settings.overlapWidth )
+									:
+									0
+							}, instance.settings.durationSlideOut, function(){
+								if( $( val ).attr( 'data-level' ) == $baseLevelHolder.attr( 'data-level' ) && collapseAll ){
+									$baseLevelHolder.children( 'ul' ).first().hide(instance.settings.durationSlideDown, function(){
+										$baseLevelHolder.addClass( instance.settings.menuInactiveClass );
+									});
+								}
+								currWidth = $baseLevelHolder.width() + parseInt( $baseLevelHolder.css( 'margin-left' ) , 10 );
+								sizeElementWidth( instance.settings.container , currWidth );
+							});
+						}
+						lpush = ( instance.settings.mode == 'overlap' ) ? ( (-1) * ( $nextLevelHolders.length * ( instance.settings.overlapWidth + ieShadowFilterDistortion ) ) ) : 0 ;
+						if( $( val ).attr( 'data-level' ) == $baseLevelHolder.attr( 'data-level' ) && collapseAll ){
+							var blpush = ( instance.settings.fullCollapse ) ? ( -1 ) * ( $baseLevelHolder.width() - ieShadowFilterDistortion ) : ( -1 ) * ( $baseLevelHolder.width() - ieShadowFilterDistortion ) + instance.settings.overlapWidth;
+							pushContainers( blpush );
+						}
+						else {
+							pushContainers( lpush );
+						}
+					});
+					$prevLevelHolders.last().queue(function(){
+						collapingObjects[ 'prevAnimEnded' ] = true;
+						animatedEventCallback( collapingObjects , callbacks );
+					});
+				}
+				collapingObjects[ 'collapsingEnded' ] = true;
+				animatedEventCallback( collapingObjects , callbacks );
+				return $this;
+			}
+
+			// Collapse menu
+			function fullCollapseMenu() {
+				if( $(instance).find( 'div.levelHolderClass' ).is(':animated') ) return false;
+				instance.settings.onCollapseMenuStart.apply(this, Array.prototype.slice.call([instance.settings]));
+				var level = arguments[0],
+					callbacks = arguments[1],
+					collapingObjects = {},
+					ieShadowFilterDistortion,lwidth, lpush, lMarginLeft, lMarginLeftFC,
+					$baseLevelHolder = $('#' + instance.settings.menuID + ' div.levelHolderClass:first'),
+					collapseAll = ( level == undefined ) ? true : false,
+					currWidth;
+				collapingObjects[ 'collapsingEnded' ] = false;
+				if( typeof level == 'object' ) {
+					level = level.attr( 'data-level' );
+				}
+				else if( typeof level == 'string' ){
+					var $selectedLevelHolder = findMenusByTitle( level );
+					if( $selectedLevelHolder && $selectedLevelHolder.length == 1 ) {
+						level = $selectedLevelHolder.attr( 'data-level' );
+					}
+					else {
+						level = $baseLevelHolder.attr( 'data-level' );
+					}
+				}
+				else if( level == undefined || !isInt( level ) || level < 0 ) {
+					level = $baseLevelHolder.attr( 'data-level' );
+				}
+				if( callbacks == undefined && typeof callbacks != 'object' ) {
+					callbacks = [ { 'method' : instance.settings.onFullCollapseMenuEnd, 'args' : [instance.settings] } ];
+				} else {
+					$.merge(callbacks, [ { 'method' : instance.settings.onFullCollapseMenuEnd, 'args' : [instance.settings] } ]);
 				}
 				var $nextLevelHolders = instance.settings.container
 					.find( '#' + instance.settings.menuID + ' div.levelHolderClass' )
