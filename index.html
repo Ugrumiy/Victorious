@@ -66,78 +66,78 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-laptop"></i>Главная</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-book"></i>Услуги</a>
-                        <h2><i class="fa fa-book"></i>Услуги</h2>
-                        <ul>
-                            <li>
-                                <a href="#">Разработка сайтов</a>
-                                <h2><i class="fa fa-book"></i>Разработка сайтов</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Сайты-визитки</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Корпоративные сайты</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Интернет-магазины</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Landing Pages</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Продвижение сайтов</a>
-                                <h2><i class="fa fa-book"></i>Продвижение сайтов</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Поисковое продвижение</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Продвижение в соц.сетях</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Контекстная реклама</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Поддержка сайтов</a>
-                                <h2><i class="fa fa-book"></i>Поддержка сайтов</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Модернизация сайтов</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Наполнение сайтов</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-shopping-cart"></i>Работы</a>
-                    </li>
-                    <li>
-                        <a href="#">Отзывы</a>
-                    </li>
-                    <li>
-                        <a href="#">Блог</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    </div>
+    <div id="mobile-menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa fa-laptop"></i>Главная</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-book"></i>Услуги</a>
+                    <h2><i class="fa fa-book"></i>Услуги</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Разработка сайтов</a>
+                            <h2><i class="fa fa-book"></i>Разработка сайтов</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Сайты-визитки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Корпоративные сайты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Интернет-магазины</a>
+                                </li>
+                                <li>
+                                    <a href="#">Landing Pages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Продвижение сайтов</a>
+                            <h2><i class="fa fa-book"></i>Продвижение сайтов</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Поисковое продвижение</a>
+                                </li>
+                                <li>
+                                    <a href="#">Продвижение в соц.сетях</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контекстная реклама</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Поддержка сайтов</a>
+                            <h2><i class="fa fa-book"></i>Поддержка сайтов</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Модернизация сайтов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Наполнение сайтов</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i>Работы</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Блог</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 <main>
@@ -326,6 +326,7 @@ $(function() {
             menuHeight: '100%',
             collapsed: true,
             fullCollapse: true,
+            mode: 'cover',
             onExpandMenuEnd: function(){
                 $mobileMenu.addClass('open');
             },

@@ -159,9 +159,11 @@ p{
     width: 100%;
     top: 0;
     left: 0;
+    .box-shadow(0px 2px 15px -4px @black);
   }
   .container-center-wrapper{
     padding: 0 15px;
+    background: @white;
   }
   .desktop-menu {
     width: 100%;
@@ -405,10 +407,62 @@ p{
 #mobile-menu{
   position: fixed;
   height: 100% !important;
+  z-index: 100;
+  top: 60px;
 }
 .multilevelpushmenu_wrapper{
   height: 100% !important;
+  .levelHolderClass {
+    background: @white;
+  }
+
+  .ltr {
+    -moz-box-shadow: 0px 2 15px -4px #000;
+    -webkit-box-shadow: 0px 2 15px -4px #000;
+    box-shadow: 0px 2 15px -4px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=@light-green,direction=90,strength=2);
+  }
+
+  .rtl {
+    -moz-box-shadow: 0px 2 15px -4px #000;
+    -webkit-box-shadow: 0px 2 15px -4px #000;
+    box-shadow: 0px 2 15px -4px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=@light-green,direction=270,strength=2);
+  }
+
+  .multilevelpushmenu_inactive {
+    background: #F5F5F5;
+  }
+
+  h2 {
+    color: @light-green - 10%;
+  }
+
+  li {
+    border-top: 1px solid @light-green;
+    cursor: pointer;
+    &:last-child{
+      border-bottom: 1px solid @light-green;
+    }
+    &:hover{
+      color: #295685;
+    }
+  }
+
+  a {
+    color: @light-green;
+    &:hover{
+      color: @light-green;
+    }
+  }
+
+  .backItemClass {
+
+    background: #F5F5F5;
+    border-top: 1px solid @light-green;
+  }
 }
+
 
 
 
@@ -464,7 +518,7 @@ header.fixed {
 }
 
 header .inner-page-pattern-bg{
-  background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
+  background: url('../img/slider_bg.jpg') repeat-x 50% 0;
   width: 100%;
   height: 76px;
 }
@@ -489,10 +543,10 @@ main{
 
 
   .slider-container-full-width{
-    background: url('../img/slider_bg2.jpg') repeat-x 50% 0;
+    background: url('../img/slider_bg.jpg') repeat-x 50% 0;
     @media (max-width: 600px) {
-      background-position: 50% -81px;
-      margin-top: 60px;
+      background-position: 50% -83px;
+      margin-top: 65px;
     }
     .container-center-wrapper{
       max-width: 1920px;
@@ -505,7 +559,7 @@ main{
       height: 516px;
       text-align: center;
       @media (max-width: 600px) {
-        height: 354px;
+        height: 323px;
       }
       &:before{
         content: '';
