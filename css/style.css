@@ -571,15 +571,15 @@ p {
   background: #ffffff;
 }
 .multilevelpushmenu_wrapper .ltr {
-  -moz-box-shadow: 0px 2 15px -4px #000000;
-  -webkit-box-shadow: 0px 2 15px -4px #000000;
-  box-shadow: 0px 2 15px -4px #000000;
+  -webkit-box-shadow: 0px 2px 15px -4px #000000;
+  -moz-box-shadow: 0px 2px 15px -4px #000000;
+  box-shadow: 0px 2px 15px -4px #000000;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#399799, direction=90, strength=2);
 }
 .multilevelpushmenu_wrapper .rtl {
-  -moz-box-shadow: 0px 2 15px -4px #000000;
-  -webkit-box-shadow: 0px 2 15px -4px #000000;
-  box-shadow: 0px 2 15px -4px #000000;
+  -webkit-box-shadow: 0px 2px 15px -4px #000000;
+  -moz-box-shadow: 0px 2px 15px -4px #000000;
+  box-shadow: 0px 2px 15px -4px #000000;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#399799, direction=270, strength=2);
 }
 .multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
@@ -722,7 +722,7 @@ main .slider-container-full-width .container-center-wrapper {
 }
 main .slider .slide {
   width: 100%;
-  height: 516px;
+  height: 490px;
   text-align: center;
 }
 @media (max-width: 600px) {
