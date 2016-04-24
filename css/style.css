@@ -400,9 +400,9 @@ p {
 }
 #header-container .desktop-nav ul a:hover,
 #header-container .desktop-nav ul a.active {
-  -webkit-box-shadow: 0px 2px 0px 0px #3c3c3c;
-  -moz-box-shadow: 0px 2px 0px 0px #3c3c3c;
-  box-shadow: 0px 2px 0px 0px #3c3c3c;
+  -webkit-box-shadow: 0px 3px 0px -1px #3c3c3c;
+  -moz-box-shadow: 0px 3px 0px -1px #3c3c3c;
+  box-shadow: 0px 3px 0px -1px #3c3c3c;
 }
 #header-container .desktop-nav ul a.dropdown-anchor:after {
   content: '';
@@ -465,9 +465,9 @@ p {
   color: #ffffff;
 }
 #header-container .desktop-nav-dropout a:hover {
-  -webkit-box-shadow: 0px 2px 0px 0px #ffffff;
-  -moz-box-shadow: 0px 2px 0px 0px #ffffff;
-  box-shadow: 0px 2px 0px 0px #ffffff;
+  -webkit-box-shadow: 0px 3px 0px -1px #ffffff;
+  -moz-box-shadow: 0px 3px 0px -1px #ffffff;
+  box-shadow: 0px 3px 0px -1px #ffffff;
 }
 /*Burger-icon*/
 /*_______________*/
@@ -1106,9 +1106,9 @@ main .paginator li.active:hover {
   display: inline-block;
   height: 21px;
   text-decoration: none;
-  -webkit-box-shadow: 0px 2px 0px 0px #399799;
-  -moz-box-shadow: 0px 2px 0px 0px #399799;
-  box-shadow: 0px 2px 0px 0px #399799;
+  -webkit-box-shadow: 0px 3px 0px -1px #399799;
+  -moz-box-shadow: 0px 3px 0px -1px #399799;
+  box-shadow: 0px 3px 0px -1px #399799;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
