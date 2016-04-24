@@ -34,7 +34,7 @@
 				collapsed: false,
 				fullCollapse: false,
 				direction: 'ltr',
-				backText: 'Назад',
+				backText: '<',
 				backItemClass: 'backItemClass',
 				backItemIcon: '',
 				groupIcon: '',

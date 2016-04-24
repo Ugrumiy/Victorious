@@ -20,7 +20,7 @@
     <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
             <div class="desktop-menu clearfix">
-                <img class="desktop-menu_logo" src="img/logo.png">
+                <img class="desktop-menu_logo" src="img/logo.svg">
                 <div class="desktop-menu_phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
                     <button>Оставить заявку</button>
@@ -342,6 +342,7 @@ $(function() {
             $(this).removeClass('open');
         }
         else{
+            $mobileMenu.css('visibility','visible');
             $mobileMenu.multilevelpushmenu('expand');
             $(this).addClass('open');
         }

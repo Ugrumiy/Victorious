@@ -216,10 +216,10 @@ p{
       .link-colors(@black, @black);
       @media (max-width: 600px) {
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 37px;
+        height: 37px;
         margin: 0;
-        background: url('../img/phone_receiver.png') no-repeat 0 0;
+        background: url('../img/phone_receiver.svg') no-repeat 0 0;
         font-size: 0;
       }
     }
@@ -347,7 +347,7 @@ p{
   span{
     display: block;
     position: absolute;
-    height: 8px;
+    height: 5px;
     width: 100%;
     background: @light-green;
     border-radius: 3px;
@@ -357,16 +357,16 @@ p{
     .transition (.25s ease-in-out);
   }
   span:nth-child(1) {
-    top: 10px;
+    top: 15px;
   }
 
   span:nth-child(2),
   span:nth-child(3) {
-    top: 26px;
+    top: 27px;
   }
 
   span:nth-child(4) {
-    top: 42px;
+    top: 39px;
   }
   &.open span{
     background: @light-green;
@@ -389,7 +389,7 @@ p{
     top: 18px;
     width: 0;
     left: 50%;
-  }
+  }/*
   .hamburger_ie9{
     width: 21px;
     height: 30px;
@@ -398,7 +398,7 @@ p{
     left: 0;
     background: url('../img/open_close_menu_icon_sprite.png') 0px -47px no-repeat;
     display: none;
-  }
+  }*/
   &.open .hamburger_ie9{
     background-position: 0 10px;
   }
@@ -412,13 +412,14 @@ p{
   height: 100% !important;
   z-index: 100;
   top: 60px;
+  visibility: hidden;
   .box-shadow(0px 2px 15px -4px @black);
 }
 
 .multilevelpushmenu_wrapper{
   height: 100% !important;
   .levelHolderClass {
-    background: @white;
+    background: @light-green;
   }
 
   .ltr {
@@ -432,31 +433,28 @@ p{
   }
 
   .multilevelpushmenu_inactive {
-    background: #F5F5F5;
+    background: #2F7E80;
   }
 
   h2 {
-    color: @light-green - 10%;
+    color: @white - 10%;
   }
 
   li {
-    border-top: 1px solid @light-green;
+    border: none;
     cursor: pointer;
     &:last-child{
       border-bottom: none;
     }
     &:hover{
-      color: @light-green;
+      background-color: #2F7E80;
     }
-  }
-  > .levelHolderClass > ul > li:first-child{
-      border-top: none;
   }
 
   a {
-    color: @light-green;
+    color: @white;
     &:hover{
-      color: @light-green;
+      color: @white;
     }
   }
 
@@ -758,13 +756,11 @@ main {
       width: 30%;
       float: left;
       margin-bottom: 66px;
-      &:not(:last-child){
-        margin-right: 5%;
-      }
       @media (max-width: 850px) {
         text-align: center;
       }
       &.development{
+        margin-right: 6%;
         @media (max-width: 850px) {
           width:47%;
         }
@@ -775,6 +771,7 @@ main {
         }
       }
       &.seo{
+        margin-right: 6%;
         @media (max-width: 850px) {
           width: 47%;
           margin-right: 0;
@@ -786,6 +783,7 @@ main {
         }
       }
       &.support{
+        width: 28%;
         @media (max-width: 850px) {
           float: none;
           width: 100%;
@@ -1047,7 +1045,7 @@ footer{
   .personal-info{
     width: 200px;
     float: left;
-    margin-right: 10%;
+    margin-right: 6%;
     position: relative;
     @media (max-width: 600px) {
       float: none;
@@ -1108,6 +1106,14 @@ footer{
       padding-top: 43px;
       @media (max-width: 600px) {
         padding-top: 20px;
+      }
+      p{
+        font-style: italic;
+        padding-right: 4%;
+        text-align: justify;
+        @media (max-width: 600px) {
+         padding-right: 0;
+        }
       }
       /*Styles for bracket-symbols*/
       .top-bracket {
