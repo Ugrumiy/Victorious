@@ -283,7 +283,7 @@ p{
           position: absolute;
           top: 7px;
           right: -23px;
-          background: black;
+          background: url('../img/general_spritesheet.png') -0px -218px no-repeat;
         }
       }
     }
@@ -646,7 +646,7 @@ main {
       padding: 0 0 0 40px;
       font-size: 14px;
       font-style: italic;
-      background: url('../img/download_pdf_icon.png') no-repeat 0 0;
+      background: url('../img/general_spritesheet.png') -50px -120px no-repeat;
       a{
         text-decoration: none;
         .link-colors(@black, @black);
@@ -918,7 +918,7 @@ footer{
   .social-sharing{
     float: right;
     margin-top: 33px;
-    width: 128px;
+    width: 150px;
     font-size: 0;
     @media (max-width: 600px) {
       float: none;
@@ -936,12 +936,27 @@ footer{
       }
       a{
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 47px;
+        height: 47px;
         background: red;
-        &.fb{}
-        &.vk{}
-        &.gp{}
+        &.fb{
+          background: url('../img/general_spritesheet.png') -52px 0 no-repeat;
+          &:hover{
+            background: url('../img/general_spritesheet.png') -52px -60px no-repeat;
+          }
+        }
+        &.vk{
+          background: url('../img/general_spritesheet.png') -105px 0 no-repeat;
+          &:hover{
+            background: url('../img/general_spritesheet.png') -105px -60px no-repeat;
+          }
+        }
+        &.gp{
+          background: url('../img/general_spritesheet.png') 0px 0 no-repeat;
+          &:hover{
+            background: url('../img/general_spritesheet.png') 0px -60px no-repeat;
+          }
+        }
       }
     }
   }
@@ -1127,7 +1142,7 @@ footer{
           position: absolute;
           top: -20px;
           left: -40px;
-          background: blue;
+          background: url('../img/general_spritesheet.png') 0 -120px no-repeat;
           @media (max-width: 600px) {
             display: none;
           }
@@ -1141,7 +1156,7 @@ footer{
         position: absolute;
         top: 0;
         right: 0;
-        background: green;
+        background: url('../img/general_spritesheet.png') 0 -120px no-repeat;
         @media (max-width: 600px) {
           display: block;
         }
@@ -1154,10 +1169,9 @@ footer{
         position: absolute;
         bottom:-45px;
         right: 0;
-        background: blue;
+        background: url('../img/general_spritesheet.png') 0 -120px no-repeat;
         @media (max-width: 600px) {
           left: 0;
-          background-position: 0 0;
         }
       }
     }
@@ -1261,12 +1275,13 @@ footer{
     input[type="search"]{
       height: 40px;
       width: 100%;
-      padding: 10px 0 0 40px;
+      padding: 10px 10px 0 30px;
       border: none;
       border-bottom: 2px solid @middle-gray;
       font-size: 14px;
       //line-height: 40px;
       color: #525252;
+      background: url('../img/general_spritesheet.png') 0 -164px no-repeat;
     }
     .article-filter_title{
       @media (max-width: 850px) {

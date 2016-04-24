@@ -17,26 +17,26 @@
 </head>
 <body>
 <header>
-    <div id="header" class="container-full-width">
+    <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
-            <div class="logo-menu-container clearfix">
-                <div class="logo-pic"></div>
-                <div class="header-phone-btn">
+            <div class="desktop-menu clearfix">
+                <img class="desktop-menu_logo" src="img/logo.svg">
+                <div class="desktop-menu_phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
                     <button>Оставить заявку</button>
                 </div>
-                <div class="header-menu-container">
-                    <nav class="header-menu">
+                <div class="desktop-nav-container">
+                    <nav class="desktop-nav">
                         <ul>
-                            <li><a href="" class="active">Главная</a></li><!--
-                         --><li><a href="#" id="header-menu-dropdown-anchor" class="dropdown-anchor">Услуги</a></li><!--
-                         --><li><a href="">Работы</a></li><!--
-                         --><li><a href="">Отзывы</a></li><!--
-                         --><li><a href="">Блог</a></li><!--
-                         --><li><a href="">Контакты</a></li>
+                            <li><a href="" class="active">Главная</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="#" id="desktop-nav-dropdown-anchor" class="dropdown-anchor">Услуги</a></li>
+                            <li><a href="">Работы</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div id="header-menu-dropout" class="header-menu-dropout clearfix">
+                    <div id="js_desktop-nav-dropout" class="desktop-nav-dropout clearfix">
                         <ul class="link-group">
                             <li class="link-group_title">Разработка сайтов</li>
                             <li><a href="">Сайты-визитки</a></li>
@@ -55,44 +55,89 @@
                             <li><a href="">Модернизация сайтов</a></li>
                             <li><a href="">Наполнение сайтов</a></li>
                         </ul>
-
                     </div>
                 </div>
+                <div id="js_hamburger" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="hamburger_ie9"></div>
+                </div>
             </div>
-            <ul id="menu-mobile" style="display: none">
-                <li><a href="">Главная</a></li>
-                <li id="utyutyu">Услуги
+        </div>
+    </div>
+    <div id="js_mobile-menu" class="mobile-menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Услуги</a>
+                    <h2>Услуги</h2>
                     <ul>
-                        <li>Разработка сайтов
+                        <li>
+                            <a href="#">Разработка сайтов</a>
+                            <h2>Разработка сайтов</h2>
                             <ul>
-                                <li><a href="">Сайты-визитки</a></li>
-                                <li><a href="">Корпоративные сайты</a></li>
-                                <li><a href="">Интернет-магазины</a></li>
-                                <li><a href="">Landing Pages</a></li>
+                                <li>
+                                    <a href="#">Сайты-визитки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Корпоративные сайты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Интернет-магазины</a>
+                                </li>
+                                <li>
+                                    <a href="#">Landing Pages</a>
+                                </li>
                             </ul>
                         </li>
-
-                        <li>Продвижение сайтов
+                        <li>
+                            <a href="#">Продвижение сайтов</a>
+                            <h2>Продвижение сайтов</h2>
                             <ul>
-                                <li><a href="">Поисковое продвижение</a></li>
-                                <li><a href="">Продвижение в соц.сетях</a></li>
-                                <li><a href="">Контекстная реклама</a></li>
+                                <li>
+                                    <a href="#">Поисковое продвижение</a>
+                                </li>
+                                <li>
+                                    <a href="#">Продвижение в соц.сетях</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контекстная реклама</a>
+                                </li>
                             </ul>
                         </li>
-                        <li>Поддержка сайтов
+                        <li>
+                            <a href="#">Поддержка сайтов</a>
+                            <h2>Поддержка сайтов</h2>
                             <ul>
-                                <li><a href="">Модернизация сайтов</a></li>
-                                <li><a href="">Наполнение сайтов</a></li>
+                                <li>
+                                    <a href="#">Модернизация сайтов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Наполнение сайтов</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="">Работы</a></li>
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">Блог</a></li>
-                <li><a href="">Контакты</a></li>
+                <li>
+                    <a href="#">Работы</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Блог</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
             </ul>
-        </div>
+        </nav>
     </div>
     <div class="inner-page-pattern-bg"></div>
 </header>
@@ -102,7 +147,7 @@
             <ul class="breadcrumbs">
                 <li><a href="">Главная</a></li>
                 <li>&#62;</li>
-                <li class="current-active">Контакты</li>
+                <li class="current-active">Блог</li>
             </ul>
             <div class="content article clearfix">
                 <div class="article-filter">
