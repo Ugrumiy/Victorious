@@ -186,6 +186,7 @@ h2 {
   h1,
   h2 {
     margin: 30px 0;
+    font-size: 35px;
     text-align: center;
   }
 }
@@ -196,22 +197,19 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
-.content {
-  padding: 0 15px;
-}
-@media (max-width: 600px) {
-  .content {
-    padding: 0;
-  }
+.container-full-width.add-side-padding {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /*Header*/
 /*_______________*/
 #header-container {
   z-index: 1000;
+  padding: 0 15px;
+  background: #ffffff;
 }
 @media (max-width: 600px) {
   #header-container {
-    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -222,7 +220,6 @@ p {
   }
 }
 #header-container .container-center-wrapper {
-  padding: 0 15px;
   background: #ffffff;
 }
 #header-container .desktop-menu {
@@ -243,7 +240,6 @@ p {
   }
 }
 #header-container .desktop-menu .desktop-menu_logo {
-  width: 225px;
   height: 67px;
   position: absolute;
   top: 50%;
@@ -473,7 +469,7 @@ p {
 /*_______________*/
 .hamburger {
   display: none;
-  width: 49px;
+  width: 45px;
   height: 49px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -484,7 +480,6 @@ p {
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   cursor: pointer;
-  margin: 0 0 0 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -508,7 +503,7 @@ p {
 .hamburger span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 2px;
   width: 100%;
   background: #399799;
   border-radius: 3px;
@@ -627,7 +622,6 @@ header.fixed {
 }
 header.fixed #header-container {
   width: 100%;
-  padding: 0;
   position: fixed;
   background: #ffffff;
   top: 0;
@@ -698,7 +692,6 @@ main {
 main .breadcrumbs {
   list-style: none;
   margin-top: 35px;
-  padding: 0 15px;
 }
 main .breadcrumbs li {
   display: inline-block;
@@ -1001,15 +994,28 @@ main .paginator li.active:hover {
 /*_______________*/
 .services-container-full-width {
   padding: 0.1% 15px 4% 15px;
+  font-size: 0;
+}
+@media (max-width: 850px) {
+  .services-container-full-width .service-item-list {
+    text-align: center;
+  }
 }
 .services-container-full-width .service-item {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
   width: 30%;
-  float: left;
   margin-bottom: 66px;
 }
 @media (max-width: 850px) {
   .services-container-full-width .service-item {
-    text-align: center;
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .services-container-full-width .service-item {
+    width: auto;
   }
 }
 .services-container-full-width .service-item.development {
@@ -1017,53 +1023,28 @@ main .paginator li.active:hover {
 }
 @media (max-width: 850px) {
   .services-container-full-width .service-item.development {
-    width: 47%;
+    margin-right: 0;
   }
 }
 @media (max-width: 600px) {
-  .services-container-full-width .service-item.development {
-    float: none;
-    width: 100%;
-    margin-right: 0;
-  }
+  
 }
 .services-container-full-width .service-item.seo {
-  margin-right: 6%;
+  margin-right: 4%;
 }
 @media (max-width: 850px) {
   .services-container-full-width .service-item.seo {
-    width: 47%;
     margin-right: 0;
   }
 }
 @media (max-width: 600px) {
-  .services-container-full-width .service-item.seo {
-    float: none;
-    width: 100%;
-    margin-right: 0;
-  }
-}
-.services-container-full-width .service-item.support {
-  width: 28%;
+  
 }
 @media (max-width: 850px) {
-  .services-container-full-width .service-item.support {
-    float: none;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .services-container-full-width .service-item.support:before {
-    content: '';
-    display: block;
-    clear: both;
-  }
+  
 }
 @media (max-width: 600px) {
-  .services-container-full-width .service-item.support {
-    float: none;
-    width: 100%;
-    margin-right: 0;
-  }
+  
 }
 .services-container-full-width .service-item .service-item_title {
   margin-bottom: 15px;
@@ -1074,11 +1055,6 @@ main .paginator li.active:hover {
   display: inline-block;
   vertical-align: middle;
   margin-right: 15px;
-}
-@media (max-width: 850px) {
-  .services-container-full-width .service-item .service-item_title .service-item_title_icon {
-    margin: 0;
-  }
 }
 .services-container-full-width .service-item .service-item_title .service-item_title_text {
   display: inline-block;
@@ -1094,9 +1070,7 @@ main .paginator li.active:hover {
   width: 100%;
 }
 @media (max-width: 850px) {
-  .services-container-full-width .service-item ul {
-    text-align: center;
-  }
+  
 }
 .services-container-full-width .service-item ul li {
   margin: 0 0 11px 0;
@@ -1265,75 +1239,47 @@ footer .social-sharing ul a.gp:hover {
 }
 /*Contacts page*/
 /*_______________*/
-.contacts-container-full-width {
-  padding: 0 15px;
-}
-@media (max-width: 600px) {
-  .contacts-container-full-width {
-    padding: 0;
-  }
-}
-@media (max-width: 600px) {
-  .contact-info_map .contact-info {
-    float: none;
-    width: 100%;
-    margin-bottom: 40px;
-    padding: 0 15px;
-  }
-}
-.contact-info_map .contact-info p {
+.contact-info p {
   margin: 15px 0;
 }
-.contact-info_map .contact-info p:first-child {
+.contact-info p:first-child {
   margin: 0;
 }
-.contact-info_map .contact-info a:link {
+.contact-info a:link {
   color: #399799;
 }
-.contact-info_map .contact-info a:visited {
+.contact-info a:visited {
   color: #399799;
 }
-.contact-info_map .contact-info a:hover {
+.contact-info a:hover {
   color: #000000;
 }
-.contact-info_map .contact-info a:active {
+.contact-info a:active {
   color: #399799;
 }
-.contact-info_map .contact-info .phone-number {
+.contact-info .phone-number {
   text-decoration: none;
 }
-.contact-info_map .contact-info .phone-number:link {
+.contact-info .phone-number:link {
   color: #000000;
 }
-.contact-info_map .contact-info .phone-number:visited {
+.contact-info .phone-number:visited {
   color: #000000;
 }
-.contact-info_map .contact-info .phone-number:hover {
+.contact-info .phone-number:hover {
   color: #000000;
 }
-.contact-info_map .contact-info .phone-number:active {
+.contact-info .phone-number:active {
   color: #000000;
 }
-.contact-info_map .contact-info address {
+.contact-info address {
   font-style: normal;
 }
-.contact-info_map .map-container {
+.map-container {
   width: 100%;
   height: 270px;
   background: red;
   margin-top: 50px;
-}
-@media (max-width: 600px) {
-  .contact-info_map .map-container {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
-}
-@media (max-width: 600px) {
-  .contactus-form {
-    padding: 0 15px;
-  }
 }
 .contactus-form .input-group.text {
   float: left;
@@ -1452,11 +1398,6 @@ footer .social-sharing ul a.gp:hover {
 }
 /*Feedback page*/
 /*_______________*/
-@media (max-width: 600px) {
-  .feedback-items-container {
-    padding: 0 15px;
-  }
-}
 .feedback-item a {
   display: inline-block;
   margin-top: 40px;
@@ -1639,11 +1580,6 @@ footer .social-sharing ul a.gp:hover {
 .article-item-list_item {
   margin: 0 0 35px 0;
 }
-@media (max-width: 600px) {
-  .article-item-list_item {
-    padding: 0 15px;
-  }
-}
 .article-item-list_item .article-item-list_item_title {
   font-size: 20px;
   font-weight: 700;
@@ -1697,11 +1633,6 @@ footer .social-sharing ul a.gp:hover {
   .article-filter {
     width: 100%;
     float: none;
-  }
-}
-@media (max-width: 600px) {
-  .article-filter {
-    padding: 0 15px;
   }
 }
 .article-filter .article-filter_title {
@@ -1812,11 +1743,6 @@ footer .social-sharing ul a.gp:hover {
   .content.article .article-item {
     float: none;
     width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .content.article .article-item {
-    padding: 0 15px;
   }
 }
 .content.article .article-item h1 {

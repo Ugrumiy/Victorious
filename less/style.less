@@ -130,6 +130,7 @@ h1, h2{
   }
   @media (max-width: 600px) {
     margin: 30px 0;
+    font-size: 35px;
     text-align: center;
   }
 }
@@ -141,20 +142,21 @@ p{
   max-width: 1200px;
   margin: 0 auto;
 }
-.content{
-  padding: 0 15px;
-  @media (max-width: 600px) {
-    padding: 0;
+
+.container-full-width{
+  &.add-side-padding{
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-
 
 /*Header*/
 /*_______________*/
 #header-container {
   z-index: 1000;
+  padding: 0 15px;
+  background: #ffffff;
   @media (max-width: 600px) {
-    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -162,7 +164,6 @@ p{
     .box-shadow(0px 2px 15px -4px @black);
   }
   .container-center-wrapper{
-    padding: 0 15px;
     background: @white;
   }
   .desktop-menu {
@@ -178,7 +179,6 @@ p{
       padding: 3px 0;
     }
     .desktop-menu_logo {
-      width: 225px;
       height: 67px;
       position: absolute;
       top: 50%;
@@ -332,12 +332,11 @@ p{
 /*_______________*/
 .hamburger{
   display: none;
-  width: 49px;
+  width: 45px;
   height: 49px;
   .rotate (0deg);
   .transition (.5s ease-in-out);
   cursor: pointer;
-  margin: 0 0 0 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -347,7 +346,7 @@ p{
   span{
     display: block;
     position: absolute;
-    height: 5px;
+    height: 2px;
     width: 100%;
     background: @light-green;
     border-radius: 3px;
@@ -474,7 +473,6 @@ header.fixed {
   padding: 60px 0 0 0;
   #header-container {
     width: 100%;
-    padding: 0;
     position: fixed;
     background: @white;
     top: 0;
@@ -536,7 +534,6 @@ main {
   .breadcrumbs {
     list-style: none;
     margin-top: 35px;
-    padding: 0 15px;
     li {
       display: inline-block;
     }
@@ -752,52 +749,46 @@ main {
 /*_______________*/
   .services-container-full-width{
     padding: 0.1% 15px 4% 15px;
-    .service-item{
-      width: 30%;
-      float: left;
-      margin-bottom: 66px;
+    font-size: 0;
+    .service-item-list{
       @media (max-width: 850px) {
         text-align: center;
       }
+    }
+    .service-item{
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      width: 30%;
+      margin-bottom: 66px;
+      @media (max-width: 850px) {
+         width: 45%;
+      }
+      @media (max-width: 600px) {
+        width: auto;
+      }
       &.development{
-        margin-right: 6%;
+            margin-right: 6%;
         @media (max-width: 850px) {
-          width:47%;
+              margin-right: 0;
         }
         @media (max-width: 600px) {
-          float: none;
-          width: 100%;
-          margin-right: 0;
         }
       }
       &.seo{
-        margin-right: 6%;
+            margin-right: 4%;
         @media (max-width: 850px) {
-          width: 47%;
-          margin-right: 0;
+              margin-right: 0;
         }
         @media (max-width: 600px) {
-          float: none;
-          width: 100%;
-          margin-right: 0;
+
         }
       }
       &.support{
-        width: 28%;
         @media (max-width: 850px) {
-          float: none;
-          width: 100%;
-          margin: 0 auto;
-          &:before{
-            content: '';
-            display: block;
-            clear: both;
-          }
+
         }
         @media (max-width: 600px) {
-          float: none;
-          width: 100%;
-          margin-right: 0;
         }
       }
       .service-item_title{
@@ -808,9 +799,6 @@ main {
         display: inline-block;
         vertical-align: middle;
         margin-right: 15px;
-        @media (max-width: 850px) {
-          margin: 0;
-        }
       }
       .service-item_title_text{
         display: inline-block;
@@ -826,7 +814,7 @@ main {
         list-style: none;
         width: 100%;
         @media (max-width: 850px) {
-          text-align: center;
+          //text-align: center;
         }
         li{
           margin: 0 0 11px 0;
@@ -965,53 +953,31 @@ footer{
 
 /*Contacts page*/
 /*_______________*/
-.contacts-container-full-width{
-  padding: 0 15px;
-  @media (max-width: 600px) {
-    padding:0;
+.contact-info{
+  p{
+    margin: 15px 0;
+    &:first-child{
+      margin: 0;
+    }
+  }
+  a{
+    .link-colors(@light-green,@black);
+  }
+  .phone-number{
+    .link-colors(@black,@black);
+    text-decoration: none;
+  }
+  address{
+    font-style: normal;
   }
 }
-.contact-info_map{
-  .contact-info{
-    @media (max-width: 600px) {
-      float: none;
-      width: 100%;
-      margin-bottom: 40px;
-      padding: 0 15px;
-    }
-    p{
-      margin: 15px 0;
-      &:first-child{
-        margin: 0;
-      }
-    }
-    a{
-      .link-colors(@light-green,@black);
-    }
-    .phone-number{
-      .link-colors(@black,@black);
-      text-decoration: none;
-    }
-    address{
-      font-style: normal;
-    }
-  }
-  .map-container{
-    width: 100%;
-    height: 270px;
-    background: red;
-    margin-top: 50px;
-    @media (max-width: 600px) {
-      float: none;
-      width: 100%;
-      margin-left: 0;
-    }
-  }
+.map-container{
+  width: 100%;
+  height: 270px;
+  background: red;
+  margin-top: 50px;
 }
 .contactus-form{
-  @media (max-width: 600px) {
-    padding: 0 15px;
-  }
   .input-group.text{
     float: left;
     margin-bottom: 3%;
@@ -1045,11 +1011,6 @@ footer{
 
 /*Feedback page*/
 /*_______________*/
-.feedback-items-container{
-  @media (max-width: 600px) {
-    padding: 0 15px;
-  }
-}
 .feedback-item{
   a{
     display: inline-block;
@@ -1191,9 +1152,6 @@ footer{
 }
 .article-item-list_item{
   margin: 0 0 35px 0;
-  @media (max-width: 600px) {
-    padding: 0 15px;
-  }
   .article-item-list_item_title{
     font-size: 20px;
     font-weight: 700;
@@ -1232,9 +1190,6 @@ footer{
   @media (max-width: 850px) {
     width: 100%;
     float: none;
-  }
-  @media (max-width: 600px) {
-    padding: 0 15px;
   }
   .article-filter_title{
     font-size: 15px;
@@ -1308,9 +1263,6 @@ footer{
     @media (max-width: 850px) {
       float: none;
       width: 100%;
-    }
-    @media (max-width: 600px) {
-      padding: 0 15px;
     }
     h1 {
       margin-bottom: 5px;
