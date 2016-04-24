@@ -210,7 +210,6 @@ p {
 }
 @media (max-width: 600px) {
   #header-container {
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -782,7 +781,6 @@ main .paginator li.active:hover {
 @media (max-width: 600px) {
   .slider-container-full-width {
     background-position: 50% -83px;
-    margin-top: 65px;
   }
 }
 .slider-container-full-width .container-center-wrapper {

@@ -11,6 +11,7 @@
     <script src="js/multilevelmenu/jquery.multilevelpushmenu.js"></script>
     <script src="js/slickslider/slick.min.js"></script>
     <script src="js/flowType.js"></script>
+    <script src="js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="js/slickslider/slick.css"/>
     <link rel="stylesheet" href="js/multilevelmenu/jquery.multilevelpushmenu.css"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -282,34 +283,13 @@
 
 $(function() {
 
-    $(document).on('scroll', function (e) {
-        if ($(this).scrollTop() > 70) {
-            $('header').addClass('fixed');
-        }
-        else {
-            $('header').removeClass('fixed');
-        }
-    })
-
-
     $('#js_slider').slick({
-        //autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
         adaptiveHeight: true,
 
     });
-
-    $('#desktop-nav-dropdown-anchor').on('click', function(event){
-        event.preventDefault();
-        var dropout = $('#js_desktop-nav-dropout');
-        if(dropout.hasClass('active')) {
-            dropout.fadeOut(200).removeClass('active');
-        }
-        else {
-            dropout.fadeIn(200).addClass('active');
-        }
-    })
     
     $('.js_slide').flowtype({
        minimum   : 320,
@@ -318,47 +298,6 @@ $(function() {
        maxFont   : 50,
        fontRatio : 25
     });
-
-
-    var $mobileMenu = $('#js_mobile-menu');
-    var mobileMenuOpen = false;
-
-    $(document).ready(function(){
-        $mobileMenu.multilevelpushmenu({
-            menuHeight: '100%',
-            collapsed: true,
-            fullCollapse: true,
-            //mode: 'cover',
-            onExpandMenuEnd: function(){
-                mobileMenuOpen = true;
-            },
-            onFullCollapseMenuEnd: function(){
-                mobileMenuOpen = false;
-            },
-        });
-    });
-
-    $('#js_hamburger').click(function(){
-        if( mobileMenuOpen == true){
-            $mobileMenu.multilevelpushmenu('fullcollapse');
-            $(this).removeClass('open');
-        }
-        else{
-            $mobileMenu.css('visibility','visible');
-            $mobileMenu.multilevelpushmenu('expand');
-            $(this).addClass('open');
-        }
-    });
-    $(window).on('resize', function(){
-        if( $(this).width() > 600 ){
-            $('#js_mobile-menu').multilevelpushmenu('fullcollapse');
-            $('#js_hamburger').removeClass('open');
-        }
-    })
-    $("#main").on('click', function(){
-        $mobileMenu.multilevelpushmenu('fullcollapse');
-        $('#js_hamburger').removeClass('open');
-    })
 
 });
 </script>
