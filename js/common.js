@@ -2,9 +2,13 @@ $(function() {
 
     $('#js_open-popup-btn').on('click', function(){
             $('#js_modal-popup').show();
+            $('body').addClass('stop-scrolling');
+            $('body').bind('touchmove', function(e){e.preventDefault()})
     }) 
     $('#js_close-modal-btn').on('click', function(){
             $('#js_modal-popup').hide();
+            $('body').removeClass('stop-scrolling');
+            $('body').unbind('touchmove')
     }) 
 
     $(document).on('scroll', function (e) {
