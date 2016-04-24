@@ -17,6 +17,23 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+    <div id="js_modal-popup" class="modal-popup">
+        <div class="modal-form-container">
+            <div class="modal-form-title">Заявка</div>
+            <div id="js_close-modal-btn" class="close-modal"></div>
+            <form action="get" id="js_modal-form" class="modal-form clearfix">
+                <div class="input-group text">
+                    <input name="username" type="text"/>
+                    <div class="js_placeholder placeholder">Ваше имя:</div>
+                </div>
+                <div class="input-group text">
+                    <input name="userphone" type="text"/>
+                    <div class="js_placeholder placeholder">Номер телефона:</div>
+                </div>    
+                <input type="submit"/>
+        </form>
+        </div>
+    </div>
 <header>
     <div id="header-container" class="container-full-width">
         <div class="container-center-wrapper">
@@ -24,7 +41,7 @@
                 <img class="desktop-menu_logo" src="img/logo.svg">
                 <div class="desktop-menu_phone-btn">
                     <a class="phone-number" href="tel:3177594940">+7 495 123-45-67</a>
-                    <button>Оставить заявку</button>
+                    <button id="js_open-popup-btn">Оставить заявку</button>
                 </div>
                 <div class="desktop-nav-container">
                     <nav class="desktop-nav">

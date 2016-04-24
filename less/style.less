@@ -150,6 +150,44 @@ p{
   }
 }
 
+.modal-popup{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  z-index: 1000000;
+  display: none;
+  .modal-form-title{
+    margin: 0 0 20px 0;
+    font: 23px/1.2 'Bitter', serif;
+  }
+  .modal-form-container{
+    width: 250px;
+    height: 220px;
+    background: @white;
+    padding: 20px 25px 25px 25px;
+    margin: 100px auto 0 auto;
+    position: relative;
+  }
+  .close-modal{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url('../img/general_spritesheet.png') 0px -245px no-repeat;
+  }
+  .input-group.text{
+    margin: 7% auto;
+    .input-group-text(@light-gray, 100%, 32px);
+  }
+  input[type="submit"]{
+    .btn(@light-green);
+    height: 32px;
+    margin: 3% 0 0 0;
+  }
+
+}
 /*Header*/
 /*_______________*/
 #header-container {
@@ -283,7 +321,7 @@ p{
           position: absolute;
           top: 7px;
           right: -23px;
-          background: url('../img/general_spritesheet.png') -0px -218px no-repeat;
+          background: url('../img/general_spritesheet.png') 0 -218px no-repeat;
         }
       }
     }

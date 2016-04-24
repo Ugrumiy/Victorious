@@ -1,5 +1,12 @@
 $(function() {
 
+    $('#js_open-popup-btn').on('click', function(){
+            $('#js_modal-popup').show();
+    }) 
+    $('#js_close-modal-btn').on('click', function(){
+            $('#js_modal-popup').hide();
+    }) 
+
     $(document).on('scroll', function (e) {
         if ($(this).scrollTop() > 70) {
             $('header').addClass('fixed');
@@ -56,11 +63,27 @@ $(function() {
             $('#js_mobile-menu').multilevelpushmenu('fullcollapse');
             $('#js_hamburger').removeClass('open');
         }
+        else{
+            $('#js_modal-popup').hide();
+        }
     })
-    
+
     $("#main").on('click', function(){
         $mobileMenu.multilevelpushmenu('fullcollapse');
         $('#js_hamburger').removeClass('open');
+    })
+
+    $('.js_placeholder').on('click', function(){
+        $(this).parent().addClass('active');
+        $(this).prev().focus();
+    })
+
+    $('input[type="text"], textarea').on('focus change input', function(){
+        $(this).parent().addClass('active');
+    }).on('blur',function(){
+        if ($(this).val() == ''){
+            $(this).parent().removeClass('active');
+        }
     })
 
 });

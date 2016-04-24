@@ -201,6 +201,95 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
+.modal-popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1000000;
+  display: none;
+}
+.modal-popup .modal-form-title {
+  margin: 0 0 20px 0;
+  font: 23px/1.2 'Bitter', serif;
+}
+.modal-popup .modal-form-container {
+  width: 250px;
+  height: 220px;
+  background: #ffffff;
+  padding: 20px 25px 25px 25px;
+  margin: 100px auto 0 auto;
+  position: relative;
+}
+.modal-popup .close-modal {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url('../img/general_spritesheet.png') 0px -245px no-repeat;
+}
+.modal-popup .input-group.text {
+  margin: 7% auto;
+  width: 100%;
+  height: 32px;
+  position: relative;
+}
+.modal-popup .input-group.text input,
+.modal-popup .input-group.text textarea {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background: #f9f9f9;
+  border: 1px solid #c7c7c7;
+  font-size: 14px;
+  line-height: 32px;
+  color: #525252;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.modal-popup .input-group.text .placeholder {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 32px;
+  color: #525252;
+  position: relative;
+  top: -32px;
+  left: 0;
+}
+.modal-popup .input-group.text.active .placeholder {
+  display: none;
+}
+.modal-popup input[type="submit"] {
+  color: #399799;
+  font-weight: 700;
+  background: transparent;
+  padding: 0.5em 1.2em;
+  border: 2px solid #399799;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 32px;
+  margin: 3% 0 0 0;
+}
+.modal-popup input[type="submit"]:hover {
+  background: #399799;
+  color: #ffffff;
+}
 /*Header*/
 /*_______________*/
 #header-container {
@@ -407,7 +496,7 @@ p {
   position: absolute;
   top: 7px;
   right: -23px;
-  background: url('../img/general_spritesheet.png') 0px -218px no-repeat;
+  background: url('../img/general_spritesheet.png') 0 -218px no-repeat;
 }
 #header-container .desktop-nav-dropout {
   display: none;
